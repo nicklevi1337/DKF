@@ -8,149 +8,164 @@ const items = [
     },
     {
         img: 'images/051.png',
-        title: 'Щit',
-        count: 2,
+        title: 'Читерский кубик',
+        count: 1,
     },
     {
         img: 'images/052.png',
-        title: 'Комбинезон химзащиты'
+        title: 'Кубик хуюбик',
+        count: 1,
+
     },
     {
         img: 'images/053.png',
-        title: 'Рулон туалетной бумаги',
-        count: 2,
+        title: 'Туалетка',
+        count: 1,
     },
     {
         img: 'images/054.png',
-        title: 'Респиратор',
-        count: 10,
+        title: 'Очки EZ',
     },
     {
         img: 'images/055.png',
-        title: 'Одноразовые перчатки'
+        title: 'Свиток рерола',
+        count: 1,
     },
     {
         img: 'images/056.png',
-        title: 'Банка шпината'
+        title: 'Повязка Рэмбо'
     },
     {
         img: 'images/057.png',
-        title: 'Крышка от мусорного бака',
+        title: 'Бесконечная Манга',
+        count: 1,
     },
     {
         img: 'images/058.png',
         title: 'Ремонтный набор',
-        count: 2,
+        count: 1,
     },
     {
         img: 'images/059.png',
-        title: 'Антисептик'
-    },
-    {
-        img: 'images/060.png',
-        title: 'Рука для фистинга имени Билли Херрингтона',
+        title: 'Парные кольца',
         count: 4,
     },
     {
+        img: 'images/060.png',
+       title: 'Рука для fisting',
+        count: 5,
+    },
+    {
         img: 'images/061.png',
-        title: 'Сексуальные чулки',
-        count: 2,
+        title: 'Чулки Гилтикуса',
+        count: 1,
     },
     {
         img: 'images/062.png',
-        title: 'Четырехлистный клевер'
+        title: 'Четырехлистный клевер',
+        count: 1,
     },
     {
         img: 'images/063.png',
-        title: 'Кукла вуду'
+        title: 'Тухлая шаурма',
+        count: 2,
     },
-    {
-        img: 'images/064.png',
-        title: 'Набор выживальщика',
-        count: 3,
+   {
+       img: 'images/064.png',
+       title: 'Чокер боли',
+        count: 1,
     },
     {
         img: 'images/065.png',
         title: 'Наперсток удачи'
     },
-    {
+   {
         img: 'images/066.png',
-        title: 'Переносной телепорт'
+       title: 'Полукаловая монетка',
+       count: 1,
     },
     {
         img: 'images/067.png',
-        title: 'Футляр'
+        title: 'Шоколадный Рулет',
+        count: 1,
     },
     {
         img: 'images/068.png',
-        title: 'Жилетка Вассермана',
-        count: 2,
+        title: 'Штрафная квитанция',
+        count: 1,
     },
     {
         img: 'images/069.png',
         title: 'Стул мамы Мерфи',
-        count: 2,
+        count: 1,
     },
     {
         img: 'images/070.png',
-        title: 'Шиш кебаб',
-        count: 7,
+        title: 'Дырявый парашют',
+        count: 1,
     },
     {
         img: 'images/071.png',
-        title: 'Альпинистский трос'
+        title: 'Мошнаторы Здесь? - На месте!'
     },
     {
         img: 'images/072.png',
-        title: 'Хакерский компьютер'
+        title: 'Плюсовый блокнот'
     },
     {
         img: 'images/073.png',
         title: 'Корона короля петучей',
-        count: 3,
+        count: 1,
     },
     {
         img: 'images/074.png',
-        title: 'Благословение Хакса',
-        count: 3,
-        isNotSlot: true
+        title: 'Бомба',
+        count: 2,
     },
+    
     {
         img: 'images/075.png',
-        title: 'Порошок прозрения',
-        count: 2
+        title: 'Мистер Ржавчик',
+        
     },
 
     {
-        img: 'images/01.png',
-        title: 'Силовая броня (Корона короля петучей, Щit, Одноразовые перчатки)',
-        count: 2,
-        isNotSlot: true
+        img: 'images/076.png',
+       title: 'Грабли',
+       
     },
     {
-        img: 'images/02.png',
-        title: 'Костюм мудреца (Порошок прозрения, хакерский компьютер, Жилетка Вассермана)',
-        count: 3,
-        isNotSlot: true
+        img: 'images/077.png',
+        title: 'Всепоглощающий свин',
+        
     },
     {
-        img: 'images/03.png',
-        title: 'Костюм "Элегантный рекетир" (Наперсток удачи, сексуальные чулки, Рука для фистинга имени Билли Херрингтона)',
-        count: 3,
-        isNotSlot: true
+        img: 'images/078.png',
+        title: 'Липкая жижа',
+         
     },
     {
-        img: 'images/04.png',
-        title: 'Костюм "Исследователь Пустошей" (Набор выживальщика, Комбинезон химзащиты, Крышка от мусорного бака)',
-        count: 3,
-        isNotSlot: true
+        img: 'images/079.png',
+        title: 'Комп с Алика',
+         
     },
     {
-        img: 'images/05.png',
-        title: 'Рейдерские лохмотья (Шиш-Кебаб, Кукла вуду, Альпинистский трос)',
-        count: 2,
-        isNotSlot: true
+        img: 'images/080.png',
+        title: 'Вор Трусов',
+         
     },
+    
+    {
+        img: 'images/081.png',
+        title: 'Увы',
+        
+    },
+    {
+        img: 'images/082.png',
+        title: 'Часовой рост',
+        
+    },
+    
 ];
 let selectedCellKey = false;
 
@@ -407,3 +422,42 @@ console.log(cells);
 createCells(cells);
 createSelector(items);
 
+
+
+
+
+/*
+
+  {
+        img: 'images/01.png',
+        title: 'Силовая броня (Корона короля петучей, Щit, Одноразовые перчатки)',
+        count: 2,
+        isNotSlot: true
+    },
+    {
+        img: 'images/02.png',
+        title: 'Костюм мудреца (Порошок прозрения, хакерский компьютер, Жилетка Вассермана)',
+        count: 3,
+        isNotSlot: true
+    },
+    {
+        img: 'images/03.png',
+        title: 'Костюм "Элегантный рекетир" (Наперсток удачи, сексуальные чулки, Рука для фистинга имени Билли Херрингтона)',
+        count: 3,
+        isNotSlot: true
+    },
+    {
+        img: 'images/04.png',
+        title: 'Костюм "Исследователь Пустошей" (Набор выживальщика, Комбинезон химзащиты, Крышка от мусорного бака)',
+        count: 3,
+        isNotSlot: true
+    },
+    {
+        img: 'images/05.png',
+        title: 'Рейдерские лохмотья (Шиш-Кебаб, Кукла вуду, Альпинистский трос)',
+        count: 2,
+        isNotSlot: true
+    },
+
+
+*/

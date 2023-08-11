@@ -19,134 +19,24 @@ const items = [
         type: EFFECT_TYPES.NONE,
     },
     {
-        img: 'images/001.png',
-        title: 'Мистер Ржавчик',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/002.png',
-        title: 'Облизанный ободок унитаза',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
         img: 'images/003.png',
-        title: 'Ловушка Джокера',
-        type: EFFECT_TYPES.TARGET_TRAP,
+        title: 'УВЫ',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
         img: 'images/004.png',
-        title: 'Знаток выгоды',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/005.png',
-        title: 'Стримбернар',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/006.png',
-        title: 'В бухгалтерии все перепутали',
-        type: EFFECT_TYPES.NONTARGET_TRAP,
-    },
-    {
-        img: 'images/007.png',
-        title: 'Скупщик гречи',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/008.png',
-        title: 'Грабли',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/009.png',
-        title: 'Выключенный ОБС',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/010.png',
-        title: 'ОПЯТЬ НДИДИ',
-        type: EFFECT_TYPES.DEBUFF,
+        title: 'Пустая ячейка',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
         img: 'images/011.png',
-        title: 'Шуточное колесо',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/012.png',
-        title: 'Вор',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/013.png',
-        title: 'Чат здесь закон',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/014.png',
-        title: 'Ультрамошна',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/015.png',
-        title: 'Суд присяжных',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/016.png',
-        title: 'Тест на вирус',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/017.png',
-        title: 'Успешная вылазка',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/018.png',
-        title: 'Штаны на 40 хрывень',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/019.png',
-        title: 'ВзрывОчка',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/020.png',
-        title: 'Залутанная локация',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/021.png',
-        title: 'Конченное событие',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/022.png',
-        title: 'Комбо неудач',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/023.png',
-        title: 'Дух Рэмбо',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/024.png',
-        title: 'Настоящий бунтарь',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/025.png',
-        title: 'Чуйка на говно',
-        type: EFFECT_TYPES.DEBUFF,
+        title: 'LMAO',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
         img: 'images/026.png',
-        title: 'Не та позиция тебе выпала, стремлер',
-        type: EFFECT_TYPES.DEBUFF,
+        title: 'Ой, извините',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
         img: 'images/027.png',
@@ -159,119 +49,44 @@ const items = [
         type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/029.png',
-        title: 'Чат выбирает',
-        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
-    },
-    {
         img: 'images/030.png',
         title: 'Я здесь закон',
         type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/031.png',
-        title: 'Три топора',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/032.png',
-        title: 'Сраное колдунье',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/033.png',
-        title: 'Два по цене одного',
-        type: EFFECT_TYPES.NONE,
-    },
-    {
-        img: 'images/034.png',
-        title: 'Интрига',
-        type: EFFECT_TYPES.NONE,
-    },
-    {
         img: 'images/035.png',
-        title: 'РокировОЧКА',
-        type: EFFECT_TYPES.TARGET_TRAP,
-    },
-    {
-        img: 'images/036.png',
-        title: 'По магазинам с чатом',
-        type: EFFECT_TYPES.NONE,
-    },
-    {
-        img: 'images/037.png',
-        title: 'Открытая пачка сухариков',
-        type: EFFECT_TYPES.FOOD,
-    },
-    {
-        img: 'images/038.png',
-        title: 'Сырое мясо',
-        type: EFFECT_TYPES.FOOD,
-    },
-    {
-        img: 'images/039.png',
-        title: 'Проблев',
-        type: EFFECT_TYPES.NONE,
-    },
-    {
-        img: 'images/040.png',
-        title: 'Кефир с замазанным сроком годности',
-        type: EFFECT_TYPES.FOOD,
-    },
-    {
-        img: 'images/041.png',
-        title: 'Таблетки без названия',
-        type: EFFECT_TYPES.FOOD,
-    },
-    {
-        img: 'images/042.png',
-        title: 'Сладкий рулет ХПГ',
-        type: EFFECT_TYPES.FOOD,
-    },
-    {
-        img: 'images/043.png',
-        title: 'Подземное убежище',
-        type: EFFECT_TYPES.BUFF,
-    },
-    {
-        img: 'images/044.png',
-        title: 'Аттракцион невиданной щедрости',
-        type: EFFECT_TYPES.DEBUFF,
-    },
-    {
-        img: 'images/045.png',
-        title: 'Never Lucky',
+        title: 'Кам Мунизм',
         type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/046.png',
-        title: 'Сахарные бомбы',
-        type: EFFECT_TYPES.FOOD,
+        img: 'images/045.png',
+        title: 'Еперный рот этого казино',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/047.png',
-        title: 'Наелся и спит',
-        type: EFFECT_TYPES.NONE,
+        img: 'images/038.png',
+        title: 'Торопыга',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/048.png',
-        title: 'Предательский столб',
-        type: EFFECT_TYPES.DEBUFF,
+        img: 'images/037.png',
+        title: 'А где я?',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/049.png',
-        title: 'Падение пиццианской башни',
-        type: EFFECT_TYPES.DEBUFF,
+        img: 'images/040.png',
+        title: '',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/050.png',
-        title: 'Полное свинство',
-        type: EFFECT_TYPES.TARGET_TRAP,
+        img: 'images/043.png',
+        title: '',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
     {
-        img: 'images/072.png',
-        title: 'Хакерский компьютер',
-        type: EFFECT_TYPES.BUFF,
+        img: 'images/041.png',
+        title: '',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
 ];
 let selectedCellKey = false;
@@ -457,3 +272,161 @@ loadMarginState();
 createCells(cells);
 createSelector(items);
 
+
+
+/*
+
+ {
+        img: 'images/003.png',
+        title: 'УВЫ',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/004.png',
+        title: 'Часовой рост',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    
+    {
+        img: 'images/011.png',
+        title: ' LMAO',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/025.png',
+        title: 'А где это я?',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/026.png',
+        title: 'Ой, извините',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/027.png',
+        title: 'Выбор Бумера',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/028.png',
+        title: 'Выбор Зумера',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/029.png',
+        title: 'Чат выбирает',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/030.png',
+        title: 'Я здесь закон',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/031.png',
+        title: 'Три топора',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/032.png',
+        title: 'Сраное колдунье',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/033.png',
+        title: 'Два по цене одного',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/034.png',
+        title: 'Интрига',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/035.png',
+        title: 'Кам Мунизм',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/036.png',
+        title: 'По магазинам с чатом',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/037.png',
+        title: 'Открытая пачка сухариков',
+        type: EFFECT_TYPES.FOOD,
+    },
+    {
+        img: 'images/038.png',
+        title: 'Сырое мясо',
+        type: EFFECT_TYPES.FOOD,
+    },
+    {
+        img: 'images/039.png',
+        title: 'Липкая жижа',
+        type: EFFECT_TYPES.TARGET_TRAP,
+    },
+    {
+        img: 'images/040.png',
+        title: 'Кефир с замазанным сроком годности',
+        type: EFFECT_TYPES.FOOD,
+    },
+    {
+        img: 'images/041.png',
+        title: 'Таблетки без названия',
+        type: EFFECT_TYPES.FOOD,
+    },
+    {
+        img: 'images/042.png',
+        title: 'Шоколадный Рулет',
+        type: EFFECT_TYPES.BUFF,
+    },
+    {
+        img: 'images/043.png',
+        title: 'Подземное убежище',
+        type: EFFECT_TYPES.BUFF,
+    },
+    {
+        img: 'images/044.png',
+        title: 'Аттракцион невиданной щедрости',
+        type: EFFECT_TYPES.DEBUFF,
+    },
+    {
+        img: 'images/045.png',
+        title: 'Еперный рот этого казино',
+        type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
+    },
+    {
+        img: 'images/046.png',
+        title: 'Сахарные бомбы',
+        type: EFFECT_TYPES.FOOD,
+    },
+    {
+        img: 'images/047.png',
+        title: 'Наелся и спит',
+        type: EFFECT_TYPES.NONE,
+    },
+    {
+        img: 'images/048.png',
+        title: 'Предательский столб',
+        type: EFFECT_TYPES.DEBUFF,
+    },
+    {
+        img: 'images/049.png',
+        title: 'Падение пиццианской башни',
+        type: EFFECT_TYPES.DEBUFF,
+    },
+    {
+        img: 'images/050.png',
+        title: 'Всепоглощающий свин',
+        type: EFFECT_TYPES.TARGET_TRAP,
+    },
+    {
+        img: 'images/072.png',
+        title: 'Хакерский компьютер',
+        type: EFFECT_TYPES.BUFF,
+    },
+
+
+*/
