@@ -116,7 +116,7 @@ width: 100%;
     font-size: 17px;
     line-height: 18px;
     list-style-type: none;
-    color: rgb(157, 157, 29);
+    color: rgb(45, 205, 30);
 }
 
 .unlist-2{
@@ -133,7 +133,7 @@ width: 100%;
     font-size: 17px;
     line-height: 18px;
     list-style-type: none;
-    color: rgb(43, 160, 186);
+    color: rgb(221, 250, 7);
 }
 .unlist-4{
     font-style: normal;
@@ -141,7 +141,7 @@ width: 100%;
     font-size: 17px;
     line-height: 18px;
     list-style-type: none;
-    color: rgb(34, 183, 34)
+    color: rgb(142, 80, 10)
 }
 .unlist-5{
     font-style: normal;
@@ -158,7 +158,7 @@ width: 100%;
     font-size: 17px;
     line-height: 18px;
     list-style-type: none;
-    color: sienna;
+    color: rgb(27, 203, 209);
 }
 
 .unlist-7{
@@ -167,7 +167,7 @@ width: 100%;
     font-size: 17px;
     line-height: 18px;
     list-style-type: none;
-    color: rgb(206, 240, 15);
+    color: rgb(182, 32, 149);
 }
 
 .intro__span-accent{
@@ -206,7 +206,7 @@ width: 100%;
     margin: 0;
     font-size: 35px;
     line-height: 36px;
-    color: rgb(157, 157, 29);
+    color: rgb(45, 205, 30);
 }
 
 .place__title_main_evil{
@@ -217,6 +217,24 @@ width: 100%;
     color: rgb(255, 54, 54);
 }
 
+
+.place__title_main_heroes{
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    line-height: 36px;
+    margin-top: 45px;
+    color: rgb(221, 250, 7);
+}
+
+.place__title_main_que{
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    line-height: 36px;
+    margin-top: 45px;
+    color: rgb(142, 80, 10)
+}
 
 .place__title{
     padding: 0;
@@ -347,3 +365,4 @@ flex-direction: column;
     font-size: 35px;
     line-height: 163%;
 }
+
