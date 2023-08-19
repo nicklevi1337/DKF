@@ -1,0 +1,141 @@
+.root {
+    background : #250738;
+    font-family: Calibri, serif;
+    color      : #eee;
+    background-image: url("../history/images/art2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0 auto;
+    position: absolute;
+    top: 300px;
+    left: 490px;
+        display: grid;
+        grid-template-areas:
+            "a a a"
+            "b b b"
+            "c . ."
+        ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        font-family: calibri, serif;
+}
+
+.page {
+    min-width      : 1100px;
+    max-width      : 1600px;
+    margin         : 0 auto;
+    display        : flex;
+    align-content  : center;
+    align-items    : center;
+    justify-content: center;
+
+}
+
+
+
+.body {
+    margin: 0 auto;
+position: absolute;
+top: 163px;
+left: 24px;
+    display: grid;
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        "c . ."
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-family: calibri, serif;
+}
+.heroes {
+    grid-area: a;
+
+
+display: flex;
+align-items: flex-start;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-between;
+gap: 30px;
+
+}
+.heroes__bob {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+.heroes__miron {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+.heroes__musheg {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+.heroes__sanya {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+.heroes__max {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+.heroes__kuka {
+    padding: 5px 10px;
+    background: rgba(136, 5, 224, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+}
+
+
+.heroes__kuka:hover {
+    background: rgb(16, 14, 14);
+}
+.heroes__bob:hover {
+    background: rgb(16, 14, 14);
+}
+
+.heroes__miron:hover {
+    background: rgb(16, 14, 14);
+}
+
+.heroes__musheg:hover {
+    background: rgb(16, 14, 14);
+}
+
+.heroes__sanya:hover {
+    background: rgb(16, 14, 14);
+}
+
+.heroes__max:hover {
+    background: rgb(16, 14, 14);
+}
+

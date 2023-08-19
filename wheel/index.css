@@ -395,3 +395,55 @@ padding: 0;
 #btn-edit {
 	font-size: 2em;
 }
+
+
+.rules{
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 44px;
+	background-image: url('../rules/images/setting.jpg ');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	z-index: 1;
+	border-radius: 15px;
+    font-size    : 20px;
+    box-shadow   : 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+	margin-left: 687px;
+}
+
+.rules:hover{
+	opacity: 0.8;
+background-color: rgb(153, 187, 203);
+}
+
+.inventory{
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 44px;
+	background-image: url('../rules/images/inventory.jpg');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	z-index: 1;
+	border-radius: 15px;
+    font-size    : 20px;
+    box-shadow   : 1px 1px 0 #bbb;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.inventory:hover{
+	opacity: 0.8;
+background-color: rgb(153, 187, 203);
+}

@@ -9,8 +9,16 @@ body {
 	max-width: var(--max-width);
 	margin: 0 auto;
 	position: relative;
+	background-color: #250738;
+	background-image: url("../history/images/art2.jpg");
+	background-attachment: fixed;
+    background-size: cover;
 	color: #20262E;
 	overflow: hidden;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .clear {
 	clear: both;
@@ -169,4 +177,22 @@ body {
 }
 .selector li img {
 	width: 100%;
+}
+
+
+
+
+
+
+.stats{
+	color: white;
+}
+
+.heroes__img{
+margin: 0;
+padding: 0;
+max-width: 200px;
+max-height: 200px;
+background-size: cover;
+background-repeat: no-repeat;
 }
