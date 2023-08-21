@@ -11,7 +11,6 @@
 .page {
     max-width: 1280px;
     min-width: 320px;
-    height: 5813px;
     margin         : 0 auto;
     display        : flex;
     align-content  : center;

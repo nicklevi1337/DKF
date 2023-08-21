@@ -2,10 +2,7 @@
 
 let cells = [];
 const items = [
-    {
-        img: 'images/000.png',
-        title: 'Пустая ячейка'
-    },
+   
     {
         img: 'images/051.png',
         title: 'Читерский кубик',

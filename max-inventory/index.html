@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Инвентарь стримера ХПГ 2.0</title>
@@ -10,41 +11,188 @@
         https://github.com/shtrih/open-hpg-2-inventory
     -->
 </head>
+
 <body>
-
-<img src="../images/streamers/Bob.png" class="heroes__img" alt="Герой">
-
-
-<div class="stats">
-<h1 class="stats__title">Имя</h1>
-<p class="stats__subtitle">Боб</p>
-<h1></h1>
-<p></p>
+    <div class="page">
+        <div class="content">
 
 
-</div>
+            <div class="img__div">
+                <h1 class="stats__title">Max</h1>
+                <img src="../images/streamers/max.jpg" class="heroes__img" alt="Герой">
+            </div>
 
-<div class="store"></div>
-<div class="add-block">
-    <button class="add-cell" title="Добавить ячейку инвентаря">+</button>
-    <div class="clear"></div>
-</div>
-<div class="clear"></div>
+            <div class="info">
+                <p class="stats__subtitle">Пройденные игры</p>
+                <div class="game">
+                    <p class="game__text">0</p>
+                    <button class="game__button" type="button"></button>
+                </div>
+                <p class="stats__subtitle">Очки</p>
+                <div class="points">
+                    <p class="points__text">0</p>
+                    <button class="points__button" type="button"></button>
+                </div>
+            </div>
 
-<div class="selector">
-    <ul></ul>
-    <div class="clear"></div>
-</div>
+            <div class="element">
+                <div class="store"></div>
+                <div class="add-block">
+                    <button class="add-cell" title="Добавить ячейку инвентаря">+</button>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+
+                <div class="selector">
+                    <ul></ul>
+                    <div class="clear"></div>
+                </div>
+    
+            </div>
+           
+
+
+
+            <div class="main">
+                <div class="number">
+                    <h1 class="number__title">
+                        №
+                    </h1>
+                    <p class="number__subtitle">1</p>
+                </div>
+                <div class="mission">
+                    <h1 class="number__title">
+                        Миссия
+                    </h1>
+                    <form class="mission__form">
+                        <input class="mission__icon">
+                    </form>
+                </div>
+                <div class="game-text">
+                    <h1 class="number__title">
+                        Игра
+                    </h1>
+                    <form class="game-text__form">
+                        <input class="game-text__icon">
+                    </form>
+                </div>
+                <div class="status">
+                    <h1 class="number__title">
+                        Статус
+                    </h1>
+                    <form class="status__form">
+                        <input class="status__text">
+                    </form>
+                </div>
+                <div class="comment">
+                    <h1 class="number__title">
+                        Описание
+                    </h1>
+                    <form class="comment__form">
+                        <input class="comment__text">
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="popup popup_type_game">
+        <div class="popup__container">
+            <h2 class="popup__title">Какие ваши успехи?</h2>
+            <form class="popup__form" name="popup__form">
+                <input type="text" placeholder="Количество игр" class="popup__input popup__input_type_game" name="popup__input popup__input_type_game">
+                <button class="popup__save-btn" type="submit">
+                    Добавить
+                </button>
+                <button class="popup__close" type="button"></button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_type_points">
+        <div class="popup__container">
+            <h2 class="popup__title">Сколько награбили?</h2>
+            <form class="popup__form popup__form_type_points" name="popup__form">
+                <input type="text" placeholder="Ваши поинты" class="popup__input popup__input_type_points" name="popup__input popup__input_type_points">
+                <button class="popup__save-btn" type="submit">
+                    Награда
+                </button>
+                <button class="popup__close" type="button"></button>
+            </form>
+        </div>
+    </div>
 
 
 
 
 
 
-<script
-        src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-        crossorigin="anonymous"></script>
-<script src="index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="content.js"></script>
 </body>
+
 </html>
+
+<!--
+    <div class="element">
+    <div class="info">
+        <h1 class="info__title">№</h1>
+        <h1 class="info__title1">Локация</h1>
+        <h1 class="info__title2">Игра</h1>
+        <h1 class="info__title4">Комментарий</h1>
+    </div>
+
+
+<div class="container">
+    <div class="info">
+        <p class="info__title">1</p>    
+    </div>
+    <div class="info">
+        <form class="position">
+            <input class="position__icon">
+            </form>
+    </div>
+    <div class="info">
+        <form class="game">
+            <input class="game__text">
+            </form>
+    </div>
+    <div class="info">
+        <form class="comment">
+            <input class="comment__text">
+            </form>
+    </div>
+</div>
+<div class="container">
+    <div class="info">
+        <p class="info__title">1</p>    
+    </div>
+    <div class="info">
+        <form class="position">
+            <input class="position__icon">
+            </form>
+    </div>
+    <div class="info">
+        <form class="game">
+            <input class="game__text">
+            </form>
+    </div>
+    <div class="info">
+        <form class="comment">
+            <input class="comment__text">
+            </form>
+    </div>
+</div>
+
+
+</div>
+    -->
