@@ -188,6 +188,7 @@ const  store = $('.store'),
             return false;
         }
     }),
+   
     controlDecrementCounter = $('<a/>', {
         text: '–',
         title: 'Уменьшить кол-во зарядов/прочность',
@@ -341,6 +342,8 @@ const  store = $('.store'),
         cells.push({});
         addCell();
         saveState(cells);
+
+        
     },
     cellOnHover = function () {
         const idx = $(this).index();
@@ -413,6 +416,7 @@ const  store = $('.store'),
 ;
 
 $('.add-cell').on('click', addCellOnClick);
+        
 
 cells = loadState();
 console.log(cells);
@@ -437,6 +441,14 @@ createSelector(items);
         count: 3,
         isNotSlot: true
     },
+
+
+
+
+    $('.add-cell').on('click', addCellOnClick);
+
+
+
     {
         img: 'images/03.png',
         title: 'Костюм "Элегантный рекетир" (Наперсток удачи, сексуальные чулки, Рука для фистинга имени Билли Херрингтона)',
