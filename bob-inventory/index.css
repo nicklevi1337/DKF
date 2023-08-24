@@ -393,7 +393,7 @@ background-repeat: no-repeat;
 	display: grid;
     grid-template-columns: repeat(5, 1fr); /* Равномерное разделение на 4 столбца */
     gap: 20px; /* Промежуток между элементами */
-    align-items: center; 
+	align-items: start;
 	
 }
 .number{
@@ -408,6 +408,7 @@ background-repeat: no-repeat;
 .number__title{
 	margin: 0;
 	padding: 0;
+	font-size: 25px;
 }
 
 
@@ -436,6 +437,8 @@ padding: 0;
 .mission__icon{
 	margin: 0;
 	padding: 0;
+	width: 50px;
+    height: 50px;
 }
 
 
@@ -476,6 +479,8 @@ padding: 0;
 .status__text{
 	margin: 0;
 	padding: 0;
+	width: 50px;
+    height: 50px;
 }
 
 .comment{
@@ -644,4 +649,91 @@ padding: 0;
 .history__fon{
 	margin: 0;
     padding: 0;
+}
+
+
+.add-text{
+	cursor: pointer;
+	float: left;
+	margin: 15px 0 10px 4px;
+	width: 32px;
+	height: 32px;
+	border-width: 5px;
+	border-radius: 50%;
+	border-color: #ddd;
+	border-style: double;
+	background: #9f14c5;
+	color: #eee;
+	font-family: monospace;
+	font-size: 16px;
+	text-align: center;
+	line-height: 16px;
+	text-shadow: 1px 1px 0 #000;
+	
+}
+
+.add-text:hover {
+	background: #000000;
+}
+
+.add-text:focus {
+	outline: none;
+}
+
+.add{
+	margin: 0;
+    padding: 0;
+
+}
+
+
+.list{
+	margin-top: 27px;
+    color: white;
+    display: grid;
+    
+    gap: 20px;
+    align-items: start;
+	min-width: 610px;
+    
+}
+
+.list__check{
+	margin-top: 27px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+	align-items: center;
+		min-width: 610px;
+    
+}
+
+.popup__input_type_day{
+
+}
+
+.popup__input_type_play{
+
+}
+
+.popup__input_type_comm{
+
+	
+}
+
+.popup__link{
+
+}
+
+.popup__container_type_stats{
+
+}
+
+.popup__form_type_stats{
+
+}
+
+.popup__close_type_stats{
+
 }

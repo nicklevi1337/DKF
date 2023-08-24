@@ -355,17 +355,21 @@
 .place__image-left {
     padding: 0;
     margin : 0;
+    object-fit: cover;
+    width: 80%
 }
 
 .place__image-loc {
     padding: 0;
     margin : 0 auto;
-    width  : 80%;
+    width  : 100%;
 }
 
 .place__image-right {
     padding: 0;
     margin : 0;
+    object-fit: cover;
+    width: 80%
 }
 
 

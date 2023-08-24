@@ -16,7 +16,7 @@
     <div class="page">
         <div class="content">
 
-            <h1 class="stats__title">Bob - Воин городских пустошь</h1>
+            <h1 class="stats__title">Bob</h1>
             <div class="img__div">
                 <img src="../images/streamers/bob.jpg" class="heroes__img" alt="Герой">
                 <div class="info">
@@ -32,29 +32,6 @@
                     </div>
                 </div>
             </div>
-            <div class="history">
-                <h2 class="history__lor">Краткая биография</h2>
-                <p class="history__fon">Боб родился в бедном районе Скуф-Сити, где преступность и коррупция были
-                    повседневной реальностью. Он вырос среди банд и гангстерских группировок, но решил идти своим путем.
-                    С ранних лет он начал тренироваться в искусстве боя, а с появлением кибер-технологий он обратил
-                    внимание на кибер-импланты, которые могли усилить его физические способности.
-                    <br>
-                    Однако настоящая перемена произошла, когда Боб встретил мастера оружия, который подарил ему
-                    кибер-катану. Это было совершенно новое оружие, сочетающее в себе традиционное искусство меча с
-                    передовыми технологиями. Он освоил его мастерски, делая каждый размах смертоносным и изящным.
-                    <br>
-                    С годами Боб стал известен в городе как независимый наемник, готовый стать защитником тех, кто не
-                    мог защитить себя самих. Его имя стало символом справедливости, и несмотря на свою внушительную
-                    внешность, он всегда старался решать конфликты мирным путем, когда это было возможно.
-                    <br>
-                    Его длинные волосы и впечатляющая фигура делали его узнаваемым в толпе, и многие боялись, но также и
-                    уважали. Боб никогда не искал славы или богатства, его миссия была в том, чтобы защищать уязвимых и
-                    привносить хоть каплю чистоты в беспорядочный мир Скуф-Сити.
-                </p>
-
-            </div>
-
-
             <div class="element">
                 <div class="bob__inventory"></div>
                 <div class="add-block">
@@ -69,51 +46,43 @@
                 </div>
 
             </div>
-
-
-
-
             <div class="main">
                 <div class="number">
                     <h1 class="number__title">
                         №
                     </h1>
-                    <p class="number__subtitle">1</p>
                 </div>
                 <div class="mission">
                     <h1 class="number__title">
                         Миссия
                     </h1>
-                    <form class="mission__form">
-                        <input class="mission__icon">
-                    </form>
                 </div>
                 <div class="game-text">
                     <h1 class="number__title">
                         Игра
                     </h1>
-                    <form class="game-text__form">
-                        <input class="game-text__icon">
-                    </form>
                 </div>
                 <div class="status">
                     <h1 class="number__title">
                         Статус
                     </h1>
-                    <form class="status__form">
-                        <input class="status__text">
-                    </form>
                 </div>
                 <div class="comment">
                     <h1 class="number__title">
                         Описание
                     </h1>
-                    <form class="comment__form">
-                        <input class="comment__text">
-                    </form>
                 </div>
             </div>
 
+            <div class="list">
+
+               
+
+            </div>
+
+            <div class="add">
+                <button class="add-text" type="button">+</button>
+            </div>
 
 
 
@@ -150,8 +119,45 @@
         </div>
     </div>
 
+    <div class="popup popup_type_stats">
+        <div class="popup__container popup__container_type_stats">
+            <h2 class="popup__title">Впишите информацию</h2>
+            <form class="popup__form popup__form_type_stats" name="popup__form">
+                <input type="text" placeholder="День" class="popup__input popup__input_type_day" name="day">
+                <input type="link" placeholder="Локация" class="popup__link" name="icon">
+                <input type="text" placeholder="Игра" class="popup__input popup__input_type_play" name="play">
+                <input type="link" placeholder="Статус" class="popup__link" name="status">
+                <input type="text" placeholder="Комментарий" class="popup__input popup__input_type_comm"
+                    name="comment">
+            </form>
+            <button class="popup__save-btn popup__save-btn_type_stats" type="submit">
+                Готово
+            </button>
+            <button class="popup__close popup__close_type_stats" type="button"></button>
+        </div>
+    </div>
 
 
+
+    <template id="list-template">
+        <div class="list__check">
+        <div class="number">
+            <p class="number__subtitle"></p>
+        </div>
+        <div class="mission">
+            <img class="mission__icon" src="#" alt="#">
+        </div>
+        <div class="game-text">
+            <p class="game-text__icon"></p>
+        </div>
+        <div class="status">
+            <img class="status__text" src="#" alt="#">
+        </div>
+        <div class="comment">
+            <p class="comment__text"></p>
+        </div>
+    </div>
+    </template>
 
 
 
@@ -160,6 +166,29 @@
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="content.js"></script>
+    <script src="effects.js"></script>
 </body>
 
 </html>
+
+
+<!--
+        
+        <div class="list__check">
+<div class="number">
+    <p class="number__subtitle">2</p>
+</div>
+<div class="mission">
+    <img class="mission__icon" src="https://ic.wampi.ru/2023/08/24/BOG-LYBIT-3.png" alt="">
+</div>
+<div class="game-text">
+    <p class="game-text__icon">efwfwefwfwf</p>
+</div>
+<div class="status">
+    <img class="status__text" src="https://ic.wampi.ru/2023/08/24/BOG-LYBIT-3.png" alt="">
+</div>
+<div class="comment">
+    <p class="comment__text">efwfwefwfwf</p>
+</div>
+</div>
+-->
