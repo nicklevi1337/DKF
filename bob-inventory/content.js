@@ -28,7 +28,7 @@ const openAddList =  document.querySelector('.add-text');
 const popupAddDay =  document.querySelector('.popup__input_type_day');
 const popupAddPlay =  document.querySelector('.popup__input_type_play');
 const popupAddLink =  document.querySelector('.popup__link');
-const popupImgLink =  document.querySelector('.popup__link');
+const popupImgLink =  document.querySelector('.popup__link_img');
 
 const popupAddComm =  document.querySelector('.popup__input_type_comm');
 const formElementAdd = document.querySelector(".popup__container_type_stats");
@@ -61,7 +61,7 @@ const popupAdd  = () => {
     
 }
 
-const popupAddClosr  = () => {
+const popupAddClose  = () => {
     closePopup(popupAddList)
     
 }
@@ -170,6 +170,7 @@ const infoList = [
         img: "https://ic.wampi.ru/2023/08/24/PROIDENO.png",
         comment: "Let's Go!"
     },
+    
 
 ];
 
