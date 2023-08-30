@@ -372,15 +372,15 @@ p5Instance.onAfterSetup = function () {
     ]);
 };
 
-const image = document.querySelector('#item-image img');
-p5Instance.onSelectItem = function(data, selectedKey) {
-    if (dataSets[currentDataSet]) {
-        image.src = getImageURI(dataSets[currentDataSet].indexOf(data[selectedKey]));
-    }
-    else {
-        image.src = '../hpg-inventory/images/000.png';
-    }
-};
+const image = document.querySelector('#item-image img'); 
+p5Instance.onSelectItem = function(data, selectedKey) { 
+    if (dataSets[currentDataSet]) { 
+        image.src = getImageURI(dataSets[currentDataSet].indexOf(data[selectedKey])); 
+    } 
+    else { 
+        image.src = '../hpg-inventory/images/000.png'; 
+    } 
+}; 
 
 const customDialog = document.getElementById('custom-list'),
     customTextarea = customDialog.getElementsByTagName('textarea')[0],

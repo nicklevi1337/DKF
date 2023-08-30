@@ -33,6 +33,7 @@ const popupImgLink =  document.querySelector('.popup__link_img');
 const popupAddComm =  document.querySelector('.popup__input_type_comm');
 const formElementAdd = document.querySelector(".popup__container_type_stats");
 const formSaveAdd = document.querySelector(".popup__form_type_stats");
+const deleteAddBtn = document.querySelector(".list__check-deletebtn");
 
 const popupAddList =  document.querySelector('.popup_type_stats');
 const popupCloseBtnAdd = document.querySelector(".popup__close_type_stats");
@@ -40,6 +41,7 @@ const popupCloseBtnAdd = document.querySelector(".popup__close_type_stats");
 const popupSaveBtnAdd = document.querySelector(".popup__save-btn");
 const listTemplate = document.getElementById("list-template");
 const listContainer = document.querySelector(".list");
+
 
 
 
@@ -92,10 +94,29 @@ const handleAddFormSubmit = (event) => {
         comment
     };
 
+    savedLists.push(infoList); // Добавляем новый список в массив
+    
+    saveListsToLocalStorage(savedLists); 
+
+
     renderAddElement(createListElement(infoList)); 
     closePopup(popupAddList);
     event.target.reset(event);
 };
+
+
+function loadListsFromLocalStorage() {
+    const storedLists = localStorage.getItem('lists');
+    return storedLists ? JSON.parse(storedLists) : [];
+}
+
+const savedLists = loadListsFromLocalStorage();
+
+function saveListsToLocalStorage(lists) {
+    localStorage.setItem('lists', JSON.stringify(lists));
+}
+
+
 
 
 
@@ -181,6 +202,8 @@ const createListElement = (listData) => {
     const listTitle = listElement.querySelector(".game-text__icon");
     const listImg = listElement.querySelector(".status__text");
     const listComm = listElement.querySelector(".comment__text");
+    const listDeleteBtn = listElement.querySelector(".list__check-deletebtn");
+
 
 
     listName.textContent = listData.name;
@@ -192,11 +215,18 @@ const createListElement = (listData) => {
     listComm.textContent = listData.comment;
     
 
-   
-    
+    const handleDelete = () => {
+        listElement.remove();
+        const index = savedLists.findIndex((list) => list.name === listData.name);
+        if (index !== -1) {
+            savedLists.splice(index, 1); // Удаляем список из массива savedLists
+            saveListsToLocalStorage(savedLists); // Обновляем данные в локальном хранилище
+        }
+    };
 
     
-    
+
+    listDeleteBtn.addEventListener("click", handleDelete);
     return listElement;
 };
 
@@ -224,7 +254,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLists = loadListsFromLocalStorage(); // Загружаем списки из локального хранилища
+    savedLists.forEach((list) => {
+        const element = createListElement(list);
+        renderAddElement(element);
+    });
+});
 
 
 openPointsBobBtn.addEventListener("click", pointsBobEdit);
@@ -241,11 +277,14 @@ openGameBobBtn.addEventListener("click", () => openPopup(popupGame));
 popupCloseBtn.addEventListener("click", () => closePopup(popupGame));
 
 
-
-
-
 openAddList.addEventListener("click", () => openPopup(popupAddList));
 popupCloseBtnAdd.addEventListener("click", () => closePopup(popupAddList));
 popupAddList.addEventListener("click", closePopupAddByClick);
 formElementAdd.addEventListener("submit", handleAddFormSubmit); 
 formSaveAdd.addEventListener("click", closePopupAddByClick); 
+
+
+
+
+
+
