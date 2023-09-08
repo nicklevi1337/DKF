@@ -111,7 +111,7 @@ let currentDataSet = 'inventory',
     editedDataSets = {};
     
 
-    const openImg = document.getElementById('button-img');
+
 
 const editDialog = document.getElementById('dialog-edit'),
     editButton = document.getElementById('btn-edit'),

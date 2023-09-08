@@ -1,42 +1,40 @@
-html{
-    background-image: url("./images/боба-1.png");
-    background-position: center;
+
+
+
+body{
+    margin: 0;
+    background-attachment: fixed;
+    font-family: Aquatix, normal;
+    background-image: url("./images/3.jpg");
+    background-position: bottom;
     background-repeat: no-repeat;
-    position: relative;
     background-size: cover;
-    height: 82vh;
+
 }
 
 
-body {
-    display: grid;
-    grid-template-areas:
-        "a a a"
-        "b b b"
-        "c . ."
-    ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    font-family: calibri, serif;
-}
 nav {
     grid-area: a;
-
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    left: 401px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 40px;
 }
 nav a {
     color: white;
     padding: 5px 10px;
-    background: rgba(66, 22, 73, 0.8);
+    background: rgba(185, 34, 212, 0.8);
     border-radius: 15px;
     font-size: 20px;
-    box-shadow: 1px 1px 0 #bbb;
+    box-shadow: 1px 1px 0 #100d0d;
     text-decoration: none;
 }
 nav a:hover {
-    background: rgba(240, 240, 240, 1);
+    background: rgb(0, 0, 0);
 }
 div {
     grid-area: c;
@@ -44,7 +42,6 @@ div {
     display: flex;
     justify-content: flex-end;
 }
-
 
 
     /*
@@ -77,4 +74,64 @@ div {
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+html{
+    background-image: url("./images/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 100vh; 
+    
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        "c . ."
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-family: calibri, serif;
+}
+nav {
+    grid-area: a;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav a {
+    color: white;
+    padding: 5px 10px;
+    background: rgba(185, 34, 212, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #100d0d;
+    text-decoration: none;
+}
+nav a:hover {
+    background: rgb(0, 0, 0);
+}
+div {
+    grid-area: c;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+    
         */

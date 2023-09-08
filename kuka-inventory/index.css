@@ -5,11 +5,10 @@ body {
 	font-family: Calibri, serif;
 	
 	margin: 0 auto;
-	background: #1c1e20;;
+	background: #000000;
 	background-attachment: fixed;
     background-size: cover;
-	color: #20262E;
-	
+	color: #ffffff;
 	
 
 
@@ -31,6 +30,14 @@ display: flex;
     align-items: center;
     justify-content: center;
 	width: 80%;
+}
+
+.section{
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
 }
 
 .content{
@@ -59,9 +66,9 @@ flex-direction: column;
 	margin: 0 ;
 padding: 0 ;
 color: white;
-display: flex;
-flex-direction: column;
-    align-items: center;
+display       : flex;
+	flex-direction: row;
+	align-items   : center;
 	
 }
 
@@ -383,7 +390,7 @@ background-repeat: no-repeat;
     grid-template-columns: repeat(5, 1fr); /* Равномерное разделение на 4 столбца */
     gap: 20px; /* Промежуток между элементами */
     align-items: center; 
-	
+	width: 1200px;
 }
 .number{
 	margin: 0;
@@ -611,4 +618,171 @@ padding: 0;
 
 .popup__close:active {
     opacity: 1;
+}
+
+
+.list-kuk{
+	margin-top: 27px;
+	color     : white;
+	display   : grid;
+
+	gap        : 20px;
+	align-items: start;
+	width: 100%;
+}
+
+
+
+.add-kuk__text{
+	cursor       : pointer;
+	float        : left;
+	margin       : 15px 0 10px 4px;
+	width        : 32px;
+	height       : 32px;
+	border-width : 5px;
+	border-radius: 50%;
+	border-color : #ddd;
+	border-style : double;
+	background   : #9f14c5;
+	color        : #eee;
+	font-family  : monospace;
+	font-size    : 16px;
+	text-align   : center;
+	line-height  : 16px;
+	text-shadow  : 1px 1px 0 #000;
+}
+
+.add-kuk__text:hover {
+	background: #000000;
+}
+
+.add-kuk__text:focus {
+	outline: none;
+}
+
+
+.list-kuk__check{
+	margin-top           : 27px;
+	color                : white;
+	display              : grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap                  : 20px;
+	align-items          : center;
+	min-width            : 610px;
+	position             : relative;
+}
+
+
+.number__subtitle_kuk{
+	margin: 0;
+	padding: 0;
+}
+
+.mission__icon_kuk{
+	margin: 0;
+	padding: 0;
+	width  : 83px;
+}
+
+.game-text__icon_kuk{
+	margin: 0;
+	padding: 0;
+}
+
+
+.status__text_kuk{
+	margin: 0;
+	padding: 0;
+	width  : 50px;
+	height : 50px;
+}
+
+
+.comment__text_kuk{
+	margin: 0;
+	padding: 0;
+}
+
+.list-kuk__check-deletebtn{
+
+	padding          : 0;
+	margin           : 0;
+	background-image : url('../images/group__delete.svg');
+	background-color : transparent;
+	background-size  : contain;
+	background-repeat: no-repeat;
+	position         : absolute;
+	left: 1280px;
+	border           : none;
+	width            : 18px;
+	height           : 19px;
+	overflow         : hidden;
+}
+
+.list-kuk__check-deletebtn:hover {
+	cursor : pointer;
+	opacity: 0.6;
+}
+
+.popup__input_type_day {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__input_type_play {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__input_type_comm {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__link {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__container_type_stats {
+	position      : relative;
+	padding-top   : 22px;
+	padding-bottom: 25px;
+	padding-left  : 22px;
+	padding-right : 22px;
+	background    : #ffffff;
+	width         : 400px;
+	border-radius : 19px;
+	box-shadow    : 0px 0px 25px rgba(0, 0, 0, 0.15);
+	
+
+}
+
+.popup__form_type_stats {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__close_type_stats {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__save-btn_type_stats{
+	all: unset;
+	padding          : 0;
+	margin           : 0;
+    width: 400px;
+    height: 46px;
+    color: white;
+    background: #000000;
+    border-radius: 2px;
+    transition: opacity ease-in-out 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
 }

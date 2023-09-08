@@ -16,7 +16,21 @@ const popupPoints = document.querySelector('.popup_type_points');
 const popupTextPoints = document.querySelector('.popup__input_type_points');
 const formPointsSave = document.querySelector(".popup__form_type_points");
 
-
+// для таблицы
+const openAddListMus =  document.querySelector('.add-mus');
+const popupAddDay =  document.querySelector('.popup__input_type_day');
+const popupAddPlay =  document.querySelector('.popup__input_type_play');
+const popupAddLink =  document.querySelector('.popup__link');
+const popupImgLink =  document.querySelector('.popup__link_img');
+const popupAddComm =  document.querySelector('.popup__input_type_comm');
+const formElementAdd = document.querySelector(".popup__container_type_stats");
+const formSaveAdd = document.querySelector(".popup__form_type_stats");
+const deleteAddBtn = document.querySelector(".list-mus__check-deletebtn");
+const popupAddList =  document.querySelector('.popup_type_stats');
+const popupCloseBtnAdd = document.querySelector(".popup__close_type_stats");
+const popupSaveBtnAdd = document.querySelector(".popup__save-btn");
+const listTemplateMus = document.getElementById("list-mus-template");
+const listContainerMus = document.querySelector(".list-mus");
 
 
 
@@ -101,6 +115,109 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// list
+
+const popupAdd  = () => {
+    openPopup(popupAddList)
+}
+
+const popupAddClose  = () => {
+    closePopup(popupAddList)
+}
+
+function closePopupAddByClick(evt) {
+    const isOverlay = evt.target.classList.contains("popup_type_stats");
+    const isCloseBtn = evt.target.classList.contains("popup__close");
+    if (isOverlay || isCloseBtn) {
+        closePopup(popupAddList);
+    }
+}
+
+const handleAddMusFormSubmit = (event) => {
+    event.preventDefault();
+    const name = popupAddDay.value;
+    const link = popupAddLink.value;
+    const title = popupAddPlay.value;
+    const img = popupImgLink.value;
+    const comment = popupAddComm.value;
+    const infoMusList = {
+        name,
+        link,
+        title,
+        img,
+        comment
+    };
+    savedMusLists.push(infoMusList); // Добавляем новый список в массив
+    saveListsToLocalMusStorage(savedMusLists); 
+    renderAddMusElement(createListMusElement(infoMusList));
+    closePopup(popupAddList);
+    event.target.reset(event);
+};
+
+function loadListsFromLocalMusStorage() {
+    const storedMusLists = localStorage.getItem('musLists');
+    return storedMusLists ? JSON.parse(storedMusLists) : [];
+}
+
+let savedMusLists = loadListsFromLocalMusStorage();
+
+function saveListsToLocalMusStorage(lists) {
+    localStorage.setItem('musLists', JSON.stringify(lists));
+}
+
+// massiv
+const createListMusElement = (listMusData) => {
+    const listElementMus = listTemplateMus.content.querySelector(".list-mus__check").cloneNode(true);
+    const listNameMus = listElementMus.querySelector(".number__subtitle_mus");
+    const listLinkMus = listElementMus.querySelector(".mission__icon_mus");
+    const listTitleMus= listElementMus.querySelector(".game-text__icon_mus");
+    const listImgMus = listElementMus.querySelector(".status__text_mus");
+    const listCommMus = listElementMus.querySelector(".comment__text_mus");
+    const listDeleteBtnMus = listElementMus.querySelector(".list-mus__check-deletebtn");
+
+    listNameMus.textContent = listMusData.name;
+    listLinkMus.src = listMusData.link;
+    listLinkMus.alt = listMusData.name;
+    listTitleMus.textContent = listMusData.title;
+    listImgMus.src = listMusData.img;
+    listImgMus.alt = listMusData.name;
+    listCommMus.textContent = listMusData.comment;
+
+    const handleMusDelete = () => {
+        listElementMus.remove();
+        const index = savedMusLists.findIndex((list) => list.name === listMusData.name);
+        if (index !== -1) {
+            savedMusLists.splice(index, 1); // Удаляем список из массива savedLists
+            saveListsToLocalMusStorage(savedMusLists); // Обновляем данные в локальном хранилище
+        }
+    };
+
+    listDeleteBtnMus.addEventListener("click", handleMusDelete);
+
+    return listElementMus;
+};
+
+const renderAddMusElement = (listElementMus) => {
+    listContainerMus.append(listElementMus);
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    savedMusLists.forEach((list) => {
+        const element = createListMusElement(list);
+        renderAddMusElement(element);
+    });
+});
+
+
+
+
+
+
+
+
+
+
 openPointsMushegBtn.addEventListener("click", pointsMushegEdit);
 popupPoints.addEventListener("click", closePopupByClick);
 openPointsMushegBtn.addEventListener("click", () => openPopup(popupPoints));
@@ -113,3 +230,13 @@ formElement.addEventListener("submit", handleGameMushegFormSubmit);
 formSave.addEventListener("click", closePopupByClick);
 openGameMushegBtn.addEventListener("click", () => openPopup(popupGame));
 popupCloseBtn.addEventListener("click", () => closePopup(popupGame));
+
+openAddListMus.addEventListener("click", () => openPopup(popupAddList));
+popupCloseBtnAdd.addEventListener("click", () => closePopup(popupAddList));
+popupAddList.addEventListener("click", closePopupAddByClick);
+formElementAdd.addEventListener("submit", handleAddMusFormSubmit); 
+formSaveAdd.addEventListener("click", closePopupAddByClick);
+
+
+
+

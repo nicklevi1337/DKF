@@ -16,11 +16,10 @@
     <div class="page">
         <div class="content">
 
-
+            <h1 class="stats__title">Max</h1>
             <div class="img__div">
-                <h1 class="stats__title">Max</h1>
                 <img src="../images/streamers/max.jpg" class="heroes__img" alt="Герой">
-            </div>
+            
 
             <div class="info">
                 <p class="stats__subtitle">Пройденные игры</p>
@@ -28,12 +27,13 @@
                     <p class="game__text">0</p>
                     <button class="game__button" type="button"></button>
                 </div>
-                <p class="stats__subtitle">Очки</p>
+                <p class="stats__subtitle">Кредиты</p>
                 <div class="points">
                     <p class="points__text">0</p>
                     <button class="points__button" type="button"></button>
                 </div>
             </div>
+        </div>
 
             <div class="element">
                 <div class="store"></div>
@@ -47,98 +47,131 @@
                     <ul></ul>
                     <div class="clear"></div>
                 </div>
-                
-            </div>
-           
-            
-            
 
-
-            <div class="main">
-                <div class="number">
-                    <h1 class="number__title">
-                        №
-                    </h1>
-                    <p class="number__subtitle">1</p>
-                </div>
-                <div class="mission">
-                    <h1 class="number__title">
-                        Миссия
-                    </h1>
-                    <form class="mission__icon">
-                        <input class="mission__icon">
-                    </form>
-                </div>
-                <div class="game-text">
-                    <h1 class="number__title">
-                        Игра
-                    </h1>
-                    <form class="game-text__form">
-                        <input class="game-text__icon">
-                    </form>
-                </div>
-                <div class="status">
-                    <h1 class="number__title">
-                        Статус
-                    </h1>
-                    <form class="status__form">
-                        <input class="status__text">
-                    </form>
-                </div>
-                <div class="comment">
-                    <h1 class="number__title">
-                        Описание
-                    </h1>
-                    <form class="comment__form">
-                        <input class="comment__text">
-                    </form>
-                </div>
             </div>
 
 
 
 
 
+            <div class="section">
+                <div class="main">
+                    <div class="number">
+                        <h1 class="number__title">
+                            №
+                        </h1>
+                    </div>
+                    <div class="mission">
+                        <h1 class="number__title">
+                            Миссия
+                        </h1>
+                    </div>
+                    <div class="game-text">
+                        <h1 class="number__title">
+                            Игра
+                        </h1>
+                    </div>
+                    <div class="status">
+                        <h1 class="number__title">
+                            Статус
+                        </h1>
+                    </div>
+                    <div class="comment">
+                        <h1 class="number__title">
+                            Описание
+                        </h1>
+                    </div>
+                </div>
+
+
+                <div class="list-max">
+                </div>
+                <div class="add-max">
+                    <button class="add-max__text" type="button">+</button>
+                </div>
+
+
+            </div>
+
         </div>
 
 
     </div>
 
-    <div class="popup popup_type_game">
-        <div class="popup__container">
-            <h2 class="popup__title">Какие ваши успехи?</h2>
-            <form class="popup__form" name="popup__form">
-                <input type="text" placeholder="Количество игр" class="popup__input popup__input_type_game" name="popup__input popup__input_type_game">
-                <button class="popup__save-btn" type="submit">
-                    Добавить
-                </button>
-                <button class="popup__close" type="button"></button>
-            </form>
+        <div class="popup popup_type_game">
+            <div class="popup__container">
+                <h2 class="popup__title">Какие ваши успехи?</h2>
+                <form class="popup__form" name="popup__form">
+                    <input type="text" placeholder="Количество игр" class="popup__input popup__input_type_game"
+                        name="popup__input popup__input_type_game">
+                    <button class="popup__save-btn" type="submit">
+                        Добавить
+                    </button>
+                    <button class="popup__close" type="button"></button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="popup popup_type_points">
-        <div class="popup__container">
-            <h2 class="popup__title">Сколько награбили?</h2>
-            <form class="popup__form popup__form_type_points" name="popup__form">
-                <input type="text" placeholder="Ваши поинты" class="popup__input popup__input_type_points" name="popup__input popup__input_type_points">
-                <button class="popup__save-btn" type="submit">
-                    Награда
-                </button>
-                <button class="popup__close" type="button"></button>
-            </form>
+        <div class="popup popup_type_points">
+            <div class="popup__container">
+                <h2 class="popup__title">Сколько награбили?</h2>
+                <form class="popup__form popup__form_type_points" name="popup__form">
+                    <input type="text" placeholder="Ваши поинты" class="popup__input popup__input_type_points"
+                        name="popup__input popup__input_type_points">
+                    <button class="popup__save-btn" type="submit">
+                        Награда
+                    </button>
+                    <button class="popup__close" type="button"></button>
+                </form>
+            </div>
         </div>
+
+        <div class="popup popup_type_stats">
+            <div class="popup__container popup__container_type_stats">
+                <h2 class="popup__title">Впишите информацию</h2>
+                <form class="popup__form popup__form_type_stats" name="popup__form">
+                    <input type="text" placeholder="День" class="popup__input popup__input_type_day" name="day">
+                    <input type="link" placeholder="Локация" class="popup__link" name="icon">
+                    <input type="text" placeholder="Игра" class="popup__input popup__input_type_play" name="play">
+                    <input type="link" placeholder="Статус" class="popup__link_img" name="status">
+                    <input type="text" placeholder="Комментарий" class="popup__input popup__input_type_comm"
+                        name="comment">
+                        <button class="popup__save-btn popup__save-btn_type_stats" type="submit">
+                            Готово
+                        </button>
+                </form>
+              
+                <button class="popup__close popup__close_type_stats" type="button"></button>
+            </div>
+        </div>
+
+
+ <template id="list-max-template">
+        <div class="list-max__check">
+        <div class="number">
+            <p class="number__subtitle_max"></p>
+        </div>
+        <div class="mission">
+            <img class="mission__icon_max" src="#" alt="#">
+        </div>
+        <div class="game-text">
+            <p class="game-text__icon_max"></p>
+        </div>
+        <div class="status">
+            <img class="status__text_max" src="#" alt="#">
+        </div>
+        <div class="comment">
+            <p class="comment__text_max"></p>        
+        </div>
+        <button class="list-max__check-deletebtn"></button>
     </div>
+    </template>
 
 
 
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-    <script src="content.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script src="content.js"></script>
 </body>
 
 </html>

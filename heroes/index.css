@@ -2,13 +2,13 @@
     background : #250738;
     font-family: Calibri, serif;
     color      : #eee;
-    background-image: url("../history/images/art2.jpg");
+    background-image: url("../images/pic-2.jpg");
     background-attachment: fixed;
     background-size: cover;
     margin: 0 auto;
     position: absolute;
-    top: 300px;
-    left: 490px;
+    top: 284px;
+    left: 462px;
         display: grid;
         grid-template-areas:
             "a a a"

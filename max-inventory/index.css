@@ -5,10 +5,10 @@ body {
 	font-family: Calibri, serif;
 	
 	margin: 0 auto;
-	background: #1c1e20;;
+	background: #000000;
 	background-attachment: fixed;
     background-size: cover;
-	color: #20262E;
+	color: #ffffff;
 	
 	
 
@@ -54,14 +54,22 @@ flex-direction: column;
 	*/
 }
 
+.section{
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+}
+
 
 .img__div{
 	margin: 0 ;
 padding: 0 ;
 color: white;
-display: flex;
-flex-direction: column;
-    align-items: center;
+display       : flex;
+	flex-direction: row;
+	align-items   : center;
 	
 }
 
@@ -73,7 +81,8 @@ flex-direction: column;
     color: white;
 	align-items: center;
 	margin-bottom: 27px;
-	margin-top: 17px;
+    margin-top: 17px;
+    margin-left: 25px;
 
 	
 }
@@ -385,6 +394,7 @@ background-repeat: no-repeat;
     grid-template-columns: repeat(5, 1fr); /* Равномерное разделение на 4 столбца */
     gap: 20px; /* Промежуток между элементами */
     align-items: center; 
+	width: 1200px;
 	
 }
 .number{
@@ -403,7 +413,7 @@ background-repeat: no-repeat;
 
 
 
-.number__subtitle{
+.number__subtitle_max{
 	margin: 0;
 padding: 0;
 }
@@ -424,9 +434,10 @@ padding: 0;
 	padding: 0;
 }
 
-.mission__icon{
+.mission__icon_max{
 	margin: 0;
 	padding: 0;
+	width  : 83px;
 }
 
 .game-text{
@@ -443,6 +454,11 @@ padding: 0;
 	padding: 0;
 }
 
+
+.game-text__icon_max{
+	margin: 0;
+	padding: 0;
+}
 .game-text__title{
 	margin: 0;
 	padding: 0;
@@ -463,9 +479,11 @@ padding: 0;
 	padding: 0;
 }
 
-.status__text{
+.status__text_max{
 	margin: 0;
 	padding: 0;
+	width  : 50px;
+	height : 50px;
 }
 
 .comment{
@@ -475,6 +493,14 @@ padding: 0;
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
+	max-width: 115px;
+
+}
+
+.comment__text_max{
+	margin: 0;
+	padding: 0;
+	
 
 }
 
@@ -616,6 +642,141 @@ padding: 0;
 }
 
 
+.list-max{
+	margin-top: 27px;
+	color     : white;
+	display   : grid;
+
+	gap        : 20px;
+	align-items: start;
+	width: 100%;
+
+}
+
+
+.list-max__check {
+	margin-top           : 27px;
+	color                : white;
+	display              : grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap                  : 20px;
+	align-items          : center;
+	min-width            : 610px;
+	position             : relative;
+
+}
+
+.list-max__check-deletebtn {
+
+	padding          : 0;
+	margin           : 0;
+	background-image : url('../images/group__delete.svg');
+	background-color : transparent;
+	background-size  : contain;
+	background-repeat: no-repeat;
+	position         : absolute;
+	left: 1179px;
+	border           : none;
+	width            : 18px;
+	height           : 19px;
+	overflow         : hidden;
+}
+
+.list-max__check-deletebtn:hover {
+	cursor : pointer;
+	opacity: 0.6;
+}
 
 
 
+.add-max__text {
+	cursor       : pointer;
+	float        : left;
+	margin       : 15px 0 10px 4px;
+	width        : 32px;
+	height       : 32px;
+	border-width : 5px;
+	border-radius: 50%;
+	border-color : #ddd;
+	border-style : double;
+	background   : #9f14c5;
+	color        : #eee;
+	font-family  : monospace;
+	font-size    : 16px;
+	text-align   : center;
+	line-height  : 16px;
+	text-shadow  : 1px 1px 0 #000;
+
+}
+
+.add-max__text:hover {
+	background: #000000;
+}
+
+.add-max__text:focus {
+	outline: none;
+}
+
+
+.popup__input_type_day {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__input_type_play {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__input_type_comm {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__link {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__container_type_stats {
+	position      : relative;
+	padding-top   : 22px;
+	padding-bottom: 25px;
+	padding-left  : 22px;
+	padding-right : 22px;
+	background    : #ffffff;
+	width         : 400px;
+	border-radius : 19px;
+	box-shadow    : 0px 0px 25px rgba(0, 0, 0, 0.15);
+	
+
+}
+
+.popup__form_type_stats {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__close_type_stats {
+	padding          : 0;
+	margin           : 0;
+}
+
+.popup__save-btn_type_stats{
+	all: unset;
+	padding          : 0;
+	margin           : 0;
+    width: 400px;
+    height: 46px;
+    color: white;
+    background: #000000;
+    border-radius: 2px;
+    transition: opacity ease-in-out 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
