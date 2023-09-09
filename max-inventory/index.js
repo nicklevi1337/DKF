@@ -5,27 +5,27 @@ const items = [
    
     {
         img: 'images/051.png',
-        title: 'Читерский кубик',
+        title: 'Гипнотические макасины',
         count: 1,
     },
     {
         img: 'images/052.png',
-        title: 'Кубик хуюбик',
+        title: 'Ножик-хуежик',
         count: 1,
 
     },
     {
         img: 'images/053.png',
-        title: 'Туалетка',
+        title: 'Бронежилет ВДВ',
         count: 1,
     },
     {
         img: 'images/054.png',
-        title: 'Очки EZ',
+        title: 'Очки для слежки',
     },
     {
         img: 'images/055.png',
-        title: 'Свиток рерола',
+        title: 'V.I.P для утех',
         count: 1,
     },
     {
@@ -34,7 +34,7 @@ const items = [
     },
     {
         img: 'images/057.png',
-        title: 'Бесконечная Манга',
+        title: 'Альманах Девственника',
         count: 1,
     },
     {
@@ -44,37 +44,37 @@ const items = [
     },
     {
         img: 'images/059.png',
-        title: 'Парные кольца',
+        title: 'Кольцо шокерной любви',
         count: 4,
     },
     {
         img: 'images/060.png',
-       title: 'Рука для fisting',
+       title: 'Меч Гаччиста',
         count: 5,
     },
     {
         img: 'images/061.png',
-        title: 'Чулки Гилтикуса',
+        title: 'Трусы Трапика',
         count: 1,
     },
     {
         img: 'images/062.png',
-        title: 'Четырехлистный клевер',
+        title: 'Умная татуировка',
         count: 1,
     },
     {
         img: 'images/063.png',
-        title: 'Тухлая шаурма',
+        title: 'Плазменный дробовик',
         count: 2,
     },
    {
        img: 'images/064.png',
-       title: 'Чокер боли',
+       title: 'Глитч-боли',
         count: 1,
     },
     {
         img: 'images/065.png',
-        title: 'Наперсток удачи'
+        title: 'Брелок удачи'
     },
    {
         img: 'images/066.png',
@@ -83,83 +83,218 @@ const items = [
     },
     {
         img: 'images/067.png',
-        title: 'Шоколадный Рулет',
+        title: 'Хачапури по-скуфски',
         count: 1,
     },
     {
         img: 'images/068.png',
-        title: 'Штрафная квитанция',
+        title: 'Генератор неприятностей',
         count: 1,
     },
     {
         img: 'images/069.png',
-        title: 'Стул мамы Мерфи',
+        title: 'Поддельные отпечатки пальцев',
         count: 1,
     },
     {
         img: 'images/070.png',
-        title: 'Дырявый парашют',
+        title: 'Брелок неудачника',
         count: 1,
     },
     {
         img: 'images/071.png',
-        title: 'Мошнаторы Здесь? - На месте!'
+        title: 'Да не умер он!'
     },
     {
         img: 'images/072.png',
-        title: 'Плюсовый блокнот'
+        title: 'Браслет взлома'
     },
     {
         img: 'images/073.png',
-        title: 'Корона короля петучей',
+        title: 'Маска Анимешника',
         count: 1,
     },
     {
         img: 'images/074.png',
-        title: 'Бомба',
+        title: 'Русская Рулетка',
         count: 2,
     },
     
     {
         img: 'images/075.png',
-        title: 'Мистер Ржавчик',
+        title: 'Клинок Ассасина',
         
     },
 
     {
         img: 'images/076.png',
-       title: 'Грабли',
+       title: 'Тайзер 3000',
        
     },
     {
         img: 'images/077.png',
-        title: 'Всепоглощающий свин',
+        title: 'Всепоглощающий мульти-кастет',
         
     },
     {
         img: 'images/078.png',
-        title: 'Липкая жижа',
+        title: 'Военно-наркотический шприц "ZOV"',
          
     },
     {
         img: 'images/079.png',
-        title: 'Комп с Алика',
+        title: 'Китайский робот-убийца Сиаоми',
          
     },
     {
         img: 'images/080.png',
-        title: 'Вор Трусов',
+        title: 'Карта Взлома',
          
     },
     
     {
         img: 'images/081.png',
-        title: 'Увы',
+        title: 'Носки Боба',
+        count: 1,
         
     },
     {
         img: 'images/082.png',
-        title: 'Часовой рост',
+        title: 'Вирусный калькулятор',
+        
+    },
+    {
+        img: 'images/083.png',
+        title: 'Ну купи, купи Старфилд',
+        count: 1,
+        
+    },
+    {
+        img: 'images/084.png',
+        title: 'Слежка корпораций',
+        
+    },
+    {
+        img: 'images/085.png',
+        title: 'Засада',
+        
+    },
+    {
+        img: 'images/086.png',
+        title: 'Добро пожаловать в прошлое',
+        count: 2,
+        
+    },
+
+    {
+        img: 'images/006.png',
+        title: 'Кефир вне времени',
+        
+    },
+    {
+        img: 'images/005.png',
+        title: 'ИИ Октавия',
+        
+    },
+    {
+        img: 'images/008.png',
+        title: 'Два по цене одного',
+        
+    },
+    {
+        img: 'images/010.png',
+        title: 'Плавучий курс',
+        
+    },
+    {
+        img: 'images/011.png',
+        title: 'Туз в рукаве',
+        
+    },
+    {
+        img: 'images/012.png',
+        title: 'Телепорт обмена',
+        
+    },
+    {
+        img: 'images/013.png',
+        title: 'Кредитный чип корпа',
+        
+    },
+    {
+        img: 'images/014.png',
+        title: 'LMAO',
+        
+    },
+
+    {
+        img: 'images/015.png',
+        title: 'Проверка на IQ',
+        
+    },
+    {
+        img: 'images/016.png',
+        title: 'Еперный рот этого казино',
+        
+    },
+    {
+        img: 'images/017.png',
+        title: 'Ой, извините',
+        
+    },
+    {
+        img: 'images/018.png',
+        title: 'Кам Мунизм',
+        
+    },
+    {
+        img: 'images/019.png',
+        title: 'Перстень религиозного культа',
+        
+    },
+    {
+        img: 'images/020.png',
+        title: 'Кибер-сигареты Red Apple',
+        
+    },
+    {
+        img: 'images/021.png',
+        title: 'Штаны Торопыги',
+        
+    },
+    {
+        img: 'images/022.png',
+        title: 'Куб Мелстроя',
+        
+    },
+    {
+        img: 'images/023.png',
+        title: 'Кнопки выбора',
+        
+    },
+    {
+        img: 'images/024.png',
+        title: 'Обруч дополнительно реальности',
+        
+    },
+    {
+        img: 'images/027.png',
+        title: 'Выбор Бумер',
+        
+    },
+    {
+        img: 'images/028.png',
+        title: 'Выбор Зумер',
+        
+    },
+    {
+        img: 'images/030.png',
+        title: 'Я здесь Закон',
+        
+    },
+    {
+        img: 'images/001.png',
+        title: 'Мистер Президент',
         
     },
     

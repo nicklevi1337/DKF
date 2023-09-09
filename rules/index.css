@@ -106,24 +106,26 @@
 .image__buff{
     margin        : 0;
     padding       : 0;
-    object-fit: cover;
-    
+    object-fit: contain;
+    width: 95px;
     background-position: 50%;
     background-repeat: no-repeat;
-    border: 5px solid #20367d;
+    border: 3px solid #20367d;
     border-radius: 2px;
     box-sizing: border-box;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .image__debuff{
     margin        : 0;
     padding       : 0;
-    object-fit: cover;
-    
+    object-fit: contain;
+    width: 95px;
     background-position: 50%;
     background-repeat: no-repeat;
-    border: 5px solid #a01c1c;
+    border: 3px solid #a01c1c;
     border-radius: 2px;
     box-sizing: border-box;
     margin-left: 10px;
@@ -132,25 +134,27 @@
 .image__event{
     margin        : 0;
     padding       : 0;
-    object-fit: cover;
+    object-fit: contain;
     background-position: 50%;
     background-repeat: no-repeat;
-    border: 5px solid #6e1e62;
+    border: 3px solid #6e1e62;
     border-radius: 2px;
     box-sizing: border-box;
     margin-left: 10px;
+    width: 95px;
 }
 
 .image__trap{
     margin        : 0;
     padding       : 0;
-    object-fit: cover;
+    object-fit: contain;
     background-position: 50%;
     background-repeat: no-repeat;
-    border: 5px solid #217b2b;
+    border: 3px solid #217b2b;
     border-radius: 2px;
     box-sizing: border-box;
     margin-left: 10px;
+    width: 95px;
 }
 
 .effect{
@@ -159,7 +163,7 @@
     line-height: 22px;
     font-size: 20px;
     font-weight   : normal;
-    
+    max-width: 538px;
 
 }
 

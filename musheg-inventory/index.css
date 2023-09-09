@@ -204,10 +204,11 @@ display       : flex;
 .cell {
 	position: relative;
 	float: left;
-	width: 100px;
-	height: 100px;
-	background-color: #ddd;
-	border: 4px ridge #d0733d;
+	width: 130px;
+    height: 199px;
+/*	background-color: #dccece; */
+background : rgb(87, 40, 97);
+	border          : 4px ridge rgb(234, 213, 29);
 	margin-left: -0px;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -324,10 +325,9 @@ display       : flex;
 	user-select: none;
 	display: none;
 	margin-top: 10px;
-	background: #bbb;
-	height: 247px;
-	width: 150px;
-	overflow-y: scroll;
+	background : rgb(80, 42, 96);
+	height: 164px;
+	overflow-x: hidden;
 	
 }
 .selector ul {
@@ -337,10 +337,13 @@ display       : flex;
 .selector li {
 	list-style-type: none;
 	float: left;
-	width: 63px;
-	height:60px;
-	box-sizing: border-box;
-	
+	width: 47px;
+    height: 85px;
+	box-sizing     : border-box;
+	align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .selector li:hover {
 	background: #ddd;
