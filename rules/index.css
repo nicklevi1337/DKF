@@ -201,3 +201,15 @@
     padding       : 0;
     color: rgb(221, 32, 22);
 }
+
+.text__span-trap{
+    margin        : 0;
+    padding       : 0;
+    color: #217b2b;
+}
+
+.text__span-event{
+    margin        : 0;
+    padding       : 0;
+    color: #6e1e62;
+}

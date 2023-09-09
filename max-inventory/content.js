@@ -213,7 +213,44 @@ formSaveAdd.addEventListener("click", closePopupAddByClick);
 
 
 
+/*
+function handlePointsFormSubmit(evt) {
+    evt.preventDefault();
+    const newPointsValue = popupTextPoints.value;
+    pointsText.textContent = newPointsValue;
+    closePopup(popupPoints);
+    evt.target.reset(evt);
+    saveNumberToLocalStorage('pointsValue', newPointsValue);
+}
 
+function handleGameFormSubmit(evt) {
+    evt.preventDefault();
+    const newGameValue = popupTextGame.value;
+    gameText.textContent = newGameValue;
+    closePopup(popupGame);
+    evt.target.reset(evt);
+    saveNumberToLocalStorage('gameValue', newGameValue);
+}
+
+function saveNumberToLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+}
+
+function loadNumberFromLocalStorage(key) {
+    return localStorage.getItem(key);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedPointsValue = loadNumberFromLocalStorage('pointsValue');
+    if (savedPointsValue !== null) {
+        pointsText.textContent = savedPointsValue;
+    }
+    const savedGameValue = loadNumberFromLocalStorage('gameValue');
+    if (savedGameValue !== null) {
+        gameText.textContent = savedGameValue;
+    }
+});
+*/
 
 
 
