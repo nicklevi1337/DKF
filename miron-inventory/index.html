@@ -16,24 +16,25 @@
     <div class="page">
         <div class="content">
 
-
+            <h1 class="stats__title">Miron</h1>
             <div class="img__div">
-                <h1 class="stats__title">Miron</h1>
                 <img src="" class="heroes__img" alt="Герой">
-            </div>
+
 
             <div class="info">
-                <p class="stats__subtitle">Пройденные игры</p>
+                <p class="stats__subtitle">Выполненные миссии</p>
                 <div class="game">
                     <p class="game__text">0</p>
                     <button class="game__button" type="button"></button>
                 </div>
-                <p class="stats__subtitle">Очки</p>
+                <p class="stats__subtitle">Кредиты</p>
                 <div class="points">
                     <p class="points__text">0</p>
                     <button class="points__button" type="button"></button>
                 </div>
             </div>
+        </div>
+
 
             <div class="element">
                 <div class="table"></div>
@@ -53,45 +54,43 @@
 
 
 
-            <div class="main">
-                <div class="number">
-                    <h1 class="number__title">
-                        №
-                    </h1>
-                    <p class="number__subtitle">1</p>
+            <div class="section">
+                <div class="main">
+                    <div class="number">
+                        <h1 class="number__title">
+                            №
+                        </h1>
+                    </div>
+                    <div class="mission">
+                        <h1 class="number__title">
+                            Миссия
+                        </h1>
+                    </div>
+                    <div class="game-text">
+                        <h1 class="number__title">
+                            Игра
+                        </h1>
+                    </div>
+                    <div class="status">
+                        <h1 class="number__title">
+                            Статус
+                        </h1>
+                    </div>
+                    <div class="comment">
+                        <h1 class="number__title">
+                            Описание
+                        </h1>
+                    </div>
                 </div>
-                <div class="mission">
-                    <h1 class="number__title">
-                        Миссия
-                    </h1>
-                    <form class="mission__form">
-                        <input class="mission__icon">
-                    </form>
+
+
+                <div class="list-mir">
                 </div>
-                <div class="game-text">
-                    <h1 class="number__title">
-                        Игра
-                    </h1>
-                    <form class="game-text__form">
-                        <input class="game-text__icon">
-                    </form>
+                <div class="add-mir">
+                    <button class="add-mir__text" type="button">+</button>
                 </div>
-                <div class="status">
-                    <h1 class="number__title">
-                        Статус
-                    </h1>
-                    <form class="status__form">
-                        <input class="status__text">
-                    </form>
-                </div>
-                <div class="comment">
-                    <h1 class="number__title">
-                        Описание
-                    </h1>
-                    <form class="comment__form">
-                        <input class="comment__text">
-                    </form>
-                </div>
+
+
             </div>
 
 
@@ -129,7 +128,46 @@
     </div>
 
 
+    <div class="popup popup_type_stats">
+        <div class="popup__container popup__container_type_stats">
+            <h2 class="popup__title">Впишите информацию</h2>
+            <form class="popup__form popup__form_type_stats" name="popup__form">
+                <input type="text" placeholder="День" class="popup__input popup__input_type_day" name="day">
+                <input type="link" placeholder="Локация" class="popup__link" name="icon">
+                <input type="text" placeholder="Игра" class="popup__input popup__input_type_play" name="play">
+                <input type="link" placeholder="Статус" class="popup__link_img" name="status">
+                <input type="text" placeholder="Комментарий" class="popup__input popup__input_type_comm"
+                    name="comment">
+                    <button class="popup__save-btn popup__save-btn_type_stats" type="submit">
+                        Готово
+                    </button>
+            </form>
+          
+            <button class="popup__close popup__close_type_stats" type="button"></button>
+        </div>
+    </div>
 
+
+<template id="list-mir-template">
+    <div class="list-mir__check">
+    <div class="number">
+        <p class="number__subtitle_mir"></p>
+    </div>
+    <div class="mission">
+        <img class="mission__icon_mir" src="#" alt="#">
+    </div>
+    <div class="game-text">
+        <p class="game-text__icon_mir"></p>
+    </div>
+    <div class="status">
+        <img class="status__text_mir" src="#" alt="#">
+    </div>
+    <div class="comment">
+        <p class="comment__text_mir"></p>        
+    </div>
+    <button class="list-mir__check-deletebtn"></button>
+</div>
+</template>
 
 
 

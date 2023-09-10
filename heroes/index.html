@@ -1,23 +1,311 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Герои</title>
 
     <link rel="stylesheet" href="index.css" />
-    
+    <link rel="stylesheet" href="cyberpunk.css">
+
 </head>
 
 
 <body class="root">
     <nav class="heroes">
-        <a href="../bob-inventory/" target="_blank" class="heroes__bob">bOB</a>
-        <a href="../max-inventory/" target="_blank" class="heroes__max">max</a>
-        <a href="../musheg-inventory/" target="_blank" class="heroes__musheg">musheg</a>
-        <a href="../kuka-inventory/" target="_blank" class="heroes__kuka">kuka</a>
-        <a href="../sanya-inventory/" target="_blank" class="heroes__sanya">sanya</a>
-        <a href="../miron-inventory/" target="_blank" class="heroes__miron">miron</a>
-        <a href="../alan-inventory/" target="_blank" class="heroes__miron">Alan</a>
+        <div class="element">
+            <a href="../bob-inventory/" target="_blank" class="heroes__bob"></a>
+            <button class="cyber-button-small bg-purple fg-white  element__button-bob" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../max-inventory/" target="_blank" class="heroes__max"></a>
+            <button class="cyber-button-small bg-purple fg-white element__button-max" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../musheg-inventory/" target="_blank" class="heroes__musheg"></a>
+            <button class="cyber-button-small bg-purple fg-white element__button-musheg" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../kuka-inventory/" target="_blank" class="heroes__kuka"></a>
+            <button class="cyber-button-small bg-purple fg-white element__button-kuka" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../sanya-inventory/" target="_blank" class="heroes__sanya"></a>
+            <button class="cyber-button-small bg-purple fg-white element__button-sanya" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../miron-inventory/" target="_blank" class="heroes__miron"></a>
+            <button class="cyber-button-small bg-purple fg-white element__button-miron" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
+        <div class="element">
+            <a href="../alan-inventory/" target="_blank" class="heroes__alan">
+            </a>
+            <button class="cyber-button-small bg-purple fg-white element__button-alan" type="button">
+                Совершенно секретно!
+                <span class="glitchtext"></span>
+            </button>
+        </div>
     </nav>
 
-        </body>
+
+    <div class="popup popup_type_bob">
+        <div class="popup__container">
+            <h1 class="popup__title">РОЗЫСКИВАЕТСЯ !!!</h1>
+            <h2 class="popup__subtitle">КОД: CPRT-5578-Class A</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/bob.jpg" alt="Bob">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст: <span class="popup__stats-age_span">23</span></p>
+                    <p class="popup__stats-name">Имя: <span class="popup__stats-name_span">Боб</span></p>
+                    <p class="popup__stats-cli">Кличка: <span class="popup__stats-cli_span">Киллер Б</span></p>
+                    <p class="popup__stats-weapon">Оружие: <span class="popup__stats-weapon_span">Самурайский меч</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда: <span class="popup__stats-coin_span">10 000 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Киллер Б был служителем тайного клана, контролирующего подпольное киберпространство и торговлю
+                кибернетическим оружием. Он был их защитником и их мечом в мире бетонных джунглей Неона. Его сила и
+                навыки были безграничными, и его клинок был острее любого другого. Но внутри него таял тайный страх, что
+                однажды его прошлое нагонит.
+            </p>
+            <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                И вот однажды, когда он следил за одной из поставок кибернетического оружия в сделке, что должна была
+                укрепить позиции его клана, его прошлое навсегда вернулось. Оказалось, что его недавний клиент -
+                высокопоставленный корпоративный магнат - решил избавиться от свидетеля его сомнительных сделок.
+                Контракт на устранение Киллер Б был выставлен, и за ним начали охотиться корпоративные наемники, от
+                которых не уйти.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+    <div class="popup popup_type_max">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: CDEF-2468-Class A</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/max.jpg" alt="Max">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">18</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Максвил</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Подрыватель</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Взрывчатка</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span">30 000 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Максвил "Подрыватель" был безжалостным наемником в мире, где власть принадлежала тем, кто умел
+                использовать силу и технологии. Его имя было синонимом хаоса и разрушения, а его оружие - гранатамет -
+                вызывало ужас даже у самых отчаянных противников. Награда за его голову составляла огромную сумму в 30
+                000 000 кредитов, что делало его одним из самых разыскиваемых наемников в киберпанковском мире.
+            </p>
+            <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                Подрыватель был человеком с холодными глазами и железным характером. Его жизнь была полна насилия и
+                адреналина, и он наслаждался каждой секундой этой агонии. Он был мастером в обращении с гранатами и
+                взрывчаткой, и его умение применять их в бою было безупречным. Его снаряжение всегда было на высшем
+                уровне, и он никогда не оставлял следов, которые могли бы привести к его обнаружению.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_musheg">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: EFGH-1357-Class B</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/bob.jpg" alt="Мушег">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">22</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Мушегус</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Черная Рука</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Кибер-сабли</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span">5 000 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Мушегус "Черная Рука" был таинственным и опасным наемником, чье имя стало символом смерти и
+                кровопролития. Его кибер-сабли были оружием смертоносной красоты и точности. За его голову была
+                назначена награда в размере 5 000 000 кредитов, что привлекло внимание многих охотников за головами и
+                корпоративных ассасинов.
+            </p>
+            <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                "Черная Рука" славился своей хладнокровностью и умением сражаться. Его навыки владения кибер-саблями
+                были безупречными, и он мог разрубить цель на куски, не прикоснувшись к ней. Он действовал скрытно и
+                эффективно, оставляя за собой лишь следы мертвых тел и смешанные слухи.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_kuka">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: IJKL-4321-Class S</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/kuka.jpg" alt="Кука">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">20</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Кука</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Биг Чон</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Руки-Горилы</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span">50 000 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Биг Чон был знаменит своей физической силой и неудержимостью в бою. Его руки-горилы позволяли ему
+                разбивать бетонные стены и уничтожать любых противников, не зависимо от их числа. Он был настоящим
+                монстром в бою и не знал слова "поражение".
+            </p>
+            <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                Но за железным обликом и безжалостностью, Кука также был человеком с мрачным прошлым и собственными
+                демонами. Его жизнь была сплетением насилия и борьбы за выживание, и он не имел никаких иллюзий о
+                природе мира, в котором он жил. Его репутация была такова, что даже корпорации не решались вступать с
+                ним в конфронтацию, предпочитая платить за его услуги, чем становиться его врагами.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_sanya">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: UVWX-9876-Class B</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/sanya.jpg" alt="Александро">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">27</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Александро</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Док</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Химические
+                            реагенты</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span">1 000 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Александро "Док" был безумным ученым в мире, где наука и технологии шли рука об руку с криминалом и
+                корпоративными интригами. Его оружие - химические реагенты, были не менее опасными, чем пушки и мечи. За
+                его голову была выставлена награда всего в 1 000 000 кредитов, но его опасность заключалась в его
+                гениальности и непредсказуемости.
+            </p>
+            <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                Док был мастером в области химии и биологии, и он создавал смертоносные смеси, способные уничтожить
+                целые районы города или заразить врагов смертельными болезнями. Его исследования были запрещены, и его
+                имя было вне закона, но это не останавливало его. Он уходил в тени и проводил опасные эксперименты,
+                которые могли изменить баланс сил в киберпанковском мире.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+
+    <div class="popup popup_type_miron">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: MNOP-5678-Class S</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/bob.jpg" alt="Мирко">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">30</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Мирко</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Рэмбо</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Арсенал СССР</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span">100 000 000
+                            кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Мирко "Рэмбо" был ветераном военных конфликтов в киберпанковском мире и стал символом непобедимости и
+                силы. Его оружие - арсенал СССР - было старым, но надежным, и оно превращало его в машину разрушения. За
+                его голову была выставлена огромная награда в размере 100 000 000 кредитов, что делало его одной из
+                самых дорогих целей в мире.
+                </p>
+                <div class="popup__line"></div>
+                <p class="popup__theme_sec">
+                Рэмбо был бывшим солдатом и имел огромный опыт в военных операциях. Его тактические навыки были
+                безупречными, и он мог разорвать любое ополчение на части с помощью своего арсенала. Его верность и
+                преданность были безупречными, и он всегда выполнял свои задачи, несмотря на сложность или опасность.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+    <div class="popup popup_type_alan">
+        <div class="popup__container">
+            <h1 class="popup__title">Розыскивается!</h1>
+            <h2 class="popup__subtitle">КОД: QRST-1234-Class C</h2>
+            <div class="popup__form">
+                <img class="popup__img" src="../images/streamers/bob.jpg" alt="Алан">
+                <div class="popup__stats">
+                    <p class="popup__stats-age">Возраст <span class="popup__stats-age_span">18</span></p>
+                    <p class="popup__stats-name">Имя <span class="popup__stats-name_span">Алан</span></p>
+                    <p class="popup__stats-cli">Кличка <span class="popup__stats-cli_span">Киборг</span></p>
+                    <p class="popup__stats-weapon">Оружие <span class="popup__stats-weapon_span">Любое оружие даже его
+                            тело</span>
+                    </p>
+                    <p class="popup__stats-coin">Награда <span class="popup__stats-coin_span"> 500 000 кредитов</span>
+                    </p>
+                </div>
+            </div>
+            <div class="popup__line"></div>
+            <p class="popup__theme">
+                Алан "Киборг" был живым примером технологической эволюции в киберпанковском мире. Практически не
+                осталось человеческих конечностей в его теле, и он стал одним из самых мощных и опасных существ в мире.
+                За его голову была выставлена награда всего в 500 000 кредитов, но это не отражало его истинной
+                ценности.
+            </p>
+            <div class="popup__line"></div>
+            <p class="popup__theme_sec">
+                "Киборг" был оборудован различными видами оружия, которое он мог интегрировать в свое механическое тело.
+                Он был неуязвимым, быстро реагировал и мог легко противостоять армиям врагов. Его технологические
+                улучшения давали ему преимущество в любой ситуации.
+            </p>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>

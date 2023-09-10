@@ -1,12 +1,35 @@
+@font-face 
+{
+    font-family:BlenderProBook;
+    font-style:normal;
+    font-weight:400;
+    src:url(fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face 
+{
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face 
+{
+    font-family: Cyberpunk;
+    src: url(fonts/Cyberpunk.otf) format('opentype');
+}
+
+
 
 
 .root {
-    background : #250738;
-    font-family: "Aquatix", "Arial", sans-serif;
-    color      : #eee;
-    background-image: url("../images/pic-3.png");
+    background           : #250738;
+    font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
+        color                : #eee;
+    background-image     : url("../images/pic-3.png");
     background-attachment: fixed;
-    background-size: cover;
+    background-size      : cover;
 }
 
 .page {
@@ -37,12 +60,13 @@
     margin       : 0;
     padding      : 0;
     margin-bottom: 50px;
-    font-family: "Aquatix Bold", sans-serif;
-    line-height  : 1.15;
-    font-size    : 60px;
-    font-weight  : 700;
-    text-align   : center;
-    max-width: 885px;
+    
+    line-height: 1.15;
+    font-size  : 60px;
+    text-align : center;
+    max-width  : 885px;
+    font-weight: 700; 
+    font-style : bold; 
 }
 
 .subtitle {
@@ -50,8 +74,8 @@
     padding       : 0;
     line-height   : 42px;
     font-size     : 30px;
-    font-family: "Aquatix", sans-serif;
-    font-weight   : normal;
+    font-weight: 400;
+    font-style : normal;
     white-space   : pre-line;
     padding-bottom: 35px;
     text-align    : center;
@@ -73,11 +97,16 @@
 .paragraph {
 
     background-color: rgba(36, 23, 45, 0.2);
-    padding      : 0;
-    align-self   : flex-start;
-    padding-top  : 92px;
-    margin-bottom: 45px;
-    margin-left: 25px;
+    padding         : 0;
+    align-self      : flex-start;
+    padding-top     : 92px;
+    margin-bottom   : 45px;
+    margin-left     : 25px;
+
+
+
+
+
 }
 
 .title-second {
@@ -87,6 +116,7 @@
     line-height   : 58px;
     padding-bottom: 40px;
     text-align    : left;
+    font-weight: 700; 
 }
 
 .subtitle-second {
@@ -98,7 +128,7 @@
     line-height   : 163%;
     padding-bottom: 33px;
     text-align    : left;
-
+    font-weight: 400; 
 }
 
 .list {
@@ -360,10 +390,10 @@
 }
 
 .place__image-left {
-    padding: 0;
-    margin : 0;
+    padding   : 0;
+    margin    : 0;
     object-fit: cover;
-    width: 80%
+    width     : 80%
 }
 
 .place__image-loc {
@@ -373,10 +403,10 @@
 }
 
 .place__image-right {
-    padding: 0;
-    margin : 0;
+    padding   : 0;
+    margin    : 0;
     object-fit: cover;
-    width: 80%
+    width     : 80%
 }
 
 
@@ -385,8 +415,8 @@
     padding       : 0;
     display       : flex;
     flex-direction: column;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top    : 35px;
+    margin-bottom : 35px;
 }
 
 .place__subtitle__left {
@@ -421,142 +451,143 @@
     padding       : 0;
     display       : flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 45px;
+    align-items   : center;
+    margin-top    : 45px;
 
 }
 
 .place__info-text {
-    margin     : 0;
-    padding    : 0;
-    font-size  : 35px;
-    line-height: 46px;
+    margin        : 0;
+    padding       : 0;
+    font-size     : 35px;
+    line-height   : 46px;
     padding-bottom: 20px;
 }
 
 .place__button {
-    margin       : 0;
-    padding      : 0;
-    
+    margin : 0;
+    padding: 0;
+
     width: 250px;
-    
+
     border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
-   
-    font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
+    background   : rgba(136, 5, 224, 0.8);
+
+    font-size      : 20px;
+    box-shadow     : 1px 1px 0 #bbb;
     text-decoration: none;
-            color: white;
-            text-align: center;
-            opacity: 1;
-    transition: opacity 0.5s;
+    color          : white;
+    text-align     : center;
+    opacity        : 1;
+    transition     : opacity 0.5s;
 }
 
 
 .place__button-third {
-    margin       : 0;
-    padding      : 0;
-    
-    width: 200px;
+    margin : 0;
+    padding: 0;
+
+    width        : 200px;
     border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
-   
-    font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
+    background   : rgba(136, 5, 224, 0.8);
+
+    font-size      : 20px;
+    box-shadow     : 1px 1px 0 #bbb;
     text-decoration: none;
-            color: white;
-            text-align: center;
-            opacity: 1;
-    transition: opacity 0.5s;
+    color          : white;
+    text-align     : center;
+    opacity        : 1;
+    transition     : opacity 0.5s;
 }
+
 .place__button-one {
-    margin       : 0;
-    padding      : 0;
-    
-    width: 200px;
+    margin : 0;
+    padding: 0;
+
+    width        : 200px;
     border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
-   
-    font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
+    background   : rgba(136, 5, 224, 0.8);
+
+    font-size      : 20px;
+    box-shadow     : 1px 1px 0 #bbb;
     text-decoration: none;
-            color: white;
-            text-align: center;
-            opacity: 1;
-    transition: opacity 0.5s;
+    color          : white;
+    text-align     : center;
+    opacity        : 1;
+    transition     : opacity 0.5s;
 }
+
 .place__button-second {
-    margin       : 0;
-    padding      : 0;
-    
-    width: 200px;
+    margin : 0;
+    padding: 0;
+
+    width        : 200px;
     border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
-   
-    font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
+    background   : rgba(136, 5, 224, 0.8);
+
+    font-size      : 20px;
+    box-shadow     : 1px 1px 0 #bbb;
     text-decoration: none;
-            color: white;
-            text-align: center;
-            opacity: 1;
-    transition: opacity 0.5s;
+    color          : white;
+    text-align     : center;
+    opacity        : 1;
+    transition     : opacity 0.5s;
 }
 
 
-.place__button-four{
-    margin       : 0;
-    padding      : 0;
-    width: 200px;
-    border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
-    font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
+.place__button-four {
+    margin         : 0;
+    padding        : 0;
+    width          : 200px;
+    border-radius  : 15px;
+    background     : rgba(136, 5, 224, 0.8);
+    font-size      : 20px;
+    box-shadow     : 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 0.5s;
+    color          : white;
+    text-align     : center;
+    opacity        : 1;
+    transition     : opacity 0.5s;
 }
 
 .place__button:hover {
-opacity: 0.8;
-background-color: rgb(162, 32, 32);
+    opacity         : 0.8;
+    background-color: rgb(162, 32, 32);
 }
 
 
-.place__button-one:hover{
-    opacity: 0.8;
-background-color: rgb(172, 175, 28);
+.place__button-one:hover {
+    opacity         : 0.8;
+    background-color: rgb(172, 175, 28);
 }
 
-.place__button-second:hover{
-    opacity: 0.8;
-background-color: rgb(150, 90, 31);
+.place__button-second:hover {
+    opacity         : 0.8;
+    background-color: rgb(150, 90, 31);
 }
 
-.place__button-third:hover{
-    opacity: 0.8;
+.place__button-third:hover {
+    opacity         : 0.8;
     background-color: rgb(182, 32, 149);
-    
+
 }
-.place__button-four:hover{
-    opacity: 0.8;
+
+.place__button-four:hover {
+    opacity         : 0.8;
     background-color: rgb(211, 153, 162);
 }
 
 
-.place__list{
-    margin       : 0;
-    padding      : 0;
-    display: flex;
+.place__list {
+    margin        : 0;
+    padding       : 0;
+    display       : flex;
     flex-direction: column;
 }
 
-.place__list-text{
-    margin       : 0;
-    padding      : 0;
+.place__list-text {
+    margin     : 0;
+    padding    : 0;
     font-size  : 25px;
     line-height: 46px;
 }
-
-

@@ -1,18 +1,16 @@
-@font-face {
-    font-family: 'Aquatix';
-    font-weight: 400;
-    font-style: normal;
-    src: 
-         url('aquatix.woff2') format('woff2'), 
-         url('aquatix.woff') format('woff'), 
-      }
-
-      @font-face {
-         font-family: 'Aquatix Bold';
-         font-weight: 700;
-         font-style: bold;
-         src: 
-              url('aquatix.woff2') format('woff2'), 
-              url('aquatix.woff') format('woff'), 
-           }
-    
+@font-face { 
+   font-family: 'Chakra Petch'; 
+   font-weight: 400; 
+   font-style : normal; 
+   src        : 
+   url('ChakraPetch-Italic.woff2') format('woff2'), 
+   url('СhakraPetch-Italic.woff') format('woff'), 
+} 
+@font-face { 
+   font-family: 'Chakra Petch SemiBold'; 
+   font-weight: 700; 
+   font-style : bold; 
+   src        : 
+      url('ChakraPetch-SemiBold.woff2') format('woff2'), 
+      url('ChakraPetch-SemiBold.woff') format('woff'), 
+} 

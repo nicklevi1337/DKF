@@ -1,3 +1,19 @@
+@font-face { 
+    font-family: 'Chakra Petch'; 
+    font-weight: 400; 
+    font-style : normal; 
+    src        : 
+    url('vendor/ChakraPetch-Italic.woff2') format('woff2'), 
+    url('vendor/ChakraPetch-Italic.woff') format('woff'), 
+ } 
+ @font-face { 
+    font-family: 'Chakra Petch SemiBold'; 
+    font-weight: 700; 
+    font-style : bold; 
+    src        : 
+       url('vendor/ChakraPetch-SemiBold.woff2') format('woff2'), 
+       url('vendor/ChakraPetch-SemiBold.woff') format('woff'), 
+ } 
 
 
 
@@ -5,7 +21,7 @@
 
 .root {
     background-color: #2a2c2f;
-    font-family: "Aquatix", "Arial", sans-serif;
+    font-family: "Chakra Petch",'Chakra Petch SemiBold', "Arial", sans-serif;
     color      : #e8dfdf;
     background-image: url("../images/pic-1.gif");
     background-attachment: fixed;
@@ -54,6 +70,8 @@
     white-space   : pre-line;
     margin-bottom: 32px;
     text-align    : center;
+    font-weight  : 400;
+
 
 }
 

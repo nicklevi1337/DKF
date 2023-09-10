@@ -87,7 +87,7 @@ function wheelSketch(_p5) {
 
         // alignToRow();
 
-        const background = document.querySelector('.image-grid');
+     //   const background = document.querySelector('.image-grid');
 
         button = _p5.createButton('Roll');
         button.parent(document.querySelector('.content'));
@@ -121,14 +121,14 @@ function wheelSketch(_p5) {
                         video.pause();
                         alignToRow();
                         // background.style.display = null;
-                        background.classList = 'image-grid';
+                       // background.classList = 'image-grid';
                     },
                     easeInOutSine
                 );
             }
 
             // background.style.display = 'none';
-            background.classList = 'image-grid animation-paused';
+         //   background.classList = 'image-grid animation-paused';
 
             return false;
         });
