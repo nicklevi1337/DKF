@@ -1,19 +1,24 @@
-@font-face { 
-    font-family: 'Chakra Petch'; 
-    font-weight: 400; 
-    font-style : normal; 
-    src        : 
-    url('vendor/ChakraPetch-Italic.woff2') format('woff2'), 
-    url('vendor/ChakraPetch-Italic.woff') format('woff'), 
- } 
- @font-face { 
-    font-family: 'Chakra Petch SemiBold'; 
-    font-weight: 700; 
-    font-style : bold; 
-    src        : 
-       url('vendor/ChakraPetch-SemiBold.woff2') format('woff2'), 
-       url('vendor/ChakraPetch-SemiBold.woff') format('woff'), 
- } 
+@font-face 
+{
+    font-family:BlenderProBook;
+    font-style:normal;
+    font-weight:400;
+    src:url(fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face 
+{
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face 
+{
+    font-family: Cyberpunk;
+    src: url(fonts/Cyberpunk.otf) format('opentype');
+}
 
 
 
@@ -21,7 +26,7 @@
 
 .root {
     background-color: #2a2c2f;
-    font-family: "Chakra Petch",'Chakra Petch SemiBold', "Arial", sans-serif;
+    font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
     color      : #e8dfdf;
     background-image: url("../images/pic-1.gif");
     background-attachment: fixed;
@@ -46,7 +51,6 @@
     flex-direction: column;
     align-items   : center;
     width         : 70%;
-    padding-top: 25px;
     
 }
 
@@ -59,6 +63,7 @@
     font-size    : 60px;
     font-weight  : 700;
     text-align   : center;
+    margin-top: 25px;
 }
 
 .subtitle {
@@ -168,7 +173,7 @@
     object-fit: contain;
     background-position: 50%;
     background-repeat: no-repeat;
-    border: 3px solid #217b2b;
+    border: 3px solid green;
     border-radius: 2px;
     box-sizing: border-box;
     margin-left: 10px;
@@ -189,7 +194,7 @@
     margin        : 0;
     padding       : 0;
     height: 50px;
-    min-width: 163px;
+    min-width: 221px;
     border-radius: 15px;
     background: rgba(136, 5, 224, 0.8);
     font-size    : 20px;
@@ -197,6 +202,7 @@
     text-decoration: none;
     color: white;
     text-align: center;
+    padding-top: 20px;
     opacity: 1;
     transition: opacity 0.5s;
     margin-right: 10px;
@@ -231,3 +237,19 @@
     padding       : 0;
     color: #6e1e62;
 }
+
+.text__line{
+    margin: 16px 0px;
+    height: 8px;
+    width: 100%;
+    background-color: #00fff2;
+    border: none;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 2px, 88px 2px, 80px 100%, 0% 100%);
+}
+
+
+/*
+
+
+
+*/

@@ -446,28 +446,28 @@ animation: cyber-glitch-0 5s linear infinite;
     margin: 0;
     padding: 0;
 
-    padding-left: 64px;
+    padding-left: 195px;
 }
 .popup__stats-name_span{
     margin: 0;
     padding: 0;
-    padding-left: 91px;
+    padding-left: 222px;
 }
 
 .popup__stats-cli_span{
     margin: 0;
     padding: 0;
-    padding-left: 69px;
+    padding-left: 185px;
 }
 .popup__stats-weapon_span{
     margin: 0;
     padding: 0;
-    padding-left: 62px;
+    padding-left: 156px;
 }
 .popup__stats-coin_span{
     margin: 0;
     padding: 0;
-    padding-left: 59px;
+    padding-left: 138px;
 }
 
 .popup__form{
