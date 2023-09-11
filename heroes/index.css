@@ -125,7 +125,7 @@ all: unset;
 
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/Bob.jpg");
+    background-image: url("../images/streamers/Bob.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,10 +236,10 @@ margin-bottom: 20px;
     text-decoration: none;
     color: white;
     margin-bottom: 20px;
-
+    background-image: url("../images/streamers/Bob.png");
     width: 200px;
     height: 200px;
-    background-image: url("");
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
