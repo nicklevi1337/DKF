@@ -120,12 +120,17 @@ all: unset;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-    margin-bottom: 20px;
+    font-weight: bold;
 
+    color: rgb(251, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 20px;
+background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/Bob.png");
+    background-image: url("../images/streamers/Bob-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,8 +144,14 @@ all: unset;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-margin-bottom: 20px;
+    font-weight: bold;
+
+    color: rgb(251, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: rgba(184, 40, 40, 0.9);
+    margin-bottom: 20px;
     width: 200px;
     height: 200px;
     background-image: url("../images/streamers/miron.jpg");
@@ -157,9 +168,14 @@ margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-    margin-bottom: 20px;
+    color: rgb(251, 255, 0);
+    font-weight: bold;
 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
     background-image: url("../images/streamers/musheg.jpg");
@@ -176,12 +192,17 @@ margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-    margin-bottom: 20px;
+    color: rgb(251, 255, 0);
+    font-weight: bold;
 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/sanya.jpg");
+    background-image: url("../images/streamers/sanya.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,12 +216,16 @@ margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
+    color: rgb(251, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-weight: bold;
     margin-bottom: 20px;
-
+    background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/max.jpg");
+    background-image: url("../images/streamers/max.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,12 +239,17 @@ margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
-    margin-bottom: 20px;
+    color: rgb(251, 255, 0);
+    font-weight: bold;
 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/kuka.jpg");
+    background-image: url("../images/streamers/kuka.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -234,12 +264,17 @@ margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 1px 1px 0 #bbb;
     text-decoration: none;
-    color: white;
+    color: rgb(251, 255, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     margin-bottom: 20px;
-    background-image: url("../images/streamers/Bob.png");
+    background-image: url("");
     width: 200px;
     height: 200px;
-    
+    background-color: rgba(184, 40, 40, 0.9);
+    font-weight: bold;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -445,29 +480,32 @@ animation: cyber-glitch-0 5s linear infinite;
 .popup__stats-age_span{
     margin: 0;
     padding: 0;
-
-    padding-left: 195px;
+color: #46dffb;;
 }
 .popup__stats-name_span{
     margin: 0;
     padding: 0;
-    padding-left: 222px;
+    color: #46dffb;;
+
 }
 
 .popup__stats-cli_span{
     margin: 0;
     padding: 0;
-    padding-left: 185px;
+    color: #46dffb;;
+
 }
 .popup__stats-weapon_span{
     margin: 0;
     padding: 0;
-    padding-left: 156px;
+    color: #46dffb;;
+
 }
 .popup__stats-coin_span{
     margin: 0;
     padding: 0;
-    padding-left: 138px;
+    color: #46dffb;;
+
 }
 
 .popup__form{

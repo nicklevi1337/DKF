@@ -99,7 +99,6 @@ display: flex;
 	align-items   : center;
 	margin-bottom : 27px;
 	margin-top    : 17px;
-	margin-left   : 25px;
 
 
 }
@@ -436,10 +435,11 @@ background : rgb(87, 40, 97);
 .heroes__img {
 	margin           : 0;
 	padding          : 0;
-	max-width        : 150px;
-	max-height       : 150px;
+	width: 300px;
 	background-size  : cover;
 	background-repeat: no-repeat;
+	object-fit: cover;
+	
 
 }
 
