@@ -56,6 +56,14 @@
     padding-top: 25px;
 }
 
+
+.place__main{
+    margin       : 0;
+    padding      : 0;
+    display: flex;
+    align-items: center;
+}
+
 .title {
     margin       : 0;
     padding      : 0;
@@ -413,7 +421,7 @@
     padding   : 0;
     margin    : 0;
     object-fit: cover;
-    width     : 80%
+    width     : 200px
 }
 
 
@@ -432,6 +440,8 @@
     padding-top: 25px;
     font-size  : 22px;
     line-height: 163%;
+    padding-left: 25px;
+
 }
 
 .place__subtitle__right {

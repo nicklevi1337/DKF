@@ -264,7 +264,8 @@ body
     --button-padding-h: 1.75rem;
     --button-font-size: 1.0rem;
     --button-cutout: 0.77rem;
-    width: 226px;
+    width: 227px;
+    z-index: 1;
 }
 
 .cyber-button-big
@@ -718,6 +719,8 @@ table.cyber-table.cyber-style-2::before
 /*#region headings*/
 .cyber-h
 {
+    
+    margin-left: 200px;
     display: block;
     width: 70%;
 }
@@ -736,7 +739,6 @@ h1.cyber-h
 {
     font-size: 3.0rem;
     margin: 2.0rem 0;
-    
 }
 
 h2.cyber-h
@@ -781,7 +783,7 @@ h6.cyber-h
 .cyber-banner-short
 {
     width: 125%;
-    height: 50px;
+        height: 50px;
     background-repeat: no-repeat;
     font-size: 1.5rem;
     font-weight: 700;
@@ -799,6 +801,7 @@ h6.cyber-h
     --banner-gradient-stop: 220px;
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .cyber-banner.bg-yellow,

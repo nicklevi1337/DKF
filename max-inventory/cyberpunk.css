@@ -254,6 +254,7 @@ body
     position: relative;
     border: 0;
     transition: background 0.2s;
+    width: 196px;
 }
 
 /*Overriding*/

@@ -6,17 +6,18 @@
     <title>Инвентарь стримера ХПГ 2.0</title>
 
     <link rel="stylesheet" href="index.css" />
-    <!--
-        Author: shtrih
-        https://github.com/shtrih/open-hpg-2-inventory
-    -->
+    <link rel="stylesheet" href="cyberpunk.css" />
+
 </head>
 
 <body>
     <div class="page">
         <div class="content">
-
-            <h1 class="stats__title">Kuka</h1>
+                <div class="cyber-banner-short bg-red fg-white">
+                    <h1 class="cyber-h">
+                    Кука "Биг Чон"
+                </h1>
+                </div>
             <div class="img__div">
                 <img src="../images/streamers/kuka.png" class="heroes__img" alt="Герой">
           
@@ -100,9 +101,13 @@
         <div class="popup__container">
             <h2 class="popup__title">Какие ваши успехи?</h2>
             <form class="popup__form" name="popup__form">
-                <input type="text" placeholder="Количество игр" class="popup__input popup__input_type_game" name="popup__input popup__input_type_game">
-                <button class="popup__save-btn" type="submit">
+                <div class="cyber-input ac-yellow fg-cyan">
+                <input id="game" type="text" placeholder="Миссии" class="cyber-input ac-purple  popup__input_type_game"
+                    name="popup__input popup__input_type_game">
+                </div>
+                <button class="cyber-button-small bg-yellow fg-black popup__save-btn" type="submit">
                     Добавить
+                    <span class="glitchtext"></span>
                 </button>
                 <button class="popup__close" type="button"></button>
             </form>
@@ -112,33 +117,48 @@
         <div class="popup__container">
             <h2 class="popup__title">Сколько награбили?</h2>
             <form class="popup__form popup__form_type_points" name="popup__form">
-                <input type="text" placeholder="Ваши поинты" class="popup__input popup__input_type_points" name="popup__input popup__input_type_points">
-                <button class="popup__save-btn" type="submit">
+                <div class="cyber-input ac-yellow fg-cyan">
+                <input id="coin" type="text" placeholder="Ваши кредиты" class="cyber-input ac-purple popup__input_type_points"
+                    name="popup__input popup__input_type_points">
+                </div>
+                <button class="cyber-button-small bg-yellow fg-black popup__save-btn" type="submit">
                     Награда
+                    <span class="glitchtext"></span>
                 </button>
                 <button class="popup__close" type="button"></button>
             </form>
         </div>
     </div>
 
-<div class="popup popup_type_stats">
-            <div class="popup__container popup__container_type_stats">
-                <h2 class="popup__title">Впишите информацию</h2>
-                <form class="popup__form popup__form_type_stats" name="popup__form">
-                    <input type="text" placeholder="День" class="popup__input popup__input_type_day" name="day">
-                    <input type="link" placeholder="Локация" class="popup__link" name="icon">
-                    <input type="text" placeholder="Игра" class="popup__input popup__input_type_play" name="play">
-                    <input type="link" placeholder="Статус" class="popup__link_img" name="status">
-                    <input type="text" placeholder="Комментарий" class="popup__input popup__input_type_comm"
-                        name="comment">
-                        <button class="popup__save-btn popup__save-btn_type_stats" type="submit">
-                            Готово
-                        </button>
-                </form>
-              
-                <button class="popup__close popup__close_type_stats" type="button"></button>
-            </div>
+    <div class="popup popup_type_stats">
+        <div class="popup__container popup__container_type_stats">
+            <h2 class="popup__title">Впишите информацию</h2>
+            <form class="popup__form popup__form_type_stats" name="popup__form">
+                <div class="cyber-input ac-yellow fg-cyan">
+                    <input type="text" placeholder="День" class="popup__input_type_day" name="day">
+                </div>
+                <div class="cyber-input ac-yellow fg-cyan">
+                    <input type="link" placeholder="Локация" class=" popup__input popup__link" name="icon">
+                </div>
+                <div class="cyber-input ac-yellow fg-cyan">
+                    <input type="text" placeholder="Игра" class="popup__input  popup__input_type_play" name="play">
+                </div>
+                <div class="cyber-input ac-yellow fg-cyan">
+                    <input type="link" placeholder="Статус" class=" popup__input  popup__link_img" name="status">
+                </div>
+                <div class="cyber-input ac-yellow fg-cyan">
+                    <input type="text" placeholder="Комментарий" class="popup__input  popup__input_type_comm" name="comment">
+                </div>
+                    <button class="cyber-button bg-yellow fg-black popup__save-btn popup__save-btn_type_stats" type="submit">
+                        Готово
+                        <span class="glitchtext"></span>
+                    </button>
+            </form>
+          
+            <button class="popup__close popup__close_type_stats" type="button"></button>
         </div>
+    </div>
+
 
 
  <template id="list-kuk-template">

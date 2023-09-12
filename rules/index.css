@@ -193,12 +193,10 @@
 .link{
     margin        : 0;
     padding       : 0;
-    height: 50px;
+    height: 80px;
     min-width: 221px;
     border-radius: 15px;
-    background: rgba(136, 5, 224, 0.8);
     font-size    : 20px;
-    box-shadow   : 1px 1px 0 #bbb;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -206,6 +204,10 @@
     opacity: 1;
     transition: opacity 0.5s;
     margin-right: 10px;
+    background-image: url("./images/иконки-inv.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .link:hover{

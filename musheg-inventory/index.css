@@ -1,8 +1,29 @@
+@font-face 
+{
+    font-family:BlenderProBook;
+    font-style:normal;
+    font-weight:400;
+    src:url(fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face 
+{
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face 
+{
+    font-family: Cyberpunk;
+    src: url(fonts/Cyberpunk.otf) format('opentype');
+}
 
 
 
 body {
-	font-family: Calibri, serif;
+	font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
 	
 	margin: 0 auto;
 	background: #000000;
@@ -31,6 +52,7 @@ display: flex;
     align-items: center;
     justify-content: center;
 	width: 80%;
+	background-color: #000;
 }
 
 .content{
@@ -109,14 +131,14 @@ display       : flex;
 	margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background: #1c1e20;;
+    background: #1c1e20;
     width: 25px;
     height: 25px;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
+    border: 2px solid rgb(108, 237, 16, 0.5);
+    border-radius: 15px;
     transition: opacity ease-in-out 0.3s;
     cursor: pointer;
-    background-image: url('../images/vector_add-button.svg');
+    background-image: url(../images/vector_add-button.svg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -126,53 +148,61 @@ display       : flex;
 	margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background: #1c1e20;;
+    background: #1c1e20;
     width: 25px;
     height: 25px;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
+    border: 2px solid rgb(252, 240, 9, 0.5);
+    border-radius: 15px;
     transition: opacity ease-in-out 0.3s;
     cursor: pointer;
-    background-image: url('../images/vector_add-button.svg');
+    background-image: url(../images/vector_add-button.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 
-.number__button:hover {
+.game__button:hover {
     opacity: 0.6;
 }
 
-.number__button:active {
+.game__button:active {
+    opacity: 1;
+}
+
+.points__button:hover {
+    opacity: 0.6;
+}
+
+.points__button:active {
     opacity: 1;
 }
 
 
 
 .game__text{
-	margin:0;
-	padding: 0;
-	width: 40px;
+	margin: 0;
+    padding: 0;
+    width: 40px;
     height: 20px;
-	margin-right: 10px;
-	background: #1c1e20;
-	color: white;
-	text-align: center;
-	border: 2px solid #ffffff;
-	border-radius: 5px;
+    margin-right: 10px;
+    background: #1c1e20;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid rgb(108, 237, 16, 0.5);
+    border-radius: 15px;
 }
 
 .points__text{
-	margin:0;
-	padding: 0;
-	width: 40px;
+	margin: 0;
+    padding: 0;
+    width: 40px;
     height: 20px;
-	margin-right: 10px;
-	background: #1c1e20;
-	color: white;
-	border-radius: 5px;
-	text-align: center;
-	border: 2px solid #ffffff;
+    margin-right: 10px;
+    background: #1c1e20;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid rgba(255, 242, 0, 0.5);
 }
 
 .element{
@@ -377,6 +407,7 @@ background-repeat: no-repeat;
 	display       : flex;
 	flex-direction: column;
 	align-items   : center;
+	width: 100%;
 }
 
 .main{
@@ -392,8 +423,9 @@ background-repeat: no-repeat;
 	display: grid;
     grid-template-columns: repeat(5, 1fr); /* Равномерное разделение на 4 столбца */
     gap: 20px; /* Промежуток между элементами */
-    align-items: center; 
-	width: 1200px;
+    align-items: start; 
+	width: 100%;
+	margin-top: 50px;
 	
 }
 .number{
@@ -408,6 +440,7 @@ background-repeat: no-repeat;
 .number__title{
 	margin: 0;
 	padding: 0;
+	font-size: 25px;
 }
 
 
@@ -496,7 +529,7 @@ padding: 0;
     left: 0;
     right: 0;
     display: flex;
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+	font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -537,10 +570,11 @@ padding: 0;
     padding-bottom: 25px;
     padding-left: 22px;
     padding-right: 22px;
-    background: #ffffff;
-	width: 228px;
-    border-radius: 10px;
+    color: #ffffff;
+    width: 296px;
+	border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+	background-color: #136377;
 }
 
 .popup__title{
@@ -551,7 +585,6 @@ padding: 0;
     font-weight: 900;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
 }
 
 .popup__form{
@@ -585,8 +618,7 @@ padding: 0;
 	all: unset;
     margin: 0;
     padding: 0;
-    width: 238px;
-    height: 46px;
+    
     color: white;
     background: #000000;
     border-radius: 2px;
@@ -598,6 +630,8 @@ padding: 0;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+
+	z-index: 1;
 }
 
 .popup__form-button-save:hover {
@@ -675,6 +709,7 @@ padding: 0;
 	align-items          : center;
 	min-width            : 610px;
 	position             : relative;
+	border-bottom: 3px solid var(--red);
 }
 
 
@@ -717,7 +752,7 @@ padding: 0;
 	background-size  : contain;
 	background-repeat: no-repeat;
 	position         : absolute;
-	left: 1179px;
+	left: 950px;
 	border           : none;
 	width            : 18px;
 	height           : 19px;
@@ -750,16 +785,17 @@ padding: 0;
 }
 
 .popup__container_type_stats {
-	position      : relative;
-	padding-top   : 22px;
-	padding-bottom: 25px;
-	padding-left  : 22px;
-	padding-right : 22px;
-	background    : #ffffff;
-	width         : 400px;
-	border-radius : 19px;
-	box-shadow    : 0px 0px 25px rgba(0, 0, 0, 0.15);
-	
+	position: relative;
+    padding-top: 22px;
+    padding-bottom: 25px;
+    padding-left: 22px;
+    padding-right: 22px;
+    color: #ffffff;
+    width: 284px;
+    border-radius: 19px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    background-color: #446d44;
+
 
 }
 
@@ -778,7 +814,6 @@ padding: 0;
 	padding          : 0;
 	margin           : 0;
     width: 400px;
-    height: 46px;
     color: white;
     background: #000000;
     border-radius: 2px;
@@ -790,4 +825,5 @@ padding: 0;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+	z-index: 1;
 }
