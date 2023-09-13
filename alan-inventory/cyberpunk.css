@@ -718,7 +718,7 @@ table.cyber-table.cyber-style-2::before
 .cyber-h
 {
     display: block;
-    width: 60%;
+    width: 70%;
 }
 
 .cyber-h::after
@@ -735,7 +735,7 @@ h1.cyber-h
 {
     font-size: 3.0rem;
     margin: 2.0rem 0;
-    width: 100%;
+    
 }
 
 h2.cyber-h
@@ -779,7 +779,7 @@ h6.cyber-h
 .cyber-banner,
 .cyber-banner-short
 {
-    width: 100%;
+    width: 125%;
     height: 50px;
     background-repeat: no-repeat;
     font-size: 1.5rem;
@@ -796,6 +796,8 @@ h6.cyber-h
 .cyber-banner-short
 {
     --banner-gradient-stop: 220px;
+    display: flex;
+    align-items: center;
 }
 
 .cyber-banner.bg-yellow,

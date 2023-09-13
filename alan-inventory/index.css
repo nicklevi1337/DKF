@@ -158,73 +158,82 @@ display: flex;
 
 
 .game__button{
-	margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    background: #1c1e20;;
-    width: 25px;
-    height: 25px;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-    transition: opacity ease-in-out 0.3s;
-    cursor: pointer;
-    background-image: url('../images/vector_add-button.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+	margin    : 0 auto;
+	padding   : 0;
+	box-sizing: border-box;
+	background: #1c1e20;
+	;
+	width              : 25px;
+	height             : 25px;
+	border             : 2px solid rgb(108, 237, 16, 0.5);
+	border-radius: 15px;
+	transition         : opacity ease-in-out 0.3s;
+	cursor             : pointer;
+	background-image   : url('../images/vector_add-button.svg');
+	background-repeat  : no-repeat;
+	background-position: center;
 
 }
 
 .points__button{
-	margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    background: #1c1e20;;
-    width: 25px;
-    height: 25px;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-    transition: opacity ease-in-out 0.3s;
-    cursor: pointer;
-    background-image: url('../images/vector_add-button.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+	margin    : 0 auto;
+	padding   : 0;
+	box-sizing: border-box;
+	background: #1c1e20;
+	;
+	width              : 25px;
+	height             : 25px;
+	border             : 2px solid rgb(252, 240, 9, 0.5);
+	border-radius: 15px;
+	transition         : opacity ease-in-out 0.3s;
+	cursor             : pointer;
+	background-image   : url('../images/vector_add-button.svg');
+	background-repeat  : no-repeat;
+	background-position: center;
 }
 
 
-.number__button:hover {
-    opacity: 0.6;
+.points__button:hover {
+	opacity: 0.6;
 }
 
-.number__button:active {
-    opacity: 1;
+.points__button:active {
+	opacity: 1;
 }
 
+.game__button:hover {
+	opacity: 0.6;
+}
+
+.game__button:active {
+	opacity: 1;
+}
 
 
 .game__text{
-	margin:0;
-	padding: 0;
-	width: 40px;
-    height: 20px;
-	margin-right: 10px;
-	background: #1c1e20;
-	color: white;
-	text-align: center;
-	border: 2px solid #ffffff;
-	border-radius: 5px;
+	margin       : 0;
+	padding      : 0;
+	width        : 40px;
+	height       : 20px;
+	margin-right : 10px;
+	background   : #1c1e20;
+	color        : rgb(255, 255, 255);
+	text-align   : center;
+	border             : 2px solid rgb(108, 237, 16, 0.5);
+	border-radius: 15px;
 }
 
 .points__text{
-	margin:0;
-	padding: 0;
-	width: 40px;
-    height: 20px;
-	margin-right: 10px;
-	background: #1c1e20;
-	color: white;
-	border-radius: 5px;
-	text-align: center;
-	border: 2px solid #ffffff;
+	margin       : 0;
+	padding      : 0;
+	width        : 40px;
+	height       : 20px;
+	margin-right : 10px;
+	background   : #1c1e20;
+	color        : rgb(255, 255, 255);
+	border-radius: 15px;
+	text-align   : center;
+	border             : 2px solid rgba(255, 242, 0, 0.5);
 }
 
 .element{

@@ -24,10 +24,10 @@
 
 
 .root {
-    background           : #250738;
+    background-color: var(--yellow);
     font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
-        color                : #eee;
-    background-image     : url("../images/pic-3.png");
+        color                : #ffffff;
+  /* background-image     : url("../images/pic-3.png");*/
     background-attachment: fixed;
     background-size      : cover;
 }
@@ -40,28 +40,31 @@
     align-content  : center;
     align-items    : center;
     justify-content: center;
+    
 
 }
 
 .content {
     margin        : 0 auto;
-    /*
-    background    : rgba(36, 23, 45, 0.6);
-    */
+    
+    background-color: var(--black);
+    
     display       : flex;
     flex-direction: column;
     align-items   : center;
     width         : 80%;
+    
 
-    padding-top: 25px;
 }
 
 
 .place__main{
-    margin       : 0;
+    margin       : 0 auto;
     padding      : 0;
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
+    min-width: 642px;
 }
 
 .title {
@@ -108,7 +111,7 @@
     padding         : 0;
     align-self      : flex-start;
     padding-top     : 92px;
-    margin-bottom   : 45px;
+    margin-bottom   : 68px;
     margin-left     : 25px;
 
 
@@ -147,8 +150,53 @@
     font-weight: 700;
     font-size  : 12px;
     line-height: 18px;
+    display: flex;
+    gap: 20px; 
 
 }
+
+.nav{
+    display: flex;
+    gap: 20px; 
+}
+
+
+.list__link-1{
+    text-decoration: none; 
+    
+    color          : rgb(45, 205, 30);
+}
+.list__link-2{
+    text-decoration: none; 
+    
+    color          : rgb(255, 54, 54);
+}
+.list__link-3{
+    text-decoration: none; 
+    
+    color          : rgb(221, 250, 7);
+}
+.list__link-4{
+    text-decoration: none; 
+    
+    color          : rgb(142, 80, 10);
+}
+.list__link-5{
+    text-decoration: none; 
+    
+    color          : rgb(211, 153, 162);
+}
+.list__link-6{
+    text-decoration: none; 
+    
+    color          : rgb(27, 203, 209);
+}
+.list__link-7{
+    text-decoration: none; 
+    
+    color          : rgb(182, 32, 149);
+}
+
 
 /*
 .unlist{
@@ -166,6 +214,8 @@
     line-height    : 18px;
     list-style-type: none;
     color          : rgb(45, 205, 30);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-2 {
@@ -175,6 +225,8 @@
     line-height    : 18px;
     list-style-type: none;
     color          : rgb(255, 54, 54);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-3 {
@@ -184,6 +236,8 @@
     line-height    : 18px;
     list-style-type: none;
     color          : rgb(221, 250, 7);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-4 {
@@ -192,7 +246,9 @@
     font-size      : 17px;
     line-height    : 18px;
     list-style-type: none;
-    color          : rgb(142, 80, 10)
+    color          : rgb(142, 80, 10);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-5 {
@@ -201,7 +257,9 @@
     font-size      : 17px;
     line-height    : 18px;
     list-style-type: none;
-    color          : rgb(211, 153, 162)
+    color          : rgb(211, 153, 162);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-6 {
@@ -211,6 +269,8 @@
     line-height    : 18px;
     list-style-type: none;
     color          : rgb(27, 203, 209);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .unlist-7 {
@@ -220,6 +280,8 @@
     line-height    : 18px;
     list-style-type: none;
     color          : rgb(182, 32, 149);
+    text-decoration: none; 
+    cursor         : default; 
 }
 
 .intro__span-accent {
@@ -275,7 +337,7 @@
     margin     : 0;
     font-size  : 35px;
     line-height: 36px;
-    margin-top : 45px;
+    margin-top : 100px;
     color      : rgb(221, 250, 7);
 }
 
@@ -284,7 +346,7 @@
     margin     : 0;
     font-size  : 35px;
     line-height: 36px;
-    margin-top : 45px;
+    margin-top : 100px;
     color      : rgb(214, 118, 8)
 }
 
@@ -293,7 +355,7 @@
     margin     : 0;
     font-size  : 35px;
     line-height: 36px;
-    margin-top : 45px;
+    margin-top : 100px;
     color      : rgb(182, 32, 149);
 }
 
@@ -302,7 +364,7 @@
     margin     : 0;
     font-size  : 35px;
     line-height: 36px;
-    margin-top : 45px;
+    margin-top : 100px;
     color      : rgb(211, 153, 162)
 }
 
@@ -311,7 +373,7 @@
     margin     : 0;
     font-size  : 35px;
     line-height: 36px;
-    margin-top : 45px;
+    margin-top : 100px;
     color      : rgb(27, 203, 209);
 }
 
@@ -321,6 +383,7 @@
     font-size    : 45px;
     line-height  : 76px;
     margin-bottom: 10px;
+    margin-top: 14px;
     text-align   : center;
     opacity      : 0.8;
     /*
@@ -338,8 +401,8 @@
 
 
 .place__subtitle {
-    padding       : 0;
-    margin        : 0;
+    padding       : 0 ;
+    margin        : 0 auto;
     font-size     : 22px;
     line-height   : 163%;
     display       : flex;
@@ -434,13 +497,14 @@
     margin-bottom : 35px;
 }
 
+
 .place__subtitle__left {
     margin     : 0;
     padding    : 0;
     padding-top: 25px;
     font-size  : 22px;
     line-height: 163%;
-    padding-left: 25px;
+    padding-left: 18px;
 
 }
 
@@ -450,14 +514,17 @@
     padding-top: 25px;
     font-size  : 22px;
     line-height: 163%;
+    padding-left: 37px;
+    max-width: 401px;
 }
 
 .place__subtitle__char {
-    margin     : 0;
+    margin     : 0 auto;
     padding    : 0;
     padding-top: 25px;
     font-size  : 35px;
     line-height: 163%;
+    margin-bottom: 41px;
 }
 
 
@@ -485,18 +552,31 @@
     margin : 0;
     padding: 0;
 
-    width: 250px;
+    width: 56px;
+    height: 80px;
 
-    border-radius: 15px;
-    background   : rgba(136, 5, 224, 0.8);
-
+    background-image: url("./images/skull.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     font-size      : 20px;
-    box-shadow     : 1px 1px 0 #bbb;
+    
     text-decoration: none;
     color          : white;
     text-align     : center;
     opacity        : 1;
     transition     : opacity 0.5s;
+}
+
+.place__button:hover { 
+    background-color: transparent; 
+}
+
+
+
+.place__button:hover { 
+    background-color: transparent; 
+    opacity         : 0.8;
 }
 
 
@@ -504,94 +584,101 @@
     margin : 0;
     padding: 0;
 
-    width        : 200px;
-    border-radius: 15px;
-    background   : rgba(136, 5, 224, 0.8);
-
-    font-size      : 20px;
-    box-shadow     : 1px 1px 0 #bbb;
+    width: 70px;
+    height: 70px;
+    background-image: url("./images/question.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 20px;
     text-decoration: none;
-    color          : white;
-    text-align     : center;
-    opacity        : 1;
-    transition     : opacity 0.5s;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background-color: rgb(0, 0, 0);
+    border-radius: 48px;
 }
 
 .place__button-one {
     margin : 0;
     padding: 0;
 
-    width        : 200px;
-    border-radius: 15px;
-    background   : rgba(136, 5, 224, 0.8);
-
-    font-size      : 20px;
-    box-shadow     : 1px 1px 0 #bbb;
+    width: 79px;
+    height: 80px;
+    background-image: url("./images/mission.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
     text-decoration: none;
-    color          : white;
-    text-align     : center;
-    opacity        : 1;
-    transition     : opacity 0.5s;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background-color: black;
+    border-radius: 48px;
 }
 
 .place__button-second {
     margin : 0;
     padding: 0;
 
-    width        : 200px;
-    border-radius: 15px;
-    background   : rgba(136, 5, 224, 0.8);
-
-    font-size      : 20px;
-    box-shadow     : 1px 1px 0 #bbb;
+    width: 79px;
+    height: 80px;
+    background-image: url("./images/mission.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
     text-decoration: none;
-    color          : white;
-    text-align     : center;
-    opacity        : 1;
-    transition     : opacity 0.5s;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background-color: black;
+    border-radius: 48px;
 }
 
 
 .place__button-four {
-    margin         : 0;
-    padding        : 0;
-    width          : 200px;
-    border-radius  : 15px;
-    background     : rgba(136, 5, 224, 0.8);
-    font-size      : 20px;
-    box-shadow     : 1px 1px 0 #bbb;
+    margin : 0;
+    padding: 0;
+
+    width: 200px;
+    height: 200px;
+    background-image: url("./images/roulette.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
     text-decoration: none;
-    color          : white;
-    text-align     : center;
-    opacity        : 1;
-    transition     : opacity 0.5s;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+   
 }
 
-.place__button:hover {
-    opacity         : 0.8;
-    background-color: rgb(162, 32, 32);
-}
+
+
 
 
 .place__button-one:hover {
     opacity         : 0.8;
-    background-color: rgb(172, 175, 28);
 }
 
 .place__button-second:hover {
     opacity         : 0.8;
-    background-color: rgb(150, 90, 31);
 }
 
 .place__button-third:hover {
     opacity         : 0.8;
-    background-color: rgb(182, 32, 149);
 
 }
 
 .place__button-four:hover {
     opacity         : 0.8;
-    background-color: rgb(211, 153, 162);
 }
 
 
@@ -607,4 +694,45 @@
     padding    : 0;
     font-size  : 25px;
     line-height: 46px;
+}
+
+.text__line{
+    margin: 16px 0px;
+    height: 8px;
+    width: 100%;
+    background-color: rgb(0, 204, 255);
+    border: none;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 2px, 88px 2px, 80px 100%, 0% 100%);
+}
+
+.place__icon{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+
+}
+
+.place__icon-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 36px;
+    margin-top: 20px;
+}
+
+.place__span{
+    font-weight:bold;
+    padding-bottom: 20px;
+}
+
+.text__line-red{
+    margin: 16px 0px;
+    height: 8px;
+    width: 100%;
+    background-color: rgb(248, 3, 3);
+    border: none;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 2px, 88px 2px, 80px 100%, 0% 100%);
 }

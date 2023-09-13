@@ -215,6 +215,30 @@
 
 }
 
+.link__vic{
+    margin        : 0;
+    padding       : 0;
+    height: 42px;
+    min-width: 221px;
+    border-radius: 15px;
+    font-size    : 20px;
+    text-decoration: none;
+    background-image: url("../history/images/question.png");
+
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    margin-right: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.link__vic:hover{
+    opacity: 0.6;
+
+}
 
 .text__span-buff{
     margin        : 0;

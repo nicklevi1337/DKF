@@ -567,7 +567,7 @@ body
 .cyber-tile-small,
 .cyber-tile-big
 {
-    --tile-width: 360px;
+    
     --tile-padding: 4px;
     --tile-edges: 20px;
     --label-margins: calc(var(--tile-edges) - var(--tile-padding));
@@ -577,6 +577,8 @@ body
     clip-path: var(--og-clip-path);
     padding: var(--tile-padding);
     padding-bottom: var(--tile-edges);
+    text-align: center;
+    margin-right: 20px;
 }
 
 .cyber-tile img,
@@ -613,7 +615,7 @@ body
 /*Overriding the values*/
 .cyber-tile-big
 {
-    --tile-width: 480px;
+    --tile-width: 1000px;
     --tile-edges: 26px;
 }
 
@@ -727,21 +729,19 @@ table.cyber-table.cyber-style-2::before
     width: 100%;
     height: 6px;
     display: block;
-    background-color: var(--ac);
     clip-path: polygon(0 0, 0 100%, 10% 100%, calc(10% + 4px) 2px, 100% 2px, 100% 0);
 }
 
 h1.cyber-h
 {
     font-size: 3.0rem;
-    margin: 2.0rem 0;
     width: 100%;
 }
 
 h2.cyber-h
 {
     font-size: 2.5rem;
-    margin: 1.6rem 0;
+    
     width: 90%;
 }
 
@@ -790,12 +790,15 @@ h6.cyber-h
     clip-path: polygon(0 0, 0 100%, calc(100% - 20px) 100%, 100% calc(100% - 20px), 100% 0);
     
     /*default: --purple --red --yellow --cyan*/
+   margin-bottom: 25px;
     background: linear-gradient(90deg, var(--banner-color1), var(--banner-color2), var(--banner-color3), var(--banner-color4) var(--banner-gradient-stop));
 }
 
 .cyber-banner-short
 {
     --banner-gradient-stop: 220px;
+    display: flex;
+    align-items: center
 }
 
 .cyber-banner.bg-yellow,

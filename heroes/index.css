@@ -130,7 +130,7 @@ all: unset;
 background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/Bob-2.png");
+    background-image: url("../images/streamers/Bob.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -390,7 +390,7 @@ background-color: rgba(184, 40, 40, 0.9);
 .popup__img{
     margin: 0;
 padding: 0;
-width: 230px;
+width: 137px;
 animation: cyber-glitch-0 5s linear infinite;
 
 }
