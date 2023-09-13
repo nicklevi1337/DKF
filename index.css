@@ -27,7 +27,7 @@ body{
     background-attachment: fixed;
     background-color: #2a2c2f;
     font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
-    background-image: url("./images/art-1.png");
+    background-image: url("./images/art-proba.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,35 +35,211 @@ body{
 }
 
 
-nav {
+.nav-1 {
     grid-area: a;
     margin: 0 auto;
+    
     position: absolute;
-    top: 10px;
-    left: 401px;
+    top: 523px;
+    left: 1129px;
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 40px;
 }
-nav a {
-    color: white;
-    padding: 5px 10px;
-    background: rgba(185, 34, 212, 0.8);
+.nav-2 {
+    grid-area: a;
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 629px;
+    left: 439px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.nav-3 {
+    grid-area: a;
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 360px;
+    left: 1223px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.nav-4 {
+    grid-area: a;
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 635px;
+    left: 267px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.nav-5 {
+    grid-area: a;
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 438px;
+    left: 353px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.nav-6 {
+    grid-area: a;
+    margin: 0 auto;
+    
+    position: absolute;
+    top:    121px;
+    left: 688px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+
+
+
+.nav-1 a {
+    background-color: transparent;
+    border-radius: 81px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(20, 255, 8, 0.5);
+    text-decoration: none;
+    text-align: center;
+    height: 157px;
+    width: 164px;
+    color: black;
+
+}
+.nav-2 a {
+    background-color: transparent;
     border-radius: 15px;
     font-size: 20px;
-    box-shadow: 1px 1px 0 #100d0d;
+    box-shadow: 0px 0px 5px 5px rgba(8, 243, 255, 0.3);
     text-decoration: none;
+    text-align: center;
+    height: 59px;
+    width: 150px;
+    transform: rotate(-15deg);
+    color: rgb(255, 221, 0);
+    font-weight: bold;
+
 }
-nav a:hover {
-    background: rgb(0, 0, 0);
+
+
+.nav-3 a {
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(248, 8, 216, 0.5);
+    text-decoration: none;
+    text-align: center;
+    height: 81px;
+    width: 55px;
+    transform: rotate(-8deg);
+    color: black;
+
 }
+.nav-4 a {
+    color: black;
+
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px rgb(225, 255, 0, 0.3);
+    text-decoration: none;
+    height: 107px;
+    width: 100px;
+    text-align: center;
+}
+
+.nav-5 a {
+    background-color: transparent;
+    color: black;
+
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px rgb(255, 0, 0, 0.5);
+    text-decoration: none;
+    text-align: center;
+    height: 34px;
+    width: 11px;
+    transform: rotate(-20deg);
+
+}
+
+.nav-6 a {
+    background-color: transparent;
+    color: black;
+
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 72, 255, 0.9);
+    text-decoration: none;
+    text-align: center;
+    height: 208px;
+    width: 38px;
+
+}
+
+
+
+
+.nav-1 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-2 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-3 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-4 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-5 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.nav-6 a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
 div {
     grid-area: c;
 
     display: flex;
     justify-content: flex-end;
 }
+
+
 
 
     /*
