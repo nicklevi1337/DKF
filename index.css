@@ -27,7 +27,7 @@ body{
     background-attachment: fixed;
     background-color: #2a2c2f;
     font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
-    background-image: url("./images/art-proba.png");
+    background-image: url("./images/art-1.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,7 +35,69 @@ body{
 }
 
 
-.nav-1 {
+.page{
+   
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    margin: 0 auto;
+    background-color: transparent;
+    
+    max-width: 1200px;
+    min-width: 320px;
+}
+
+
+nav {
+    margin: 0 auto;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    gap: 40px;
+    position: absolute;
+    top:200px;
+    left: 400px;
+    flex-direction: row;
+    
+
+}
+
+
+
+
+
+
+
+nav a {
+    color: white;
+    padding: 5px 10px;
+    background: rgba(185, 34, 212, 0.8);
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 1px 1px 0 #100d0d;
+    text-decoration: none;
+}
+nav a:hover {
+    background: rgb(0, 0, 0);
+}
+div {
+    grid-area: c;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+    /*
+
+ .nav-1 {
     grid-area: a;
     margin: 0 auto;
     
@@ -229,107 +291,6 @@ body{
 
 
 
-
-
-
-div {
-    grid-area: c;
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-
-
-    /*
-
-          body {
-            margin: 0 auto;
-    position: absolute;
-    top: 163px;
-    left: 354px;
-    
-            display: grid;
-            grid-template-areas:
-                "a a a"
-                "b b b"
-                "c . ."
-            ;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            font-family: calibri, serif;
-        }
-        nav {
-            grid-area: a;
-
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 30px;
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-html{
-    background-image: url("./images/1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-    height: 100vh; 
-    
-}
-
-
-body {
-    display: grid;
-    grid-template-areas:
-        "a a a"
-        "b b b"
-        "c . ."
-    ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    font-family: calibri, serif;
-}
-nav {
-    grid-area: a;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-nav a {
-    color: white;
-    padding: 5px 10px;
-    background: rgba(185, 34, 212, 0.8);
-    border-radius: 15px;
-    font-size: 20px;
-    box-shadow: 1px 1px 0 #100d0d;
-    text-decoration: none;
-}
-nav a:hover {
-    background: rgb(0, 0, 0);
-}
-div {
-    grid-area: c;
-
-    display: flex;
-    justify-content: flex-end;
-}
 
     
         */

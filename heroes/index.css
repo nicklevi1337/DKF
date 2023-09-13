@@ -37,6 +37,8 @@
     background-attachment: fixed;
     background-size: cover;
     margin: 0 auto;
+    max-width: 1200px;
+    min-width: 320px;
     /*
     position: absolute;
     top: 284px;

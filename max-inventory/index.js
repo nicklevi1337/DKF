@@ -297,6 +297,12 @@ const items = [
         title: 'Мистер Президент',
         
     },
+    {
+        img: 'images/007.png',
+        title: 'Интрига',
+        
+    },
+    
     
 ];
 let selectedCellKey = false;

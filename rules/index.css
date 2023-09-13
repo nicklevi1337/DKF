@@ -50,7 +50,7 @@
     display       : flex;
     flex-direction: column;
     align-items   : center;
-    width         : 70%;
+    width: 70%;
     
 }
 
@@ -223,7 +223,7 @@
     border-radius: 15px;
     font-size    : 20px;
     text-decoration: none;
-    background-image: url("../history/images/question.png");
+    background-image: url("../hpg-inventory/images/007.png");
 
     color: white;
     text-align: center;

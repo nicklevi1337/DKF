@@ -297,6 +297,11 @@ const element = [
         title: 'Мистер Президент',
         
     },
+    {
+        img: 'images/007.png',
+        title: 'Интрига',
+        
+    },
     
     
 ];
