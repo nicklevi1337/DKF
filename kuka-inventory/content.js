@@ -134,6 +134,8 @@ function closePopupAddByClick(evt) {
     }
 }
 
+
+
 const handleAddKukFormSubmit = (event) => {
     event.preventDefault();
     const name = popupAddDay.value;
@@ -164,6 +166,8 @@ let savedKukLists = loadListsFromLocalKukStorage();
 
 function saveListsToLocalKukStorage(lists) {
     localStorage.setItem('kukLists', JSON.stringify(lists));
+
+
 }
 
 // massiv
@@ -186,7 +190,7 @@ const createListKukElement = (listKukData) => {
     listCommKuk.textContent = listKukData.comment;
 
     const handleKukDelete = () => {
-        listElementMax.remove();
+        listElementKuk.remove();
         const index = savedKukLists.findIndex((list) => list.name === listKukData.name);
         if (index !== -1) {
             savedKukLists.splice(index, 1); // Удаляем список из массива savedLists

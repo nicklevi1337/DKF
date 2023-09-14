@@ -94,7 +94,7 @@ flex-direction: column;
 	display       : flex;
 		flex-direction: row;
 		align-items   : center;
-		
+		gap: 50px;
 	
 }
 
@@ -107,7 +107,6 @@ flex-direction: column;
 	align-items: center;
 	margin-bottom: 27px;
 	margin-top: 17px;
-
 	
 }
 
@@ -701,11 +700,11 @@ padding: 0;
 	background-color : transparent;
 	background-size  : contain;
 	background-repeat: no-repeat;
-	position         : absolute;
-	left: 950px;
+	position: absolute;
+    right: 3px;
 	border           : none;
 	width            : 18px;
-	height           : 19px;
+	height           : 40px;
 	overflow         : hidden;
 }
 

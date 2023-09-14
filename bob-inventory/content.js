@@ -186,7 +186,7 @@ function loadNumberFromLocalStorage(key) {
 const infoList = [
     {
         name: "1",
-        link: "https://ic.wampi.ru/2023/08/25/START.png",
+        link: "https://im.wampi.ru/2023/09/14/DONER.png",
         title: "Старт",
         img: "https://ic.wampi.ru/2023/08/24/PROIDENO.png",
         comment: "Let's Go!"

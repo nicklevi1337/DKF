@@ -89,7 +89,7 @@ function handleGameSanyaFormSubmit(evt) {
     gameTextSanya.textContent = newGameSanyaValue;
     closePopup(popupGame);
     evt.target.reset(evt);
-    saveNumberMironToLocalStorage('gameSanyaValue', newGameSanyaValue);
+    saveNumberSanyaToLocalStorage('gameSanyaValue', newGameSanyaValue);
 
 }
 

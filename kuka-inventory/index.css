@@ -93,7 +93,7 @@ color: white;
 display       : flex;
 	flex-direction: row;
 	align-items   : center;
-	
+	gap: 50px;
 }
 
 .info{
@@ -756,10 +756,10 @@ padding: 0;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    left: 950px;
+    right: 3px;
     border: none;
     width: 18px;
-    height: 19px;
+    height:40px;
     overflow: hidden;
 }
 
