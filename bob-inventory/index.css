@@ -453,21 +453,12 @@ background : rgb(87, 40, 97);
 
 
 .main {
-	/*
-	display: flex;
-	flex-direction: row;
-    color:white;
-    gap:50px;
-    flex-wrap: wrap;
-    align-items: flex-end;
-	*/
+
 	margin-top           : 50px;
 	color                : white;
 	display              : grid;
 	grid-template-columns: repeat(5, 1fr);
-	/* Равномерное разделение на 4 столбца */
 	gap                  : 20px;
-	/* Промежуток между элементами */
 	align-items          : start;
 	width: 100%;
 }
