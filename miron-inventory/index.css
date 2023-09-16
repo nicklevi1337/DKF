@@ -95,6 +95,7 @@ flex-direction: column;
 		flex-direction: row;
 		align-items   : center;
 		gap: 50px;
+		margin-top: 50px;
 	
 }
 
@@ -158,16 +159,17 @@ flex-direction: column;
 	margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background: #1c1e20;;
-    width: 25px;
-    height: 25px;
-    border: 2px solid rgb(252, 240, 9, 0.5);
-    border-radius: 15px;
+    background: #1c1e20;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(252, 240, 9, 0.5);
+    border-radius: 86px;
     transition: opacity ease-in-out 0.3s;
     cursor: pointer;
-    background-image: url('../images/vector_add-button.svg');
+    background-image: url(../images/geron.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 
@@ -211,6 +213,7 @@ flex-direction: column;
     color: rgb(255, 255, 255);
     border-radius: 15px;
     text-align: center;
+	margin-left: 20px;
     border: 2px solid rgba(255, 242, 0, 0.5);
 }
 
@@ -704,7 +707,7 @@ padding: 0;
     right: 3px;
 	border           : none;
 	width            : 18px;
-	height           : 40px;
+	height: 19px;
 	overflow         : hidden;
 }
 

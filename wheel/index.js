@@ -84,6 +84,7 @@ const dataSets = {
         'Max',
         'Sanya',
         'Musheg',
+        'Alan'
     ],
     buffs: [
         'Гипнотические макасины',
