@@ -302,6 +302,11 @@ const element = [
         title: 'Интрига',
         
     },
+    {
+        img: 'images/009.png',
+        title: 'Бгхагхский схрон',
+        
+    },
     
     
 ];

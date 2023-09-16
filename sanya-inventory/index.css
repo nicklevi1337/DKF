@@ -129,6 +129,7 @@ display       : flex;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 20px;
 }
 
 .points{
@@ -137,6 +138,7 @@ display       : flex;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 23px;
 }
 
 
@@ -146,15 +148,19 @@ display       : flex;
     padding: 0;
     box-sizing: border-box;
     background: #1c1e20;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: 2px solid rgb(108, 237, 16, 0.5);
-    border-radius: 15px;
+    border-radius: 5px;
     transition: opacity ease-in-out 0.3s;
     cursor: pointer;
-    background-image: url(../images/vector_add-button.svg);
+    /* background-image: url(../images/vector_add-button.svg); */
+    background-image: url(../images/values.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
+    padding-top: 31px;
+    padding-left: 34px;
 }
 
 .points__button{
@@ -162,16 +168,17 @@ display       : flex;
     padding: 0;
     box-sizing: border-box;
     background: #1c1e20;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgb(252, 240, 9, 0.5);
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(252, 240, 9, 0.5);
     border-radius: 86px;
     transition: opacity ease-in-out 0.3s;
     cursor: pointer;
-    background-image: url(../images/geron.png);
+    background-image: url('../images/mon.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+	border-radius: 15px;
 }
 
 .game__button:hover {
@@ -198,7 +205,6 @@ display       : flex;
     padding: 0;
     width: 40px;
     height: 20px;
-    margin-right: 10px;
     background: #1c1e20;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -211,11 +217,9 @@ display       : flex;
     padding: 0;
     width: 40px;
     height: 20px;
-    margin-right: 10px;
     background: #1c1e20;
     color: rgb(255, 255, 255);
     border-radius: 15px;
-	margin-left: 20px;
     text-align: center;
     border: 2px solid rgba(255, 242, 0, 0.5);
 }
