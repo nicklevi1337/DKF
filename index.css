@@ -22,6 +22,7 @@
 
 
 
+
 body{
     margin: 0;
     background-attachment: fixed;
@@ -393,7 +394,7 @@ div {
 
 
     /*
-
+background-image: url("./images/art-1.png");
  .nav-1 {
     grid-area: a;
     margin: 0 auto;

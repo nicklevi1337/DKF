@@ -188,7 +188,7 @@ const infoList = [
         name: "1",
         link: "https://im.wampi.ru/2023/09/14/DONER.png",
         title: "Старт",
-        img: "https://ic.wampi.ru/2023/08/24/PROIDENO.png",
+        img: "https://im.wampi.ru/2023/09/17/PROIDENO.png",
         comment: "Let's Go!"
     },
     

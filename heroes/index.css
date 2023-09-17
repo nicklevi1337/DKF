@@ -156,7 +156,7 @@ background-color: rgba(184, 40, 40, 0.9);
     margin-bottom: 20px;
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/miron.jpg");
+    background-image: url("./images/miron-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -180,7 +180,7 @@ background-color: rgba(184, 40, 40, 0.9);
     background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/musheg.jpg");
+    background-image: url("./images/musheg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -275,6 +275,8 @@ background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
     background-color: rgb(255, 0, 0);
+    background-image: url("./images/alan.png");
+
     font-weight: bold;
 
     background-position: center;
