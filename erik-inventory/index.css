@@ -1,0 +1,805 @@
+@font-face {
+	font-family: BlenderProBook;
+	font-style : normal;
+	font-weight: 400;
+	src        : url(fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: Oxanium;
+	font-style : normal;
+	font-weight: 400;
+	src        : url(fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: Cyberpunk;
+	src        : url(fonts/Cyberpunk.otf) format('opentype');
+}
+
+
+
+body {
+	font-family          : 'BlenderProBook', 'Arial', 'Oxanium', 'Cyberpunk', serif;
+	margin               : 0 auto;
+	background           : #000000;
+	background-attachment: fixed;
+	background-size      : cover;
+	color                : #ffffff;
+}
+
+.page {
+
+	margin          : 0 auto;
+	display         : flex;
+	align-content   : center;
+	align-items     : center;
+	justify-content : center;
+	width           : 80%;
+	background-color: #000;
+}
+
+.content {
+
+	margin : 0 auto;
+	padding: 0;
+	width  : 80%;
+	display       : flex;
+	flex-direction: column;
+	align-content : center;
+	align-items   : center;
+}
+
+
+.section {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	width         : 100%;
+	margin-top    : 50px;
+}
+
+
+.img__div {
+	margin        : 0;
+	padding       : 0;
+	color         : white;
+	display       : flex;
+	flex-direction: row;
+	align-items   : center;
+	gap           : 50px;
+	margin-top    : 50px;
+}
+
+.info {
+	margin        : 0 auto;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	color         : white;
+	align-items   : center;
+	margin-bottom : 27px;
+	margin-top    : 17px;
+	margin-left   : 27px;
+}
+
+
+.stats__subtitle {
+	margin       : 0;
+	padding      : 0;
+	margin-bottom: 10px;
+	margin-top   : 10px;
+}
+
+
+.game {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: row;
+	align-items   : center;
+	gap           : 20px;
+}
+
+.points {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: row;
+	align-items   : center;
+	gap           : 23px;
+}
+
+
+
+.game__button {
+	margin             : 0 auto;
+	padding            : 0;
+	box-sizing         : border-box;
+	background         : #1c1e20;
+	width              : 30px;
+	height             : 30px;
+	border             : 2px solid rgb(108, 237, 16, 0.5);
+	border-radius      : 5px;
+	transition         : opacity ease-in-out 0.3s;
+	cursor             : pointer;
+	background-image   : url(../images/values.png);
+	background-repeat  : no-repeat;
+	background-position: center;
+	background-size    : contain;
+	padding-top        : 31px;
+	padding-left       : 34px;
+}
+
+.points__button {
+	margin             : 0 auto;
+	padding            : 0;
+	box-sizing         : border-box;
+	background         : #1c1e20;
+	width              : 30px;
+	height             : 30px;
+	border             : 2px solid rgb(252, 240, 9, 0.5);
+	border-radius      : 86px;
+	transition         : opacity ease-in-out 0.3s;
+	cursor             : pointer;
+	background-image   : url('../images/mon.png');
+	background-repeat  : no-repeat;
+	background-position: center;
+	background-size    : cover;
+	border-radius      : 15px;
+}
+
+.game__button:hover {
+	opacity: 0.6;
+}
+
+.game__button:active {
+	opacity: 1;
+}
+
+
+.points__button:hover {
+	opacity: 0.6;
+}
+
+.points__button:active {
+	opacity: 1;
+}
+
+
+
+.game__text {
+	margin       : 0;
+	padding      : 0;
+	width        : 40px;
+	height       : 20px;
+	background   : #1c1e20;
+	color        : rgb(255, 255, 255);
+	text-align   : center;
+	border       : 2px solid rgb(108, 237, 16, 0.5);
+	border-radius: 15px;
+}
+
+.points__text {
+	margin       : 0;
+	padding      : 0;
+	width        : 40px;
+	height       : 20px;
+	background   : #1c1e20;
+	color        : rgb(255, 255, 255);
+	border-radius: 15px;
+	text-align   : center;
+	border       : 2px solid rgba(255, 242, 0, 0.5);
+}
+
+.element {
+	margin        : 0 auto;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	margin-top    : 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+.information {
+	position: absolute;
+	top     : 500px;
+	width   : 100%;
+}
+
+.information>ul>li {
+	margin-top: 14px;
+}
+
+.archive {
+	max-width  : 100%;
+	user-select: none;
+
+}
+
+.cell {
+	position   : relative;
+	float      : left;
+	width      : 130px;
+	height     : 199px;
+	background : rgb(87, 40, 97);
+	border     : 4px ridge rgb(234, 213, 29);
+	margin-left: -0px;
+	box-sizing : border-box;
+	cursor     : pointer;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+}
+
+.cell.active {
+	background-color: #dee;
+}
+
+.cell.not-slot {
+	float       : right;
+	border-color: #3d93d0;
+}
+
+.cell img {
+	max-width: 100%;
+	filter   : drop-shadow(3px 3px 0 #50a04e);
+}
+
+.cell img.inverted {
+	transform: scaleY(-1);
+	filter   : drop-shadow(3px -3px 0 #900a);
+}
+
+.cell .count {
+	position      : absolute;
+	top           : -4px;
+	right         : -2px;
+	width         : 20px;
+	height        : 20px;
+	/*border-width: 5px;*/
+	/*border-style: double;*/
+	border-width  : 1px;
+	border-style  : solid;
+	border-radius : 50%;
+	border-color  : #fff;
+	background    : #6857d8;
+	color         : #fff;
+	font-family   : monospace;
+	font-size     : 16px;
+	line-height   : 22px;
+	font-weight   : bold;
+	text-align    : center;
+	text-shadow   : 1px 1px 0 #000;
+}
+
+.cell .controls {
+	box-sizing   : border-box;
+	border-radius: 5px;
+	width        : 100px;
+	background   : #eed;
+	position     : absolute;
+	top          : calc(var(--cell-width) - 4px);
+	left         : -18px;
+	font-size    : 32px;
+	font-family  : monospace;
+	text-align   : center;
+	z-index      : 1;
+	box-shadow   : 1px 1px 0 #20262E;
+}
+
+.cell .controls::before {
+	display  : block;
+	top      : 13px;
+	left     : 50%;
+	transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+	background-color: #eed;
+	content         : ' ';
+	position        : absolute;
+	width           : 15px;
+	height          : 15px;
+	z-index         : -1;
+}
+
+.cell .controls a {
+	color          : #20262E;
+	text-decoration: none;
+	font-weight    : bold;
+}
+
+.cell .controls .remove {
+	color: #a70000;
+}
+
+.cell .controls *:hover {
+	color: #FF0076;
+}
+
+.add-cell {
+	cursor       : pointer;
+	float        : left;
+	margin       : 15px 0 10px 4px;
+	width        : 32px;
+	height       : 32px;
+	border-width : 5px;
+	border-radius: 50%;
+	border-color : #ddd;
+	border-style : double;
+	background   : #2c7523;
+	color        : #eee;
+	font-family  : monospace;
+	font-size    : 16px;
+	text-align   : center;
+	line-height  : 16px;
+	text-shadow  : 1px 1px 0 #000;
+	/*
+	visibility   : hidden;
+	*/
+}
+
+.add-cell:hover {
+	background: #3a982f;
+}
+
+.add-block:hover .add-cell {
+	visibility: visible;
+}
+
+.add-cell:focus {
+	outline: none;
+}
+
+.selector {
+	user-select: none;
+	display    : none;
+	margin-top : 10px;
+	background : rgb(80, 42, 96);
+	height     : 164px;
+	overflow-x : hidden;
+}
+
+.selector ul {
+	margin : 0;
+	padding: 0;
+}
+
+.selector li {
+	list-style-type: none;
+	float          : left;
+	width          : 47px;
+	height         : 85px;
+	box-sizing     : border-box;
+	align-items    : center;
+	display        : flex;
+	flex-direction : row;
+	flex-wrap      : wrap;
+}
+
+.selector li:hover {
+	background: #ddd;
+}
+
+.selector li img {
+	width: 100%;
+}
+
+.stats {
+	color: white;
+}
+
+.heroes__img {
+	margin           : 0;
+	padding          : 0;
+	max-width        : 200px;
+	max-height       : 200px;
+	background-size  : cover;
+	background-repeat: no-repeat;
+}
+
+
+.main {
+	color                : white;
+	display              : grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap                  : 20px;
+	align-items          : center;
+	width                : 100%;
+	margin-top           : 27px;
+}
+
+.number {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	gap           : 20px;
+}
+
+.number__title {
+	margin   : 0;
+	padding  : 0;
+	font-size: 25px;
+}
+
+
+
+.number__subtitle {
+	margin : 0;
+	padding: 0;
+}
+
+
+.mission {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	gap           : 20px;
+
+}
+
+.mission__form {
+	margin : 0;
+	padding: 0;
+}
+
+.mission__icon {
+	margin : 0;
+	padding: 0;
+}
+
+.game-text {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	gap           : 20px;
+}
+
+.game-text__form {
+	margin : 0;
+	padding: 0;
+}
+
+.game-text__title {
+	margin : 0;
+	padding: 0;
+}
+
+.status {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	gap           : 20px;
+
+}
+
+.status__form {
+	margin : 0;
+	padding: 0;
+}
+
+.status__text {
+	margin : 0;
+	padding: 0;
+}
+
+.comment {
+	margin        : 0;
+	padding       : 0;
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+	gap           : 20px;
+
+}
+
+.popup {
+	margin         : 0 auto;
+	position       : fixed;
+	top            : 0;
+	bottom         : 0;
+	left           : 0;
+	right          : 0;
+	display        : flex;
+	font-family    : 'BlenderProBook', 'Arial', 'Oxanium', 'Cyberpunk', serif;
+	align-items    : center;
+	justify-content: center;
+	opacity        : 0;
+	transition     : visibility .5s, opacity .5s linear;
+	visibility     : hidden;
+}
+
+
+.popup::before {
+	content   : "";
+	background: #000;
+	position  : fixed;
+	top       : 0;
+	bottom    : 0;
+	left      : 0;
+	right     : 0;
+	opacity   : 0.5;
+	width     : 100%;
+	height    : 100%;
+}
+
+
+
+.popup_opened {
+	opacity   : 1;
+	visibility: visible;
+}
+
+
+
+
+.popup__container {
+	position        : relative;
+	padding-top     : 22px;
+	padding-bottom  : 25px;
+	padding-left    : 22px;
+	padding-right   : 22px;
+	color           : #ffffff;
+	width           : 296px;
+	border-radius   : 10px;
+	box-shadow      : 0px 0px 25px rgba(0, 0, 0, 0.15);
+	background-color: #136377;
+}
+
+.popup__title {
+	margin       : 0;
+	max-width    : 238px;
+	margin-bottom: 39px;
+	font-style   : normal;
+	font-weight  : 900;
+	font-size    : 18px;
+	line-height  : 22px;
+}
+
+.popup__form {
+	margin        : 0;
+	display       : flex;
+	flex-direction: column;
+	gap           : 30px;
+}
+
+.popup__input {
+	margin        : 0;
+	padding       : 0;
+	border        : none;
+	border-bottom : 1px solid rgb(0, 0, 0, 0.2);
+	font-style    : normal;
+	font-weight   : 400;
+	font-size     : 14px;
+	line-height   : 17px;
+	color         : #000000;
+	min-width     : 238px;
+	text-overflow : ellipsis;
+	white-space   : nowrap;
+	overflow      : hidden;
+	padding-bottom: 9px;
+}
+
+
+
+
+.popup__save-btn {
+	all          : unset;
+	margin       : 0;
+	padding      : 0;
+	width        : 238px;
+	color        : white;
+	background   : #000000;
+	border-radius: 2px;
+	transition   : opacity ease-in-out 0.3s;
+	cursor       : pointer;
+	margin-top   : 15px;
+	font-style   : normal;
+	font-weight  : 400;
+	font-size    : 14px;
+	line-height  : 17px;
+	text-align   : center;
+}
+
+.popup__form-button-save:hover {
+	opacity: 0.8;
+}
+
+.popup__close {
+	all             : unset;
+	position        : absolute;
+	top             : -33px;
+	right           : -27px;
+	background-size : contain;
+	width           : 20px;
+	height          : 20px;
+	transition      : opacity ease-in-out 0.3s;
+	background-image: url("../images/Close\ Icon.svg");
+	cursor          : pointer;
+}
+
+.popup__close:hover {
+	opacity: 0.6;
+}
+
+.popup__close:active {
+	opacity: 1;
+}
+
+
+.list-san {
+	margin-top: 27px;
+	color     : white;
+	display   : grid;
+	gap        : 20px;
+	align-items: start;
+	width      : 100%;
+}
+
+
+.list-san__check {
+	margin-top           : 27px;
+	color                : white;
+	display              : grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap                  : 20px;
+	align-items          : center;
+	min-width            : 610px;
+	position             : relative;
+	border-bottom        : 3px solid var(--red);
+}
+
+.list-san__check-deletebtn {
+	padding          : 0;
+	margin           : 0;
+	background-image : url('../images/group__delete.svg');
+	background-color : transparent;
+	background-size  : contain;
+	background-repeat: no-repeat;
+	position         : absolute;
+	right            : 3px;
+	border           : none;
+	width            : 18px;
+	height           : 19px;
+	overflow         : hidden;
+}
+
+.list-san__check-deletebtn:hover {
+	cursor : pointer;
+	opacity: 0.6;
+}
+
+
+
+.add-san__text {
+	cursor       : pointer;
+	float        : left;
+	margin       : 15px 0 10px 4px;
+	width        : 32px;
+	height       : 32px;
+	border-width : 5px;
+	border-radius: 50%;
+	border-color : #ddd;
+	border-style : double;
+	background   : #9f14c5;
+	color        : #eee;
+	font-family  : monospace;
+	font-size    : 16px;
+	text-align   : center;
+	line-height  : 16px;
+	text-shadow  : 1px 1px 0 #000;
+}
+
+.add-san__text:hover {
+	background: #000000;
+}
+
+.add-san__text:focus {
+	outline: none;
+}
+
+
+.number__subtitle_san {
+	margin : 0;
+	padding: 0;
+}
+
+.mission__icon_san {
+	margin : 0;
+	padding: 0;
+	width  : 83px;
+}
+
+.game-text__icon_san {
+	margin : 0;
+	padding: 0;
+}
+
+
+.status__text_san {
+	margin : 0;
+	padding: 0;
+	width  : 147px;
+	height : 50px;
+}
+
+
+.comment__text_san {
+	margin : 0;
+	padding: 0;
+}
+
+
+.popup__input_type_day {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__input_type_play {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__input_type_comm {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__link {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__container_type_stats {
+	position        : relative;
+	padding-top     : 22px;
+	padding-bottom  : 25px;
+	padding-left    : 22px;
+	padding-right   : 22px;
+	background      : #ffffff;
+	width           : 284px;
+	border-radius   : 19px;
+	box-shadow      : 0px 0px 25px rgba(0, 0, 0, 0.15);
+	background-color: #446d44;
+}
+
+.popup__form_type_stats {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__close_type_stats {
+	padding: 0;
+	margin : 0;
+}
+
+.popup__save-btn_type_stats {
+	all          : unset;
+	padding      : 0;
+	margin       : 0;
+	width        : 400px;
+	color        : white;
+	background   : #000000;
+	border-radius: 2px;
+	transition   : opacity ease-in-out 0.3s;
+	cursor       : pointer;
+	margin-top   : 15px;
+	font-style   : normal;
+	font-weight  : 400;
+	font-size    : 14px;
+	line-height  : 17px;
+	text-align   : center;
+	z-index      : 1;
+}

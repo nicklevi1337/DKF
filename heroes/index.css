@@ -33,26 +33,12 @@
     background-color: var(--black);
     font-family: 'BlenderProBook','Arial', 'Oxanium', 'Cyberpunk', serif;
     color      : #eee;
-  /*  background-image: url("../images/pic-2.jpg"); */
     background-attachment: fixed;
     background-size: cover;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1375px;
     min-width: 320px;
-    /*
-    position: absolute;
-    top: 284px;
-    left: 462px;
-        display: grid;
-        grid-template-areas:
-            "a a a"
-            "b b b"
-            "c . ."
-        ;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        font-family: calibri, serif;
-        */
+    background-image: url("../images/map-2.png");
 }
 
 .page {
@@ -132,7 +118,7 @@ all: unset;
 background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/bob-2.png");
+    background-image: url("../images/streamers/bob-3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -227,7 +213,7 @@ background-color: rgba(184, 40, 40, 0.9);
     background-color: rgba(184, 40, 40, 0.9);
     width: 200px;
     height: 200px;
-    background-image: url("../images/streamers/max-2.png");
+    background-image: url("../images/streamers/max-3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
