@@ -95,6 +95,15 @@
 }
 
 
+.sublist {
+    display: none;
+  }
+  
+  .sublist.active {
+    display: block;
+  }
+
+
 .line {
     border-bottom: 5px solid rgba(195, 21, 175, 0.7);
 }
