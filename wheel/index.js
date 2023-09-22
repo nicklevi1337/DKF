@@ -78,7 +78,7 @@ const dataSets = {
         'Ребро!',
     ],
     streamers: [
-        'Kuka',
+        'kuka',
         'Bob',
         'Miron',
         'Max',

@@ -47,81 +47,21 @@ body {
 .content {
     margin          : 0 auto;
     background-color: transparent;
-
-
-    margin-left: 26px;
-    margin-top : 582px;
-}
-
-@media (min-width: 768px) {
-    .content {
-        margin-left: 28px;
-        margin-top : 407px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .content {
-        margin-left: 86px;
-        margin-top : 411px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .content {
-        margin-left: 86px;
-        margin-top : 506px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .content {
-        margin-left: 26px;
-        margin-top : 586px;
-    }
-}
-
-@media (min-width: 1428px) {
-    .content {
-        margin-left: 41px;
-        margin-top : 657px;
-    }
-        
-}
-
-@media (min-width: 1700px) {
-    .content {
-        margin-left: 34px;
-        margin-top : 732px;
-    }
-}
-
-@media (min-width: 1920px) {
-    .content {
-        margin-left: 112px;
-        margin-top : 831px;
-    }
-}
-
-@media (min-width: 2048px) {
-    .content {
-        margin-left: 44px;
-        margin-top : 898px;
-    }
-}
-
-@media (min-width: 2304px) {
-    .content {
-        margin-left: 44px;
-        margin-top : 1011px;
-    }
-}
-
-@media (min-width: 3072px) {
-    .content {
-        margin-left: 14px;
-        margin-top : 1377px;
-    }
+    
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: -103px;
+    margin: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 16px;
 }
 
 
@@ -131,7 +71,7 @@ nav {
     flex-direction : row;
     justify-content: center;
     align-items    : center;
-    gap            : 27px;
+    gap            : 30px;
 }
 
 .nav__wheel {
@@ -214,6 +154,34 @@ nav {
     height          : 80px;
 }
 
+.nav__dice{
+    background-image   : url("./images/dice.png");
+    background-position: center;
+    background-repeat  : no-repeat;
+    position           : relative;
+
+    background-size : contain;
+    background-color: transparent;
+    text-decoration : none;
+    width           : 100px;
+    height          : 100px;
+}
+
+.nav__win{
+    background-image   : url("./images/win.png");
+    background-position: center;
+    background-repeat  : no-repeat;
+    position           : relative;
+
+    background-size : contain;
+    background-color: transparent;
+    text-decoration : none;
+    width           : 100px;
+    height          : 100px;
+}
+
+
+
 .nav__wheel::before {
     content      : "";
     position     : absolute;
@@ -291,6 +259,33 @@ nav {
     transition   : opacity 0.3s ease;
 }
 
+.nav__dice::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 0px 5px 5px rgb(255, 4, 96, 0.8);
+    border-radius: 39px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav__win::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0px 0px 5px 5px rgba(255, 225, 0, 0.8);
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
 
 
 
@@ -316,5 +311,13 @@ nav {
 }
 
 .nav__inv:hover::before {
+    opacity: 1;
+}
+
+.nav__dice:hover::before {
+    opacity: 1;
+}
+
+.nav__win:hover::before {
     opacity: 1;
 }

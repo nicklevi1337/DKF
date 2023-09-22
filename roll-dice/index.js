@@ -1,6 +1,6 @@
 const images = [
-  "dice-1.png",
-  "dice-2.png",
+  "Dice-1.svg",
+  "Dice-2.svg",
   "Dice-3.svg",
   "Dice-4.svg",
   "Dice-5.svg",

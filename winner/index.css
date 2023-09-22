@@ -20,3 +20,116 @@
     src: url(fonts/Cyberpunk.otf) format('opentype');
 }
 
+.body {
+    color: white;
+    font-family          : 'BlenderProBook', 'Arial', 'Oxanium', 'Cyberpunk', serif;
+
+}
+
+.page{
+    margin: 0 auto;
+
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1360px;
+}
+
+.header{
+margin: 0 auto;
+padding: 0;
+color: white;
+
+}
+
+.title{
+    margin: 0 auto;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.subtitle{
+    margin: 0 auto;
+    padding: 0;
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text{
+    margin: 0 auto;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.win__first{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(119, 84, 55);
+    color: #e2e2e2;
+    margin: 10px;
+    padding: 10px;
+   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.win__sec{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(205, 143, 70);
+    color: #e2e2e2;
+    margin: 10px;
+    padding: 10px;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.win__third{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(168, 51, 47);
+    color: #e2e2e2;
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.win__four{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgb(205, 143, 70);
+    color: #e2e2e2;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
