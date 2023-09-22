@@ -78,13 +78,13 @@ const dataSets = {
         'Ребро!',
     ],
     streamers: [
-        'kuka',
+        'Alan',
         'Bob',
-        'Miron',
+        'Erik',
+        'Kuka',
         'Max',
-        'Sanya',
-        'Musheg',
-        'Alan'
+        'Miron',
+        'Musheg'
     ],
     buffs: [
         'Гипнотические макасины',
@@ -332,7 +332,7 @@ function getImageURI(index) {
             break;
 
         case "streamers":
-            result = '../images/streamers/'+ dataSets[currentDataSet][index] +'.png';
+            result = './images/'+ dataSets[currentDataSet][index] +'.png';
             break;
     }
 
