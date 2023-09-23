@@ -88,6 +88,21 @@ const items = [
         title: '',
         type: EFFECT_TYPES.SPECIFIC_WHEEL_ROLL,
     },
+    {
+        img: 'images/005.png',
+        title: '',
+        type: EFFECT_TYPES.BUFF,
+    },
+    {
+        img: 'images/023.png',
+        title: '',
+        type: EFFECT_TYPES.DEBUFF,
+    },
+    {
+        img: 'images/008.png',
+        title: '',
+        type: EFFECT_TYPES.TARGET_TRAP,
+    },
 ];
 let selectedCellKey = false;
 

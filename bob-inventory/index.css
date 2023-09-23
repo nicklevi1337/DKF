@@ -295,6 +295,14 @@ background : rgb(87, 40, 97);
 	filter   : drop-shadow(3px -3px 0 #900a);
 }
 
+.unit.BUFF {
+	background-color: green;
+  }
+  
+  .unit.DEBUFF {
+	background-color: red;
+  }
+
 .unit .count {
 	position      : absolute;
 	top           : -4px;
@@ -370,7 +378,9 @@ background : rgb(87, 40, 97);
 	border-radius: 50%;
 	border-color : #ddd;
 	border-style : double;
+	
 	background   : #2c7523;
+	
 	color        : #eee;
 	font-family  : monospace;
 	font-size    : 16px;
@@ -430,6 +440,8 @@ background : rgb(87, 40, 97);
 .selector li img {
 	width: 100%;
 }
+
+
 
 
 

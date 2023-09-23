@@ -25,7 +25,10 @@ body {
     background-attachment: fixed;
     background-color     : #2a2c2f;
     font-family          : 'BlenderProBook', 'Arial', 'Oxanium', 'Cyberpunk', serif;
+    background-image     : url("./images/art-main.jpg");
+    /*
     background-image     : url("./images/артуха.jpg");
+    */
     background-position  : bottom;
     background-repeat    : no-repeat;
     background-size      : cover;
@@ -82,8 +85,8 @@ nav {
     background-size    : contain;
     background-color   : transparent;
     text-decoration    : none;
-    width              : 80px;
-    height             : 80px;
+    width            : 60px;
+    height           : 60px;
 
 }
 
@@ -98,8 +101,8 @@ nav {
     background-size  : contain;
     background-color : transparent;
     text-decoration  : none;
-    width            : 80px;
-    height           : 80px;
+    width            : 60px;
+    height           : 60px;
 
 }
 
@@ -111,8 +114,8 @@ nav {
 
     background-size : contain;
     background-color: transparent;
-    width           : 80px;
-    height          : 80px;
+    width            : 60px;
+    height           : 60px;
 }
 
 .nav__inv {
@@ -124,8 +127,8 @@ nav {
     background-size : contain;
     background-color: transparent;
     text-decoration : none;
-    width           : 80px;
-    height          : 80px;
+    width            : 60px;
+    height           : 60px;
 }
 
 .nav__rules {
@@ -137,8 +140,8 @@ nav {
     background-size : contain;
     background-color: transparent;
     text-decoration : none;
-    width           : 80px;
-    height          : 80px;
+    width            : 60px;
+    height           : 60px;
 }
 
 .nav__sgg {
@@ -150,8 +153,8 @@ nav {
     background-size : contain;
     background-color: transparent;
     text-decoration : none;
-    width           : 80px;
-    height          : 80px;
+    width            : 60px;
+    height           : 60px;
 }
 
 .nav__dice{
@@ -163,8 +166,8 @@ nav {
     background-size : contain;
     background-color: transparent;
     text-decoration : none;
-    width           : 100px;
-    height          : 100px;
+    width            : 60px;
+    height           : 60px;
 }
 
 .nav__win{
@@ -176,8 +179,8 @@ nav {
     background-size : contain;
     background-color: transparent;
     text-decoration : none;
-    width           : 100px;
-    height          : 100px;
+    width            : 60px;
+    height           : 60px;
 }
 
 
