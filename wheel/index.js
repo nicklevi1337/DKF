@@ -1,5 +1,5 @@
 const dataSets = {
-    inventory: [
+    items: [
         'Гипнотические макасины',
         'Ножик-хуежик',
         'Бронежилет ВДВ',
@@ -118,7 +118,7 @@ const dataSets = {
     ],
     
 };
-let currentDataSet = 'inventory',
+let currentDataSet = 'items',
     editedDataSets = {};
     
 
@@ -290,17 +290,17 @@ class Presets {
 const presets = new Presets;
 
 function getImageURI(index) {
-    let result = '../hpg-inventory/images/000.png',
+    let result = '../items/images/000.png',
         offset = 0
     ;
     switch (currentDataSet) {
-        case "inventory":
+        case "items":
             offset = 50;
         case "effects":
-            result = '../hpg-inventory/images/0' + ('0' + (index+1 + offset)).slice(-2) + '.png';
+            result = '../items/images/0' + ('0' + (index+1 + offset)).slice(-2) + '.png';
             break;
             case "buffs":
-                result = '../hpg-inventory/images/00' + ('0' + (index+1 + offset)).slice(-2) + '.png';
+                result = '../items/images/00' + ('0' + (index+1 + offset)).slice(-2) + '.png';
             break;
 
         case "debuffs":
@@ -318,7 +318,7 @@ function getImageURI(index) {
                 85,
                 86,
             ];
-            result = '../hpg-inventory/images/0' + ('0' + (mapping[index])).slice(-2) + '.png';
+            result = '../items/images/0' + ('0' + (mapping[index])).slice(-2) + '.png';
             break;
 
         case "coin":
@@ -398,7 +398,7 @@ p5Instance.onSelectItem = function(data, selectedKey) {
         image.src = getImageURI(dataSets[currentDataSet].indexOf(data[selectedKey])); 
     } 
     else { 
-        image.src = '../hpg-inventory/images/000.png'; 
+        image.src = '../items/images/000.png'; 
     } 
 }; 
 
