@@ -1,6 +1,6 @@
 # DKF - интерактивно-игровой сайт
 
- https://prettylolli137.github.io/DKF/
+https://nicklevi1337.github.io/DKF/
 
 **Интро**
 
