@@ -101,8 +101,8 @@
             <h2 class="popup__title">Ваш Банк</h2>
             <form class="popup__form" name="popup__form">
                 <div class="cyber-input ac-yellow fg-cyan">
-                <input id="game" type="text" placeholder="Миссии" class="cyber-input ac-purple  popup__input_type_game"
-                    name="popup__input popup__input_type_game">
+                <input id="game" type="number" placeholder="Миссии" class="cyber-input ac-purple  popup__input_type_game"
+                    name="popup__input popup__input_type_game" required>
                 </div>
                 <button class="cyber-button-small bg-yellow fg-black popup__save-btn" type="submit">
                     Депозит
@@ -117,8 +117,8 @@
             <h2 class="popup__title">Ваше влияние</h2>
             <form class="popup__form popup__form_type_points" name="popup__form">
                 <div class="cyber-input ac-yellow fg-cyan">
-                <input id="coin" type="text" placeholder="Ваши кредиты" class="cyber-input ac-purple popup__input_type_points"
-                    name="popup__input popup__input_type_points">
+                <input id="coin" type="number" placeholder="Ваши кредиты" class="cyber-input ac-purple popup__input_type_points"
+                    name="popup__input popup__input_type_points" required>
                 </div>
                 <button class="cyber-button-small bg-yellow fg-black popup__save-btn" type="submit">
                     Итог
@@ -134,19 +134,34 @@
             <h2 class="popup__title">Впишите информацию</h2>
             <form class="popup__form popup__form_type_stats" name="popup__form">
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="text" placeholder="День" class="popup__input_type_day" name="day">
+                    <input type="text" placeholder="День" class="popup__input_type_day" name="day" required>
                 </div>
+
+
+                 <div class="cyber-input ac-yellow fg-cyan">
+                        <input type="text" placeholder="Локация" class="popup__input popup__link" name="icon" id="iconInput" autocomplete="off" required>
+                        <div class="image-list" id="imageList">
+                            <!-- Здесь будут динамически добавлены изображения -->
+                        </div>
+                    </div>
+
+
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="link" placeholder="Локация" class=" popup__input popup__link" name="icon">
+                    <input type="text" placeholder="Игра" class="popup__input  popup__input_type_play" name="play" required>
                 </div>
+
+
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="text" placeholder="Игра" class="popup__input  popup__input_type_play" name="play">
+                    <input type="text" placeholder="Статус" class=" popup__input  popup__link_img" name="status" required id="statusInput" autocomplete="off">
+                    <div class="status-list" id="statusList">
+                        <!-- Здесь будут динамически добавлены изображения -->
+                    </div>
                 </div>
+
+
+
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="link" placeholder="Статус" class=" popup__input  popup__link_img" name="status">
-                </div>
-                <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="text" placeholder="Комментарий" class="popup__input  popup__input_type_comm" name="comment">
+                    <input type="text" placeholder="Комментарий" class="popup__input  popup__input_type_comm" name="comment" required>
                 </div>
                     <button class="cyber-button bg-yellow fg-black popup__save-btn popup__save-btn_type_stats" type="submit">
                         Готово
@@ -166,18 +181,18 @@
             <p class="number__subtitle"></p>
         </div>
         <div class="mission">
-            <img class="mission__icon" src="#" alt="#">
+            <img class="mission__icon" src="" alt="">
         </div>
         <div class="game-text">
             <p class="game-text__icon"></p>
         </div>
         <div class="status">
-            <img class="status__text" src="#" alt="#">
+            <img class="status__text" src="" alt="">
         </div>
         <div class="comment">
             <p class="comment__text"></p>        
         </div>
-        <button class="list__check-editbtn"></button>
+      
         <button class="list__check-deletebtn"></button>
     </div>
     </template>
@@ -189,6 +204,8 @@
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="content.js"></script>
+    <script src="list.js"></script>
+    <script src="status.js"></script>
    
 </body>
 

@@ -837,3 +837,58 @@ padding: 0;
     text-align: center;
 	z-index: 1;
 }
+
+
+.cyber-input {
+    position: relative;
+}
+
+.image-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px; /* Ограничиваем высоту */
+    overflow-y: auto; /* Позволяем вертикальный скроллинг */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.image-list img {
+    display: block; /* Показываем изображения в колонку */
+    width: 80px; /* Устанавливаем ширину */
+    height: 80px; /* Устанавливаем высоту */
+    margin: 5px auto; /* Добавляем отступы */
+    cursor: pointer;
+}
+
+.image-list img:hover {
+    background-color: #f0f0f0;
+}
+
+.status-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px; /* Ограничиваем высоту */
+    overflow-y: auto; /* Позволяем вертикальный скроллинг */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.status-list img {
+    display: block; /* Показываем изображения в колонку */
+    width: 80px; /* Устанавливаем ширину */
+    height: 80px; /* Устанавливаем высоту */
+    margin: 5px auto; /* Добавляем отступы */
+    cursor: pointer;
+}
+
+.status-list img:hover {
+    background-color: #f0f0f0;
+}
