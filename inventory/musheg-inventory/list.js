@@ -34,6 +34,42 @@ document.addEventListener("DOMContentLoaded", function() {
         "CC-1b.png",
         "CC-2B.png",
         "CC-3b.png",
+        "MM-1.png",
+        "MM-2.png",
+        "MM-3.png",
+        "MM-1b.png",
+        "MM-2b.png",
+        "MM-3b.png",
+        "OM-1.png",
+        "OM-2.png",
+        "OM-3.png",
+        "OM-1b.png",
+        "OM-2b.png",
+        "OM-3b.png",
+        "TB-1.png",
+        "TB-2.png",
+        "TB-3.png",
+        "TB-1b.png",
+        "TB-2b.png",
+        "TB-3b.png",
+        "Todd.png",
+        "President.png",
+        "question-2.png",
+        "Mad.png",
+        "casino.png",
+        "art.png",
+        "amurant.png",
+        "эко.png",
+        "тюрьма.png",
+        "скуфы.png",
+        "мошнаторы.png",
+        "донер.png",
+        "гилтикус.png"
+
+
+
+
+
         // Добавьте больше названий изображений по необходимости
     ];
 

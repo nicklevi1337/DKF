@@ -168,6 +168,8 @@
 .nav{
     display: flex;
     gap: 20px; 
+    padding: 20px; /* Внутренние отступы по 20px */
+
 }
 
 
@@ -760,4 +762,11 @@
     padding       : 0;
     width: 70%;
     margin-left: 154px;
+}
+
+
+.sublist {
+    padding: 0;
+    display: none;
+
 }
