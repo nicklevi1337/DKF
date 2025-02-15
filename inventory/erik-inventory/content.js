@@ -135,6 +135,7 @@ function closePopupAddByClick(evt) {
 
 const handleAddSanFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
@@ -142,6 +143,7 @@ const handleAddSanFormSubmit = (event) => {
     const comment = popupAddComm.value;
 
     const infoSanList = {
+        id,
         name,
         link,
         title,
@@ -149,7 +151,7 @@ const handleAddSanFormSubmit = (event) => {
         comment
     };
   // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedSanLists.findIndex((list) => list.name === name);
+  const existingIndex = savedSanLists.findIndex((list) => list.id == id);
 
   if (existingIndex !== -1) {
       // Если элемент уже существует, обновляем его
@@ -161,13 +163,16 @@ const handleAddSanFormSubmit = (event) => {
 
   saveListsToLocalSanStorage(savedSanLists); // Сохраняем изменения в локальном хранилище
 
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-    renderAddSanElement(createListSanElement(infoSanList));
-  }
+  // 🔥 Перерисовка списка после редактирования
+  listContainerSan.innerHTML = ""; // Очищаем контейнер перед рендерингом
+  savedSanLists.forEach((list) => {
+      const element = createListSanElement(list);
+      renderAddSanElement(element);
+  });
 
   closePopup(popupAddList);
   event.target.reset();
+  delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 function loadListsFromLocalSanStorage() {
@@ -210,6 +215,7 @@ const createListSanElement = (listSanData) => {
     };
 
     const handleSanEdit = () => {
+        popupAddList.dataset.editingId = listSanData.id; // Запоминаем ID
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listSanData.name;
         popupAddLink.value = listSanData.link;
@@ -223,7 +229,7 @@ const createListSanElement = (listSanData) => {
         // Обработчик для сохранения изменений
         const handleSaveEditSan = (event) => {
             event.preventDefault();
-
+         
             // Обновляем данные элемента
             listSanData.name = popupAddDay.value;
             listSanData.link = popupAddLink.value;

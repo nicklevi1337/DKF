@@ -138,6 +138,7 @@ function closePopupAddByClick(evt) {
 
 const handleAddMirFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
@@ -145,6 +146,7 @@ const handleAddMirFormSubmit = (event) => {
     const comment = popupAddComm.value;
 
     const infoMirList = {
+        id,
         name,
         link,
         title,
@@ -155,7 +157,7 @@ const handleAddMirFormSubmit = (event) => {
 
     
   // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedMirLists.findIndex((list) => list.name === name);
+  const existingIndex = savedMirLists.findIndex((list) => list.id == id);
 
   if (existingIndex !== -1) {
       // Если элемент уже существует, обновляем его
@@ -167,21 +169,16 @@ const handleAddMirFormSubmit = (event) => {
 
   saveListsToLocalMirStorage(savedMirLists); // Сохраняем изменения в локальном хранилище
 
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-    renderAddMirElement(createListMirElement(infoMirList));
-  }
+ // 🔥 Перерисовка списка после редактирования
+ listContainerMir.innerHTML = ""; // Очищаем контейнер перед рендерингом
+ savedMirLists.forEach((list) => {
+     const element = createListMirElement(list);
+     renderAddMirElement(element);
+ });
 
-  closePopup(popupAddList);
-  event.target.reset();
-
-    /*
-    savedMirLists.push(infoMirList); // Добавляем новый список в массив
-    saveListsToLocalMirStorage(savedMirLists); 
-    renderAddMirElement(createListMirElement(infoMirList));
-    closePopup(popupAddList);
-    event.target.reset(event);
-    */
+ closePopup(popupAddList);
+ event.target.reset();
+ delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 function loadListsFromLocalMirStorage() {
@@ -224,6 +221,7 @@ const createListMirElement = (listMirData) => {
     };
 
     const handleMirEdit = () => {
+        popupAddList.dataset.editingId = listMirData.id; // Запоминаем ID
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listMirData.name;
         popupAddLink.value = listMirData.link;

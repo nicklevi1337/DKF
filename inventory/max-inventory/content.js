@@ -119,12 +119,14 @@ function closePopupAddByClick(evt) {
 
 const handleAddMaxFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
     const img = popupImgLink.value;
     const comment = popupAddComm.value;
     const infoMaxList = {
+        id,
         name,
         link,
         title,
@@ -132,7 +134,7 @@ const handleAddMaxFormSubmit = (event) => {
         comment
     };
   // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedMaxLists.findIndex((list) => list.name === name);
+  const existingIndex = savedMaxLists.findIndex((list) => list.id == id);
 
   if (existingIndex !== -1) {
       // Если элемент уже существует, обновляем его
@@ -144,13 +146,16 @@ const handleAddMaxFormSubmit = (event) => {
 
   saveListsToLocalMaxStorage(savedMaxLists); // Сохраняем изменения в локальном хранилище
 
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-    renderAddMaxElement(createListMaxElement(infoMaxList));
-  }
+ // 🔥 Перерисовка списка после редактирования
+ listContainerMax.innerHTML = ""; // Очищаем контейнер перед рендерингом
+ savedMaxLists.forEach((list) => {
+     const element = createListMaxElement(list);
+     renderAddMaxElement(element);
+ });
 
-  closePopup(popupAddList);
-  event.target.reset();
+ closePopup(popupAddList);
+ event.target.reset();
+ delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 function loadListsFromLocalMaxStorage() {
@@ -196,6 +201,7 @@ const createListMaxElement = (listMaxData) => {
     };
 
     const handleMaxEdit = () => {
+        popupAddList.dataset.editingId = listMaxData.id; // Запоминаем ID
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listMaxData.name;
         popupAddLink.value = listMaxData.link;
@@ -209,7 +215,7 @@ const createListMaxElement = (listMaxData) => {
         // Обработчик для сохранения изменений
         const handleSaveEditMax = (event) => {
             event.preventDefault();
-
+         
             // Обновляем данные элемента
             listMaxData.name = popupAddDay.value;
             listMaxData.link = popupAddLink.value;

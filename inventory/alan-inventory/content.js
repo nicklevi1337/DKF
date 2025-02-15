@@ -137,6 +137,7 @@ function closePopupAddByClick(evt) {
 
 const handleAddAlFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
@@ -144,6 +145,7 @@ const handleAddAlFormSubmit = (event) => {
     const comment = popupAddComm.value;
 
     const infoAlList = {
+        id,
         name,
         link,
         title,
@@ -152,7 +154,7 @@ const handleAddAlFormSubmit = (event) => {
     };
 
   // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedAlLists.findIndex((list) => list.name === name);
+  const existingIndex = savedAlLists.findIndex((list) => list.id == id);
 
   if (existingIndex !== -1) {
       // Если элемент уже существует, обновляем его
@@ -162,15 +164,19 @@ const handleAddAlFormSubmit = (event) => {
       savedAlLists.push(infoAlList);
   }
 
-  saveListsToLocalAlStorage(savedAlLists); // Сохраняем изменения в локальном хранилище
+  saveListsToLocalAlStorage(savedAlLists);
 
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-    renderAddAlElement(createListAlElement(infoAlList));
-  }
+
+  // 🔥 Перерисовка списка после редактирования
+  listContainerAl.innerHTML = ""; // Очищаем контейнер перед рендерингом
+  savedAlLists.forEach((list) => {
+      const element = createListAlElement(list);
+      renderAddAlElement(element);
+  });
 
   closePopup(popupAddList);
   event.target.reset();
+  delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 function loadListsFromLocalAlStorage() {
@@ -216,6 +222,7 @@ const createListAlElement = (listAlData) => {
     };
 
     const handleEditAl = () => {
+        popupAddList.dataset.editingId = listAlData.id; // Запоминаем ID
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listAlData.name;
         popupAddLink.value = listAlData.link;
@@ -229,6 +236,8 @@ const createListAlElement = (listAlData) => {
         // Обработчик для сохранения изменений
         const handleSaveEditAl = (event) => {
             event.preventDefault();
+
+         
 
             // Обновляем данные элемента
             listAlData.name = popupAddDay.value;

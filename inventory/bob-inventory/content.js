@@ -79,7 +79,7 @@ function closePopupAddByClick(evt) {
 
 const handleAddFormSubmit = (event) => {
     event.preventDefault();
-
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
@@ -87,37 +87,31 @@ const handleAddFormSubmit = (event) => {
     const comment = popupAddComm.value;
     
 
-    const infoList = {
-        name,
-        link,
-        title,
-        img,
-        comment
-    };
 
 
 
+    const infoList = { id, name, link, title, img, comment };
 
-  // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedLists.findIndex((list) => list.name === name);
+    // Находим элемент по ID
+    const existingIndex = savedLists.findIndex((list) => list.id == id);
 
-  if (existingIndex !== -1) {
-      // Если элемент уже существует, обновляем его
-      savedLists[existingIndex] = infoList;
-  } else {
-      // Если это новый элемент, добавляем его в массив
-      savedLists.push(infoList);
-  }
+    if (existingIndex !== -1) {
+        savedLists[existingIndex] = infoList; // Обновляем
+    } else {
+        savedLists.push(infoList); // Добавляем
+    }
 
-  saveListsToLocalStorage(savedLists); // Сохраняем изменения в локальном хранилище
-
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-      renderAddElement(createListElement(infoList));
-  }
+    saveListsToLocalStorage(savedLists);
+  // 🔥 Перерисовка списка после редактирования
+  listContainer.innerHTML = ""; // Очищаем контейнер перед рендерингом
+  savedLists.forEach((list) => {
+      const element = createListElement(list);
+      renderAddElement(element);
+  });
 
   closePopup(popupAddList);
   event.target.reset();
+    delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 
 };
 
@@ -241,6 +235,9 @@ const createListElement = (listData) => {
     };
 
     const handleEdit = () => {
+
+        popupAddList.dataset.editingId = listData.id; // Запоминаем ID
+
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listData.name;
         popupAddLink.value = listData.link;

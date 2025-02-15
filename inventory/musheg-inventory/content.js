@@ -136,12 +136,14 @@ function closePopupAddByClick(evt) {
 
 const handleAddMusFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
     const img = popupImgLink.value;
     const comment = popupAddComm.value;
     const infoMusList = {
+        id,
         name,
         link,
         title,
@@ -149,7 +151,7 @@ const handleAddMusFormSubmit = (event) => {
         comment
     };
     // Проверяем, редактируем ли мы существующий элемент
-    const existingIndex = savedMusLists.findIndex((list) => list.name === name);
+    const existingIndex = savedMusLists.findIndex((list) => list.id == id);
 
     if (existingIndex !== -1) {
         // Если элемент уже существует, обновляем его
@@ -161,13 +163,16 @@ const handleAddMusFormSubmit = (event) => {
   
     saveListsToLocalMusStorage(savedMusLists); // Сохраняем изменения в локальном хранилище
   
-    // Если это новый элемент, добавляем его в DOM
-    if (existingIndex === -1) {
-        renderAddMusElement(createListMusElement(infoMusList));
-    }
-  
-    closePopup(popupAddList);
-    event.target.reset();
+ // 🔥 Перерисовка списка после редактирования
+ listContainerMus.innerHTML = ""; // Очищаем контейнер перед рендерингом
+ savedMusLists.forEach((list) => {
+     const element = createListMusElement(list);
+     renderAddMusElement(element);
+ });
+
+ closePopup(popupAddList);
+ event.target.reset();
+ delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 
@@ -216,6 +221,8 @@ const createListMusElement = (listMusData) => {
     };
 
     const handleMusEdit = () => {
+        popupAddList.dataset.editingId = listMusData.id; // Запоминаем ID
+
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listMusData.name;
         popupAddLink.value = listMusData.link;

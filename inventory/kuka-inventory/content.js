@@ -138,12 +138,15 @@ function closePopupAddByClick(evt) {
 
 const handleAddKukFormSubmit = (event) => {
     event.preventDefault();
+    const id = popupAddList.dataset.editingId || Date.now(); // Если редактируем, используем старый id
+
     const name = popupAddDay.value;
     const link = popupAddLink.value;
     const title = popupAddPlay.value;
     const img = popupImgLink.value;
     const comment = popupAddComm.value;
     const infoKukList = {
+        id,
         name,
         link,
         title,
@@ -151,7 +154,7 @@ const handleAddKukFormSubmit = (event) => {
         comment
     };
   // Проверяем, редактируем ли мы существующий элемент
-  const existingIndex = savedKukLists.findIndex((list) => list.name === name);
+  const existingIndex = savedKukLists.findIndex((list) => list.id == id);
 
   if (existingIndex !== -1) {
       // Если элемент уже существует, обновляем его
@@ -163,13 +166,16 @@ const handleAddKukFormSubmit = (event) => {
 
   saveListsToLocalKukStorage(savedKukLists); // Сохраняем изменения в локальном хранилище
 
-  // Если это новый элемент, добавляем его в DOM
-  if (existingIndex === -1) {
-    renderAddKukElement(createListKukElement(infoKukList));
-  }
+  // 🔥 Перерисовка списка после редактирования
+  listContainerKuk.innerHTML = ""; // Очищаем контейнер перед рендерингом
+  savedKukLists.forEach((list) => {
+      const element = createListKukElement(list);
+      renderAddKukElement(element);
+  });
 
   closePopup(popupAddList);
   event.target.reset();
+  delete popupAddList.dataset.editingId; // Удаляем ID после редактирования
 };
 
 function loadListsFromLocalKukStorage() {
@@ -215,6 +221,7 @@ const createListKukElement = (listKukData) => {
     };
 
     const handleEditKuk = () => {
+        popupAddList.dataset.editingId = listKukData.id; // Запоминаем ID
         // Заполняем попап данными текущего элемента
         popupAddDay.value = listKukData.name;
         popupAddLink.value = listKukData.link;
@@ -228,7 +235,7 @@ const createListKukElement = (listKukData) => {
         // Обработчик для сохранения изменений
         const handleSaveEditKuk = (event) => {
             event.preventDefault();
-
+           
             // Обновляем данные элемента
             listKukData.name = popupAddDay.value;
             listKukData.link = popupAddLink.value;
