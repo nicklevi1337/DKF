@@ -150,11 +150,26 @@ const handleAddKukFormSubmit = (event) => {
         img,
         comment
     };
-    savedKukLists.push(infoKukList); // Добавляем новый список в массив
-    saveListsToLocalKukStorage(savedKukLists); 
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedKukLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedKukLists[existingIndex] = infoKukList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedKukLists.push(infoKukList);
+  }
+
+  saveListsToLocalKukStorage(savedKukLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
     renderAddKukElement(createListKukElement(infoKukList));
-    closePopup(popupAddList);
-    event.target.reset(event);
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
 };
 
 function loadListsFromLocalKukStorage() {
@@ -179,6 +194,7 @@ const createListKukElement = (listKukData) => {
     const listImgKuk = listElementKuk.querySelector(".status__text_kuk");
     const listCommKuk = listElementKuk.querySelector(".comment__text_kuk");
     const listDeleteBtnKuk = listElementKuk.querySelector(".list-kuk__check-deletebtn");
+    const listEditBtnKuk = listElementKuk.querySelector(".list-kuk__check-editbtn"); // Кнопка редактирования
 
 
     listNameKuk.textContent = listKukData.name;
@@ -198,10 +214,59 @@ const createListKukElement = (listKukData) => {
         }
     };
 
+    const handleEditKuk = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listKukData.name;
+        popupAddLink.value = listKukData.link;
+        popupAddPlay.value = listKukData.title;
+        popupImgLink.value = listKukData.img;
+        popupAddComm.value = listKukData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleSaveEditKuk = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listKukData.name = popupAddDay.value;
+            listKukData.link = popupAddLink.value;
+            listKukData.title = popupAddPlay.value;
+            listKukData.img = popupImgLink.value;
+            listKukData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameKuk.textContent = listKukData.name;
+            listLinkKuk.src = listKukData.link;
+            listTitleKuk.textContent = listKukData.title;
+            listImgKuk.src = listKukData.img;
+            listCommKuk.textContent = listKukData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalKukStorage(savedKukLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleSaveEditKuk);
+        };
+
+        formSaveAdd.addEventListener("submit", handleSaveEditKuk);
+    };
+
     listDeleteBtnKuk.addEventListener("click", handleKukDelete);
+    listEditBtnKuk.addEventListener("click", handleEditKuk); // Добавляем обработчик для кнопки редактирования
 
     return listElementKuk;
 };
+
+
+
+
+
+
 
 const renderAddKukElement = (listElementKuk) => {
     listContainerKuk.append(listElementKuk);

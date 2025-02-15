@@ -148,12 +148,33 @@ const handleAddMusFormSubmit = (event) => {
         img,
         comment
     };
-    savedMusLists.push(infoMusList); // Добавляем новый список в массив
-    saveListsToLocalMusStorage(savedMusLists); 
-    renderAddMusElement(createListMusElement(infoMusList));
+    // Проверяем, редактируем ли мы существующий элемент
+    const existingIndex = savedMusLists.findIndex((list) => list.name === name);
+
+    if (existingIndex !== -1) {
+        // Если элемент уже существует, обновляем его
+        savedMusLists[existingIndex] = infoMusList;
+    } else {
+        // Если это новый элемент, добавляем его в массив
+        savedMusLists.push(infoMusList);
+    }
+  
+    saveListsToLocalMusStorage(savedMusLists); // Сохраняем изменения в локальном хранилище
+  
+    // Если это новый элемент, добавляем его в DOM
+    if (existingIndex === -1) {
+        renderAddMusElement(createListMusElement(infoMusList));
+    }
+  
     closePopup(popupAddList);
-    event.target.reset(event);
+    event.target.reset();
 };
+
+
+
+
+
+
 
 function loadListsFromLocalMusStorage() {
     const storedMusLists = localStorage.getItem('musLists');
@@ -175,6 +196,7 @@ const createListMusElement = (listMusData) => {
     const listImgMus = listElementMus.querySelector(".status__text_mus");
     const listCommMus = listElementMus.querySelector(".comment__text_mus");
     const listDeleteBtnMus = listElementMus.querySelector(".list-mus__check-deletebtn");
+    const listEditBtnMus = listElementMus.querySelector(".list-mus__check-editbtn"); // Кнопка редактирования
 
     listNameMus.textContent = listMusData.name;
     listLinkMus.src = listMusData.link;
@@ -193,10 +215,60 @@ const createListMusElement = (listMusData) => {
         }
     };
 
+    const handleMusEdit = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listMusData.name;
+        popupAddLink.value = listMusData.link;
+        popupAddPlay.value = listMusData.title;
+        popupImgLink.value = listMusData.img;
+        popupAddComm.value = listMusData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleMusSaveEdit = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listMusData.name = popupAddDay.value;
+            listMusData.link = popupAddLink.value;
+            listMusData.title = popupAddPlay.value;
+            listMusData.img = popupImgLink.value;
+            listMusData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameMus.textContent = listMusData.name;
+            listLinkMus.src = listMusData.link;
+            listTitleMus.textContent = listMusData.title;
+            listImgMus.src = listMusData.img;
+            listCommMus.textContent = listMusData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalStorage(savedLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleMusSaveEdit);
+        };
+
+        formSaveAdd.addEventListener("submit", handleMusSaveEdit);
+    };
+
     listDeleteBtnMus.addEventListener("click", handleMusDelete);
+    listEditBtnMus.addEventListener("click", handleMusEdit); // Добавляем обработчик для кнопки редактирования
 
     return listElementMus;
 };
+
+
+
+
+
+
+
 
 const renderAddMusElement = (listElementMus) => {
     listContainerMus.append(listElementMus);

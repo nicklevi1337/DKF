@@ -536,8 +536,14 @@ padding: 0;
 }
 
 .comment__text_mir{
-	margin: 0;
-	padding: 0;
+	padding          : 0;
+	margin           : 0;
+	word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    text-align: center; 
+    max-width: 100%; 
+    display: block; 
 }
 
 .popup {

@@ -148,11 +148,26 @@ const handleAddSanFormSubmit = (event) => {
         img,
         comment
     };
-    savedSanLists.push(infoSanList); // Добавляем новый список в массив
-    saveListsToLocalSanStorage(savedSanLists); 
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedSanLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedSanLists[existingIndex] = infoSanList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedSanLists.push(infoSanList);
+  }
+
+  saveListsToLocalSanStorage(savedSanLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
     renderAddSanElement(createListSanElement(infoSanList));
-    closePopup(popupAddList);
-    event.target.reset(event);
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
 };
 
 function loadListsFromLocalSanStorage() {
@@ -175,6 +190,7 @@ const createListSanElement = (listSanData) => {
     const listImgSan = listElementSan.querySelector(".status__text_san");
     const listCommSan = listElementSan.querySelector(".comment__text_san");
     const listDeleteBtnSan = listElementSan.querySelector(".list-san__check-deletebtn");
+    const listEditBtnSan = listElementSan.querySelector(".list-san__check-editbtn"); // Кнопка редактирования
 
     listNameSan.textContent = listSanData.name;
     listLinkSan.src = listSanData.link;
@@ -193,7 +209,50 @@ const createListSanElement = (listSanData) => {
         }
     };
 
+    const handleSanEdit = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listSanData.name;
+        popupAddLink.value = listSanData.link;
+        popupAddPlay.value = listSanData.title;
+        popupImgLink.value = listSanData.img;
+        popupAddComm.value = listSanData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleSaveEditSan = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listSanData.name = popupAddDay.value;
+            listSanData.link = popupAddLink.value;
+            listSanData.title = popupAddPlay.value;
+            listSanData.img = popupImgLink.value;
+            listSanData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameSan.textContent = listSanData.name;
+            listLinkSan.src = listSanData.link;
+            listTitleSan.textContent = listSanData.title;
+            listImgSan.src = listSanData.img;
+            listCommSan.textContent = listSanData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalSanStorage(savedSanLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleSaveEditSan);
+        };
+
+        formSaveAdd.addEventListener("submit", handleSaveEditSan);
+    };
+
     listDeleteBtnSan.addEventListener("click", handleSanDelete);
+    listEditBtnSan.addEventListener("click", handleSanEdit); // Добавляем обработчик для кнопки редактирования
 
     return listElementSan;
 };

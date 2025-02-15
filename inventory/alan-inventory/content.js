@@ -150,11 +150,27 @@ const handleAddAlFormSubmit = (event) => {
         img,
         comment
     };
-    savedAlLists.push(infoAlList); // Добавляем новый список в массив
-    saveListsToLocalAlStorage(savedAlLists); 
+
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedAlLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedAlLists[existingIndex] = infoAlList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedAlLists.push(infoAlList);
+  }
+
+  saveListsToLocalAlStorage(savedAlLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
     renderAddAlElement(createListAlElement(infoAlList));
-    closePopup(popupAddList);
-    event.target.reset(event);
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
 };
 
 function loadListsFromLocalAlStorage() {
@@ -177,6 +193,10 @@ const createListAlElement = (listAlData) => {
     const listImgAl = listElementAl.querySelector(".status__text_al");
     const listCommAl = listElementAl.querySelector(".comment__text_al");
     const listDeleteBtnAl = listElementAl.querySelector(".list-al__check-deletebtn");
+    const listEditBtnAL = listElementAl.querySelector(".list-al__check-editbtn"); // Кнопка редактирования
+
+
+
 
     listNameAl.textContent = listAlData.name;
     listLinkAl.src = listAlData.link;
@@ -195,7 +215,50 @@ const createListAlElement = (listAlData) => {
         }
     };
 
+    const handleEditAl = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listAlData.name;
+        popupAddLink.value = listAlData.link;
+        popupAddPlay.value = listAlData.title;
+        popupImgLink.value = listAlData.img;
+        popupAddComm.value = listAlData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleSaveEditAl = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listAlData.name = popupAddDay.value;
+            listAlData.link = popupAddLink.value;
+            listAlData.title = popupAddPlay.value;
+            listAlData.img = popupImgLink.value;
+            listAlData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameAl.textContent = listAlData.name;
+            listLinkAl.src = listAlData.link;
+            listTitleAl.textContent = listAlData.title;
+            listImgAl.src = listAlData.img;
+            listCommAl.textContent = listAlData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalAlStorage(savedAlLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleSaveEditAl);
+        };
+
+        formSaveAdd.addEventListener("submit", handleSaveEditAl);
+    };
+
     listDeleteBtnAl.addEventListener("click", handleAlDelete);
+    listEditBtnAL.addEventListener("click", handleEditAl); // Добавляем обработчик для кнопки редактирования
 
     return listElementAl;
 };

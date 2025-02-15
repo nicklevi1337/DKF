@@ -109,7 +109,7 @@ body {
 	display       : flex;
 	flex-direction: row;
 	align-items   : center;
-	gap           : 23px;
+	gap           : 20px;
 }
 
 
@@ -138,7 +138,7 @@ body {
 	padding            : 0;
 	box-sizing         : border-box;
 	background         : #1c1e20;
-	width              : 30px;
+	width              : 35px;
 	height             : 30px;
 	border             : 2px solid rgb(252, 240, 9, 0.5);
 	border-radius      : 86px;
@@ -173,7 +173,7 @@ body {
 .game__text {
 	margin       : 0;
 	padding      : 0;
-	width        : 40px;
+	width        : 140px;
 	height       : 20px;
 	background   : #1c1e20;
 	color        : rgb(255, 255, 255);
@@ -185,7 +185,7 @@ body {
 .points__text {
 	margin       : 0;
 	padding      : 0;
-	width        : 40px;
+	width        : 140px;
 	height       : 20px;
 	background   : #1c1e20;
 	color        : rgb(255, 255, 255);
@@ -663,24 +663,58 @@ body {
 	border-bottom        : 3px solid var(--red);
 }
 
+.list-san__check-buttons {
+    position: absolute;
+    right: -50px; /* Отступ справа */
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+    align-items: center;
+}
 .list-san__check-deletebtn {
+
 	padding          : 0;
 	margin           : 0;
 	background-image : url('../images/group__delete.svg');
 	background-color : transparent;
 	background-size  : contain;
 	background-repeat: no-repeat;
-	position         : absolute;
-	right            : 3px;
+	position: absolute;
+    right: -50px;
 	border           : none;
 	width            : 18px;
-	height           : 19px;
+	height: 19px;
 	overflow         : hidden;
 }
 
 .list-san__check-deletebtn:hover {
 	cursor : pointer;
 	opacity: 0.6;
+}
+
+
+.list-san__check-editbtn {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -31px;
+    background: #000;
+    transition: opacity ease-in-out 0.3s;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+    background-image: url('../images/vector_edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+	margin-right: 20px;
+}
+
+.list-san__check-editbtn:hover {
+    opacity: 0.6;
+}
+
+.list-san__check-editbtn:active {
+    opacity: 1;
 }
 
 
@@ -739,8 +773,14 @@ body {
 
 
 .comment__text_san {
-	margin : 0;
-	padding: 0;
+	padding          : 0;
+	margin           : 0;
+	word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    text-align: center; 
+    max-width: 100%; 
+    display: block; 
 }
 
 

@@ -131,11 +131,26 @@ const handleAddMaxFormSubmit = (event) => {
         img,
         comment
     };
-    savedMaxLists.push(infoMaxList); // Добавляем новый список в массив
-    saveListsToLocalMaxStorage(savedMaxLists); 
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedMaxLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedMaxLists[existingIndex] = infoMaxList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedMaxLists.push(infoMaxList);
+  }
+
+  saveListsToLocalMaxStorage(savedMaxLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
     renderAddMaxElement(createListMaxElement(infoMaxList));
-    closePopup(popupAddList);
-    event.target.reset(event);
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
 };
 
 function loadListsFromLocalMaxStorage() {
@@ -158,6 +173,11 @@ const createListMaxElement = (listMaxData) => {
     const listImgMax = listElementMax.querySelector(".status__text_max");
     const listCommMax = listElementMax.querySelector(".comment__text_max");
     const listDeleteBtnMax = listElementMax.querySelector(".list-max__check-deletebtn");
+    const listEditBtnMax = listElementMax.querySelector(".list-max__check-editbtn"); // Кнопка редактирования
+
+
+
+
     listNameMax.textContent = listMaxData.name;
     listLinkMax.src = listMaxData.link;
     listLinkMax.alt = listMaxData.name;
@@ -175,10 +195,58 @@ const createListMaxElement = (listMaxData) => {
         }
     };
 
+    const handleMaxEdit = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listMaxData.name;
+        popupAddLink.value = listMaxData.link;
+        popupAddPlay.value = listMaxData.title;
+        popupImgLink.value = listMaxData.img;
+        popupAddComm.value = listMaxData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleSaveEditMax = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listMaxData.name = popupAddDay.value;
+            listMaxData.link = popupAddLink.value;
+            listMaxData.title = popupAddPlay.value;
+            listMaxData.img = popupImgLink.value;
+            listMaxData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameMax.textContent = listMaxData.name;
+            listLinkMax.src = listMaxData.link;
+            listTitleMax.textContent = listMaxData.title;
+            listImgMax.src = listMaxData.img;
+            listCommMax.textContent = listMaxData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalMaxStorage(savedMaxLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleSaveEditMax);
+        };
+
+        formSaveAdd.addEventListener("submit", handleSaveEditMax);
+    };
+
     listDeleteBtnMax.addEventListener("click", handleMaxDelete);
+    listEditBtnMax.addEventListener("click", handleMaxEdit); // Добавляем обработчик для кнопки редактирования
 
     return listElementMax;
 };
+
+
+
+
+
 
 const renderAddMaxElement = (listElementMax) => {
     listContainerMax.append(listElementMax);
@@ -190,6 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAddMaxElement(element);
     });
 });
+
+
+
+
+
 
 openPointsBtn.addEventListener("click", pointsEdit);
 popupPoints.addEventListener("click", closePopupByClick);

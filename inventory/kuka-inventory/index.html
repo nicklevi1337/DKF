@@ -25,12 +25,12 @@
             <div class="info">
                 <p class="stats__subtitle">Кредиты</p>
                 <div class="game">
-                    <p class="game__text">0</p>
+                    <p class="game__text"></p>
                     <button class="game__button" type="button"></button>
                 </div>
                 <p class="stats__subtitle">Жетоны</p>
                 <div class="points">
-                    <p class="points__text">0</p>
+                    <p class="points__text"></p>
                     <button class="points__button" type="button"></button>
                 </div>
             </div>
@@ -135,7 +135,7 @@
             <h2 class="popup__title">Впишите информацию</h2>
             <form class="popup__form popup__form_type_stats" name="popup__form">
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="text" placeholder="День" class="popup__input_type_day" name="day" required>
+                    <input type="date" class="popup__input popup__input_type_day" name="day" required>
                 </div>
                 <div class="cyber-input ac-yellow fg-cyan">
                     <input type="text" placeholder="Локация" class="popup__input popup__link" name="icon" id="iconInput" autocomplete="off" required>
@@ -188,7 +188,11 @@
         <div class="comment">
             <p class="comment__text_kuk"></p>        
         </div>
-        <button class="list-kuk__check-deletebtn"></button>
+             <!-- Контейнер для кнопок -->
+             <div class="list-kuk__check-buttons">
+                <button class="list-kuk__check-editbtn"></button> <!-- Кнопка для редактирования -->
+                <button class="list-kuk__check-deletebtn"></button> <!-- Кнопка для удаления -->
+            </div>
     </div>
     </template>
 

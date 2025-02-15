@@ -118,16 +118,7 @@ const handleAddFormSubmit = (event) => {
 
   closePopup(popupAddList);
   event.target.reset();
-    /*
-    savedLists.push(infoList); // Добавляем новый список в массив
-    
-    saveListsToLocalStorage(savedLists); 
 
-
-    renderAddElement(createListElement(infoList)); 
-    closePopup(popupAddList);
-    event.target.reset(event);
-    */
 };
 
 
