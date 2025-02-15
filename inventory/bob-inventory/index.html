@@ -134,7 +134,7 @@
             <h2 class="popup__title">Впишите информацию</h2>
             <form class="popup__form popup__form_type_stats" name="popup__form">
                 <div class="cyber-input ac-yellow fg-cyan">
-                    <input type="text" placeholder="День" class="popup__input_type_day" name="day" required>
+                    <input type="date" class="popup__input popup__input_type_day" name="day" required>
                 </div>
 
 
@@ -192,8 +192,11 @@
         <div class="comment">
             <p class="comment__text"></p>        
         </div>
-      
-        <button class="list__check-deletebtn"></button>
+        <!-- Контейнер для кнопок -->
+        <div class="list__check-buttons">
+            <button class="list__check-editbtn"></button> <!-- Кнопка для редактирования -->
+            <button class="list__check-deletebtn"></button> <!-- Кнопка для удаления -->
+        </div>
     </div>
     </template>
 

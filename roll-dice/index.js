@@ -7,23 +7,41 @@ const images = [
   "Dice-6.svg",
 ];
 
-const dice = document.querySelectorAll("img");
+const diceContainer = document.getElementById("dice-container");
+const diceCountSelect = document.getElementById("dice-count");
+
+
+function createDiceElements(count) {
+  diceContainer.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+      const img = document.createElement("img");
+      img.classList.add("dice");
+      img.setAttribute("id", `dice-${i + 1}`);
+      diceContainer.appendChild(img);
+  }
+}
+
+
+diceCountSelect.addEventListener("change", function () {
+  createDiceElements(Number(diceCountSelect.value));
+});
+
 
 function RollDice() {
-  dice.forEach(function (die) {
-    die.classList.add("roll");
-  });
-  setTimeout(function () {
-    dice.forEach(function (die) {
-      die.classList.remove("roll");
-    });
+  const dice = document.querySelectorAll(".dice");
+  dice.forEach(die => die.classList.add("roll"));
 
-    const dice1val = Math.floor(Math.random() * 6);
-    const dice2val = Math.floor(Math.random() * 6);
-    console.log(dice1val, dice2val);
-    document.querySelector("#dice-1").setAttribute("src", images[dice1val]);
-    document.querySelector("#dice-2").setAttribute("src", images[dice2val]);
-    document.querySelector("#total").innerHTML = "Ваше  число " + (dice1val + 1 + (dice2val + 1));
+  setTimeout(() => {
+      let total = 0;
+      dice.forEach((die, index) => {
+          const rollValue = Math.floor(Math.random() * 6);
+          die.setAttribute("src", images[rollValue]);
+          total += rollValue + 1;
+      });
+
+      document.getElementById("total").innerHTML = `Ваше число: ${total}`;
+      dice.forEach(die => die.classList.remove("roll"));
   }, 1000);
 }
-RollDice();
+
+createDiceElements(2);

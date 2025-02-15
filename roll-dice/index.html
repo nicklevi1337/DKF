@@ -1,22 +1,28 @@
 <html>
-
 <head>
-    <title>Кубик</title>
+    <title>Кубики</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="cyberpunk.css">
 </head>
-
 <body>
     <div class="container">
-        <div class="dice-wrap">
-            <img id="dice-1">
-            <img id="dice-2">
-        </div>
+        <div class="dice-wrap" id="dice-container"></div>
         <p id="total"></p>
         <button onclick="RollDice()">Проверь удачу!</button>
+
+        <div class="selector-wrap">
+            <label for="dice-count">Количество кубиков:</label>
+            <select id="dice-count">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
     </div>
 
     <script src="index.js"></script>
 </body>
-
 </html>

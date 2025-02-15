@@ -136,7 +136,7 @@ flex-direction: column;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 23px;
+	gap: 20px;
 }
 
 
@@ -167,7 +167,7 @@ flex-direction: column;
     padding: 0;
     box-sizing: border-box;
     background: #1c1e20;
-    width: 30px;
+    width: 35px;
     height: 30px;
     border: 2px solid rgb(252, 240, 9, 0.5);
     border-radius: 86px;
@@ -201,7 +201,7 @@ flex-direction: column;
 .game__text{
 	margin: 0;
     padding: 0;
-    width: 40px;
+    width: 140px;
     height: 20px;
     background: #1c1e20;
     color: rgb(255, 255, 255);
@@ -213,7 +213,7 @@ flex-direction: column;
 .points__text{
 	margin: 0;
     padding: 0;
-    width: 40px;
+    width: 140px;
     height: 20px;
     background: #1c1e20;
     color: rgb(255, 255, 255);
@@ -702,6 +702,17 @@ padding: 0;
 
 }
 
+
+
+
+
+.list-mir__check-buttons {
+    position: absolute;
+    right: -50px; /* Отступ справа */
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+    align-items: center;
+}
 .list-mir__check-deletebtn {
 
 	padding          : 0;
@@ -710,7 +721,7 @@ padding: 0;
 	background-color : transparent;
 	background-size  : contain;
 	background-repeat: no-repeat;
-	position: absolute;
+	
     right: 3px;
 	border           : none;
 	width            : 18px;
@@ -722,6 +733,36 @@ padding: 0;
 	cursor : pointer;
 	opacity: 0.6;
 }
+
+.list-mir__check-editbtn {
+    margin: 0;
+    padding: 0;
+    
+    right: -31px;
+    background: #000;
+    transition: opacity ease-in-out 0.3s;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+    background-image: url('../images/vector_edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.list-mir__check-editbtn:hover {
+    opacity: 0.6;
+}
+
+.list-mir__check-editbtn:active {
+    opacity: 1;
+}
+
+
+
+
+
 
 
 

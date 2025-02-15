@@ -151,11 +151,37 @@ const handleAddMirFormSubmit = (event) => {
         img,
         comment
     };
+
+
+    
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedMirLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedMirLists[existingIndex] = infoMirList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedMirLists.push(infoMirList);
+  }
+
+  saveListsToLocalMirStorage(savedMirLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
+    renderAddMirElement(createListMirElement(infoMirList));
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
+
+    /*
     savedMirLists.push(infoMirList); // Добавляем новый список в массив
     saveListsToLocalMirStorage(savedMirLists); 
     renderAddMirElement(createListMirElement(infoMirList));
     closePopup(popupAddList);
     event.target.reset(event);
+    */
 };
 
 function loadListsFromLocalMirStorage() {
@@ -178,6 +204,7 @@ const createListMirElement = (listMirData) => {
     const listImgMir = listElementMir.querySelector(".status__text_mir");
     const listCommMir = listElementMir.querySelector(".comment__text_mir");
     const listDeleteBtnMir = listElementMir.querySelector(".list-mir__check-deletebtn");
+    const listEditBtnMir = listElementMir.querySelector(".list-mir__check-editbtn"); // Кнопка редактирования
 
     listNameMir.textContent = listMirData.name;
     listLinkMir.src = listMirData.link;
@@ -196,10 +223,61 @@ const createListMirElement = (listMirData) => {
         }
     };
 
+    const handleMirEdit = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listMirData.name;
+        popupAddLink.value = listMirData.link;
+        popupAddPlay.value = listMirData.title;
+        popupImgLink.value = listMirData.img;
+        popupAddComm.value = listMirData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleMirSaveEdit = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listMirData.name = popupAddDay.value;
+            listMirData.link = popupAddLink.value;
+            listMirData.title = popupAddPlay.value;
+            listMirData.img = popupImgLink.value;
+            listMirData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listNameMir.textContent = listMirData.name;
+            listLinkMir.src = listMirData.link;
+            listTitleMir.textContent = listMirData.title;
+            listImgMir.src = listMirData.img;
+            listCommMir.textContent = listMirData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalMirStorage(savedMirLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleMirSaveEdit);
+        };
+
+        formSaveAdd.addEventListener("submit", handleMirSaveEdit);
+    };
+
     listDeleteBtnMir.addEventListener("click", handleMirDelete);
+    listEditBtnMir.addEventListener("click", handleMirEdit); // Добавляем обработчик для кнопки редактирования
 
     return listElementMir;
 };
+
+
+
+
+
+
+
+
 
 const renderAddMirElement = (listElementMir) => {
     listContainerMir.append(listElementMir);

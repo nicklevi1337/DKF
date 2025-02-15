@@ -90,3 +90,32 @@ button{
     transform: rotate(180deg);
   }
 }
+.selector-wrap {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.selector-wrap label {
+  color: #0ff; /* Неоновый цвет */
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#dice-count {
+  background: #111; /* Тёмный фон */
+  color: #0ff; /* Голубой текст */
+  border: 2px solid #0ff;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+#dice-count:hover {
+  background: #222;
+}
+
+#dice-count:focus {
+  box-shadow: 0 0 10px #0ff;
+}

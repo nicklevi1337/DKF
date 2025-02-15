@@ -95,6 +95,30 @@ const handleAddFormSubmit = (event) => {
         comment
     };
 
+
+
+
+  // Проверяем, редактируем ли мы существующий элемент
+  const existingIndex = savedLists.findIndex((list) => list.name === name);
+
+  if (existingIndex !== -1) {
+      // Если элемент уже существует, обновляем его
+      savedLists[existingIndex] = infoList;
+  } else {
+      // Если это новый элемент, добавляем его в массив
+      savedLists.push(infoList);
+  }
+
+  saveListsToLocalStorage(savedLists); // Сохраняем изменения в локальном хранилище
+
+  // Если это новый элемент, добавляем его в DOM
+  if (existingIndex === -1) {
+      renderAddElement(createListElement(infoList));
+  }
+
+  closePopup(popupAddList);
+  event.target.reset();
+    /*
     savedLists.push(infoList); // Добавляем новый список в массив
     
     saveListsToLocalStorage(savedLists); 
@@ -103,7 +127,14 @@ const handleAddFormSubmit = (event) => {
     renderAddElement(createListElement(infoList)); 
     closePopup(popupAddList);
     event.target.reset(event);
+    */
 };
+
+
+
+
+
+
 
 
 function loadListsFromLocalStorage() {
@@ -196,6 +227,7 @@ const createListElement = (listData) => {
     const listImg = listElement.querySelector(".status__text");
     const listComm = listElement.querySelector(".comment__text");
     const listDeleteBtn = listElement.querySelector(".list__check-deletebtn");
+    const listEditBtn = listElement.querySelector(".list__check-editbtn"); // Кнопка редактирования
 
     listName.textContent = listData.name;
     listLink.src = listData.link;
@@ -217,9 +249,63 @@ const createListElement = (listData) => {
         }
     };
 
+    const handleEdit = () => {
+        // Заполняем попап данными текущего элемента
+        popupAddDay.value = listData.name;
+        popupAddLink.value = listData.link;
+        popupAddPlay.value = listData.title;
+        popupImgLink.value = listData.img;
+        popupAddComm.value = listData.comment;
+
+        // Открываем попап
+        openPopup(popupAddList);
+
+        // Обработчик для сохранения изменений
+        const handleSaveEdit = (event) => {
+            event.preventDefault();
+
+            // Обновляем данные элемента
+            listData.name = popupAddDay.value;
+            listData.link = popupAddLink.value;
+            listData.title = popupAddPlay.value;
+            listData.img = popupImgLink.value;
+            listData.comment = popupAddComm.value;
+
+            // Обновляем отображение элемента
+            listName.textContent = listData.name;
+            listLink.src = listData.link;
+            listTitle.textContent = listData.title;
+            listImg.src = listData.img;
+            listComm.textContent = listData.comment;
+
+            // Сохраняем изменения в локальном хранилище
+            saveListsToLocalStorage(savedLists);
+
+            // Закрываем попап
+            closePopup(popupAddList);
+
+            // Удаляем обработчик, чтобы он не накладывался при повторном редактировании
+            formSaveAdd.removeEventListener("submit", handleSaveEdit);
+        };
+
+        formSaveAdd.addEventListener("submit", handleSaveEdit);
+    };
+
     listDeleteBtn.addEventListener("click", handleDelete);
+    listEditBtn.addEventListener("click", handleEdit); // Добавляем обработчик для кнопки редактирования
+
     return listElement;
 };
+
+
+
+
+
+
+
+
+
+
 
 const renderAddElement = (listElement) => {
     listContainer.append(listElement);
@@ -273,8 +359,3 @@ popupCloseBtnAdd.addEventListener("click", () => closePopup(popupAddList));
 popupAddList.addEventListener("click", closePopupAddByClick);
 formElementAdd.addEventListener("submit", handleAddFormSubmit); 
 formSaveAdd.addEventListener("click", closePopupAddByClick); 
-
-
-
-
-
